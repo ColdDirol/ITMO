@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flat_catalog>
+    <flat id="12">
+        <name>yours</name>
+        <coordinates>
+            <x>21.0</x>
+            <y>15.0</y>
+        </coordinates>
+        <creation_date>2008-12-03T10:15:30</creation_date>
+        <area>60.7</area>
+        <numbers_of_rooms>3</numbers_of_rooms>
+        <furnish>FINE</furnish>
+        <view>PARK</view>
+        <transport>ENOUGH</transport>
+        <house name="дом Екатерины вт" number_of_lifts="1" year="35"/>
+    </flat>
+    <flat id="13300">
+        <name>Antons</name>
+        <coordinates>
+            <x>21.0</x>
+            <y>15.0</y>
+        </coordinates>
+        <creation_date>2002-12-03T10:15:30</creation_date>
+        <area>60.7</area>
+        <numbers_of_rooms>3</numbers_of_rooms>
+        <furnish>FINE</furnish>
+        <view>GOOD</view>
+        <transport>ENOUGH</transport>
+        <house name="дом Колотушкина" number_of_lifts="4" year="800"/>
+    </flat>
+    <flat id="13939">
+        <name>my</name>
+        <coordinates>
+            <x>21.0</x>
+            <y>15.0</y>
+        </coordinates>
+        <creation_date>2007-12-03T10:15:30</creation_date>
+        <area>60.7</area>
+        <numbers_of_rooms>3</numbers_of_rooms>
+        <furnish>FINE</furnish>
+        <view>PARK</view>
+        <transport>ENOUGH</transport>
+        <house name="дом Екатерины вт" number_of_lifts="1" year="35"/>
+    </flat>
+</flat_catalog>
