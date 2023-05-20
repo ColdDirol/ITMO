@@ -1,6 +1,8 @@
 # ITMO Univeruty labs
 
-
+### Faculty of Software Engineering and Computer Engineering
+### Direction of Informatics and Computer Engineering
+---
 
 ### Fundamentals of Professional Activity:
 * [LAB 5](https://github.com/ColdDirol/ITMO/blob/main/2%20semester/%D0%9E%D0%9F%D0%94/%D0%9B%D0%90%D0%915.pdf)
