@@ -1,7 +1,7 @@
 # ITMO Univeruty labs
 
-### Faculty of Software Engineering and Computer Engineering
-### Direction of Informatics and Computer Engineering
+### Faculty of *Software Engineering and Computer Engineering*
+### Direction of *Informatics and Computer Engineering*
 ---
 
 ### <img src="https://raw.githubusercontent.com/github/explore/e495457f5ff28c343f9e422f8e3cf80fd3e80890/topics/assembly/assembly.png" title="git" alt="git" width="20" height="20"/> Fundamentals of Professional Activity:
