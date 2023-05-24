@@ -7,7 +7,7 @@
 ### Fundamentals of Professional Activity:
 * [LAB 7 [In progress...]]
 * [LAB 6 [In progress...]]
-* [LAB 5](https://github.com/ColdDirol/ITMO/blob/main/2%20semester/%D0%9E%D0%9F%D0%94/%D0%9B%D0%90%D0%915.pdf)
+* [LAB 5](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%9E%D0%9F%D0%94/%D0%9B%D0%90%D0%915)
 * [LAB 4](https://github.com/ColdDirol/ITMO/blob/main/2%20semester/%D0%9E%D0%9F%D0%94/%D0%9B%D0%90%D0%914.pdf)
 * [LAB 3](https://github.com/ColdDirol/ITMO/blob/main/2%20semester/%D0%9E%D0%9F%D0%94/%D0%9B%D0%90%D0%913.pdf)
 * [LAB 2](https://github.com/ColdDirol/ITMO/blob/main/1%20semester/%D0%9E%D0%9F%D0%94/%D0%9B%D0%90%D0%912.pdf)
