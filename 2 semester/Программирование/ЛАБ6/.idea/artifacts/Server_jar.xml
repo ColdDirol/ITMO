@@ -3,6 +3,11 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Server_jar</output-path>
     <root id="archive" name="Server.jar">
       <element id="module-output" name="Server" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/ch/qos/reload4j/reload4j/1.2.22/reload4j-1.2.22.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Server/log4j-core-2.20.0.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

@@ -54,6 +54,7 @@ public class ClientSideCommandsSet {
     {
         clientSideCommandsSet.add("exit");
         clientSideCommandsSet.add("execute_script");
+        clientSideCommandsSet.add("ColdDirol");
     }
     public boolean clientSideCommandsContains(String command) {
         if(clientSideCommandsSet.contains(command)) return true;

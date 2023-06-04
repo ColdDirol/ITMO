@@ -17,20 +17,19 @@ public enum View {
         this.id = id;
     }
 
-    public String getTitle() {
+    public String getName() {
         return this.name;
     }
 
-    public void setTitle(String name) {
-        this.name = name;
+    public static String getNameById(Integer id) {
+        if(id == 1) return YARD.name;
+        if(id == 2) return PARK.name;
+        if(id == 3) return BAD.name;
+        if(id == 4) return GOOD.name;
+        return null;
     }
-
     public Integer getId() {
         return this.id;
-    }
-
-    public void setId(Integer number) {
-        this.id = number;
     }
 
     @Override

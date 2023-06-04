@@ -213,6 +213,9 @@ public class Flat extends CollectionAbstractClass implements CollectionInterface
     public void setFurnish(Furnish furnish) {
         this.furnish = furnish;
     }
+    public Integer getFurnishId() {
+        return furnish.getId();
+    }
 
     /**
      * Method getView() for get View object from the Float object
@@ -228,6 +231,9 @@ public class Flat extends CollectionAbstractClass implements CollectionInterface
     public void setView(View view) {
         this.view = view;
     }
+    public Integer getViewId() {
+        return view.getId();
+    }
 
     /**
      * Method getTransport() for get Transport object from the Float object
@@ -242,6 +248,9 @@ public class Flat extends CollectionAbstractClass implements CollectionInterface
      */
     public void setTransport(Transport transport) {
         this.transport = transport;
+    }
+    public Integer getTransportId() {
+        return transport.getId();
     }
 
     /**

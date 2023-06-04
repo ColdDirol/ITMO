@@ -1,6 +1,6 @@
 package commands;
 
-import clientlogic.ConsoleOutputMode;
+import clientlogic.output.ConsoleOutputMode;
 import commands.commands.*;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class CommandsManager {
     //SimpleCommandType
     Exit exit = new Exit();
+    X0Game x0Game = new X0Game();
 
     //CommandType
     ExecuteScript executeScript = new ExecuteScript();
@@ -28,6 +29,7 @@ public class CommandsManager {
         {
             //общие команды без атрибута
             commandsMap.put(exit.toString(), () -> exit.exit());
+            commandsMap.put(x0Game.toString(), () -> x0Game.game());
         }
         commandsMap.get(command).execute();
     }

@@ -23,7 +23,7 @@ public class CollectionManager {
      * @throws IOException
      * @throws SAXException
      */
-    public void collectionReader() throws ParserConfigurationException, IOException, SAXException { // main execution method in the program
+    public void collectionReader() throws ParserConfigurationException, SAXException { // main execution method in the program
         flatArrayList = xmlReader.xmlRead();
 
         for(int i = 0; i < flatArrayList.size(); i++){

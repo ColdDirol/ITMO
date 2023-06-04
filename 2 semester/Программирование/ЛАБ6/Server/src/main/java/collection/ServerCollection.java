@@ -39,9 +39,11 @@ public class ServerCollection {
     public Hashtable<Integer, Flat> getHahstable() {
         return hashtable;
     }
-    public void setHashtable(Hashtable<Integer, Flat> hashtable) {
-        this.hashtable = hashtable;
+
+    public static void setHashtable(Hashtable<Integer, Flat> hashtable) {
+        ServerCollection.hashtable = hashtable;
     }
+
     public void clearHashtable() {
         hashtable.clear();
     }

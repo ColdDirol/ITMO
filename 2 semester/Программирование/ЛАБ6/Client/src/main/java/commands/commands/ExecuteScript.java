@@ -1,6 +1,6 @@
 package commands.commands;
 
-import clientlogic.ConsoleOutputMode;
+import clientlogic.output.ConsoleOutputMode;
 import commands.ClientSideCommandsSet;
 import commands.CommandsManager;
 
@@ -10,7 +10,6 @@ import java.io.*;
 import java.net.Socket;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -18,6 +17,7 @@ public class ExecuteScript extends ClientSideCommandsSet implements Command {
     CommandsManager commandsManager;
 
     String request;
+    int cnt = 0;
 
     public void executeScript(String filepath, Socket socket) throws ParserConfigurationException, TransformerException {
         try {
@@ -33,6 +33,7 @@ public class ExecuteScript extends ClientSideCommandsSet implements Command {
                 String line;
                 boolean recursion = false;
                 while(scanner.hasNext()){
+                    System.out.println(++cnt);
                     Thread.sleep(20);
                     line = scanner.nextLine();
                     if(line == null || line.trim().isEmpty()) continue;

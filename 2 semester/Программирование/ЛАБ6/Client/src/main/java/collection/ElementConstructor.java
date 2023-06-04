@@ -1,6 +1,6 @@
 package collection;
 
-import clientlogic.ConsoleOutputMode;
+import clientlogic.output.ConsoleOutputMode;
 
 import java.util.ArrayList;
 import java.util.Scanner;

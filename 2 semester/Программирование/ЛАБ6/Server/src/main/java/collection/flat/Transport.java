@@ -4,19 +4,37 @@ package collection.flat;
  * Class Transport is the helper ENUM class for storing its objects in a Flat object
  */
 public enum Transport {
-    FEW("FEW"),
-    NONE("FEW"),
-    ENOUGH("FEW");
+    FEW("FEW", 1),
+    NONE("NONE", 2),
+    ENOUGH("ENOUGH", 3);
 
-    private String title;
+    private String name;
+    private Integer id;
 
-    Transport(String title) {
-        this.title = title;
+    Transport(String name, Integer id) {
+        this.name = name;
+        this.id = id;
     }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public static String getNameById(Integer id) {
+        if(id == 1) return FEW.name;
+        if(id == 2) return NONE.name;
+        if(id == 3) return ENOUGH.name;
+        return null;
+    }
+
+    public Integer getId() {
+        return this.id;
+    }
+
 
     @Override
     public String toString() {
-        return title;
+        return name;
     }
 
     /**
