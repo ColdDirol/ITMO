@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"HamiltonianCycle"},{"p":"<Unnamed>","l":"HamiltonianPath"},{"p":"<Unnamed>","l":"Main"}];updateSearchResults();
