@@ -1,0 +1,63 @@
+2023-06-06 11:50:48 INFO  Server:43 - XML parsing started...
+2023-06-06 11:50:48 INFO  Server:47 - XML parsing finished!
+2023-06-06 11:50:48 INFO  Server:67 - Server started on port 5555
+2023-06-06 11:50:59 INFO  Server:99 - Enter a command: 
+2023-06-06 11:50:59 INFO  Server:99 - Enter a command: 
+2023-06-06 11:51:02 INFO  Server:99 - Enter a command: 
+2023-06-06 11:51:02 INFO  Server:169 - Request from /127.0.0.1:64457: info
+2023-06-06 11:51:02 INFO  Info:26 - Information about the collection:
+2023-06-06 11:51:02 INFO  Info:32 - Collection type: Hashtable;
+2023-06-06 11:51:02 INFO  Info:45 - 2023-06-06T11:50:48.006415600
+2023-06-06 11:51:02 INFO  Info:51 - Number of elements: 5
+2023-06-06 11:51:02 INFO  Server:199 - Enter a command: 
+2023-06-06 11:51:02 INFO  Server:99 - Enter a command: 
+2023-06-06 11:51:04 INFO  Server:99 - Enter a command: 
+2023-06-06 11:51:04 INFO  Server:169 - Request from /127.0.0.1:64457: show
+2023-06-06 11:51:04 INFO  Show:23 - -----------
+2023-06-06 11:51:04 INFO  Show:27 - The flat "13304"
+2023-06-06 11:51:04 INFO  Show:29 - +
+2023-06-06 11:51:04 INFO  Show:31 - Flat Id: 13304
+2023-06-06 11:51:04 INFO  Show:33 - House: дом Колотушкина
+2023-06-06 11:51:04 INFO  Show:35 - ---
+2023-06-06 11:51:04 INFO  Show:27 - The flat "13303"
+2023-06-06 11:51:04 INFO  Show:29 - +
+2023-06-06 11:51:04 INFO  Show:31 - Flat Id: 13303
+2023-06-06 11:51:04 INFO  Show:33 - House: дом Колотушкина
+2023-06-06 11:51:04 INFO  Show:35 - ---
+2023-06-06 11:51:04 INFO  Show:27 - The flat "13302"
+2023-06-06 11:51:04 INFO  Show:29 - +
+2023-06-06 11:51:04 INFO  Show:31 - Flat Id: 13302
+2023-06-06 11:51:04 INFO  Show:33 - House: дом Колотушкина
+2023-06-06 11:51:04 INFO  Show:35 - ---
+2023-06-06 11:51:04 INFO  Show:27 - The flat "13301"
+2023-06-06 11:51:04 INFO  Show:29 - +
+2023-06-06 11:51:04 INFO  Show:31 - Flat Id: 13301
+2023-06-06 11:51:04 INFO  Show:33 - House: дом Колотушкина
+2023-06-06 11:51:04 INFO  Show:35 - ---
+2023-06-06 11:51:04 INFO  Show:27 - The flat "13939"
+2023-06-06 11:51:04 INFO  Show:29 - +
+2023-06-06 11:51:04 INFO  Show:31 - Flat Id: 13939
+2023-06-06 11:51:04 INFO  Show:33 - House: дом Екатерины вт
+2023-06-06 11:51:04 INFO  Show:35 - ---
+2023-06-06 11:51:04 INFO  Show:38 - -----------
+2023-06-06 11:51:04 INFO  Server:199 - Enter a command: 
+2023-06-06 11:51:04 INFO  Server:99 - Enter a command: 
+2023-06-06 11:52:09 INFO  Server:99 - Enter a command: 
+2023-06-06 11:52:09 INFO  Server:169 - Request from /127.0.0.1:64457: сдуфк
+2023-06-06 11:52:09 INFO  Server:199 - Enter a command: 
+2023-06-06 11:52:09 INFO  Server:99 - Enter a command: 
+2023-06-06 11:52:11 INFO  Server:99 - Enter a command: 
+2023-06-06 11:52:11 INFO  Server:169 - Request from /127.0.0.1:64457: clear
+2023-06-06 11:52:11 INFO  Clear:17 - Collection has been cleared!
+2023-06-06 11:52:11 INFO  Server:199 - Enter a command: 
+2023-06-06 11:52:11 INFO  Server:99 - Enter a command: 
+2023-06-06 11:52:14 INFO  Server:99 - Enter a command: 
+2023-06-06 11:52:14 INFO  Server:169 - Request from /127.0.0.1:64457: echo djsjdsjdjs
+2023-06-06 11:52:14 INFO  Echo:14 - djsjdsjdjs
+2023-06-06 11:52:14 INFO  Server:199 - Enter a command: 
+2023-06-06 11:52:14 INFO  Server:99 - Enter a command: 
+2023-06-06 11:52:19 INFO  Server:99 - Enter a command: 
+2023-06-06 11:52:19 INFO  Server:169 - Request from /127.0.0.1:64457: echo 123
+2023-06-06 11:52:19 INFO  Echo:14 - 123
+2023-06-06 11:52:19 INFO  Server:199 - Enter a command: 
+2023-06-06 11:52:19 INFO  Server:99 - Enter a command: 
