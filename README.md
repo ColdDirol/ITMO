@@ -6,7 +6,7 @@
 
 ### <img src="https://raw.githubusercontent.com/github/explore/e495457f5ff28c343f9e422f8e3cf80fd3e80890/topics/assembly/assembly.png" title="git" alt="git" width="20" height="20"/> Fundamentals of Professional Activity:
 * [LAB 7 [In progress...]]
-* [LAB 6 [In progress...]]
+* [LAB 6](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%9E%D0%9F%D0%94/%D0%9B%D0%90%D0%916)
 * [LAB 5](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%9E%D0%9F%D0%94/%D0%9B%D0%90%D0%915)
 * [LAB 4](https://github.com/ColdDirol/ITMO/blob/main/2%20semester/%D0%9E%D0%9F%D0%94/%D0%9B%D0%90%D0%914.pdf)
 * [LAB 3](https://github.com/ColdDirol/ITMO/blob/main/2%20semester/%D0%9E%D0%9F%D0%94/%D0%9B%D0%90%D0%913.pdf)
@@ -24,8 +24,8 @@
 
 ---
 ### <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original.svg" title="git" alt="git" width="20" height="20"/> Databases
-* [LAB 4 [In progress...]]
-* [LAB 3 [In progress...]]
+* [LAB 4](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%91%D0%94/%D0%9B%D0%90%D0%914)
+* [LAB 3](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%91%D0%94/%D0%9B%D0%90%D0%913)
 * [LAB 2](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%91%D0%94/%D0%9B%D0%90%D0%912)
 * [LAB 1](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%91%D0%94/%D0%9B%D0%90%D0%911)
 
