@@ -6,7 +6,7 @@ import java.util.*;
  * The class CommandsList is used to help execute the *help* command
  */
 public class CommandsMap {
-    private HashMap<String, String> commandsMapInfo = new HashMap<String, String>();
+    private Map<String, String> commandsMapInfo = new HashMap<String, String>();
     {
         commandsMapInfo.put("help", "display help for available commands");
         commandsMapInfo.put("info", "output information about the collection (type, initialization date, number of items, etc.) to the standard output stream");

@@ -34,7 +34,7 @@ public class ExecuteScript extends ClientSideCommandsSet implements Command {
                 boolean recursion = false;
                 while(scanner.hasNext()){
                     System.out.println(++cnt);
-                    Thread.sleep(20);
+                    Thread.sleep(100);
                     line = scanner.nextLine();
                     if(line == null || line.trim().isEmpty()) continue;
                     if(isComment(line)) {

@@ -11,6 +11,9 @@ import org.apache.log4j.Logger;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.nio.channels.SocketChannel;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -22,7 +25,7 @@ public class SecuredServerCommandsManager extends CommandsManagerAbstract {
     TwistHistory twistHistory = new TwistHistory();
 
     private Logger logger = LogManager.getLogger(ServerCommandsManager.class.getSimpleName());
-    private void commandsManager(String command) throws FileHasBeenDeletedException {
+    private void commandsManager(String command, SocketChannel clientChannel) throws FileHasBeenDeletedException {
         Map<String, CommandType> commandsMap = new LinkedHashMap<>();
         {
             // Show history of changes
@@ -38,8 +41,10 @@ public class SecuredServerCommandsManager extends CommandsManagerAbstract {
             // Save and exit
             commandsMap.put(saveExit.getCommandName(), () -> {
                 try {
-                    saveExit.saveExit();
+                    saveExit.saveExit(clientChannel);
                 } catch (FileHasBeenDeletedException e) {
+                    throw new RuntimeException(e);
+                } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             });
@@ -57,7 +62,7 @@ public class SecuredServerCommandsManager extends CommandsManagerAbstract {
     }
 
 
-    public void executeCommand(String fullCommand) throws ParserConfigurationException, TransformerException {
+    public void executeCommand(String fullCommand, SocketChannel clientChannel) throws ParserConfigurationException, TransformerException {
         String command = getCommand(fullCommand);
         String attribute = getAttribute(fullCommand);
 
@@ -65,7 +70,7 @@ public class SecuredServerCommandsManager extends CommandsManagerAbstract {
         //System.out.println("command: " + command + ", attribute: " + attribute);
 
         try {
-            if (attribute == null || attribute.trim().isEmpty()) commandsManager(command);
+            if (attribute == null || attribute.trim().isEmpty()) commandsManager(command, clientChannel);
             else commandsManager(command, attribute);
         } catch (NullPointerException | FileHasBeenDeletedException exception) {
             exception.printStackTrace();

@@ -15,6 +15,7 @@ import org.xml.sax.SAXException;
 import serverlogic.condition.CommandBelonging;
 import serverlogic.input.CommandWrapperClass;
 import serverlogic.input.RequestInputMode;
+import serverlogic.output.PrepareToStop;
 import serverlogic.output.ResponseArrayList;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -30,6 +31,8 @@ public class Server {
     public static void main(String[] args) throws IOException, InterruptedException, ParserConfigurationException, TransformerException, SAXException {
         // Create BufferedReader to read the console
         BufferedReader consoleBufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        PrepareToStop prepareToStop = new PrepareToStop();
 
 
         // Projects objects
@@ -109,9 +112,10 @@ public class Server {
                         // logger.info("Accepted new connection from client at " + clientChannel.getRemoteAddress());
 
                     } else if (key.isReadable()) {
+                        prepareToStop.setPrepareToStop(false);
+
                         // Read from the client channel
                         SocketChannel clientChannel = (SocketChannel) key.channel();
-
 
                         // Create ByteBuffer to get request from client
                         ByteBuffer byteBufferRequest = ByteBuffer.allocate(BUF_SIZE);
@@ -188,15 +192,17 @@ public class Server {
                         if(commandBelonging.isSecuredServerSideCommands(serverCommandsManager.getCommand(commandWrapperClass.getCommand()))
                                                                 & commandWrapperClass.getRequestInputMode().equals(RequestInputMode.SERVER)) {
                             // If command is server and secured
-                            securedServerCommandsManager.executeCommand(commandWrapperClass.getCommand());
+                            securedServerCommandsManager.executeCommand(commandWrapperClass.getCommand(), clientChannel);
                         }
                         byteBufferRequest.clear();
                         // >
 
 
                         // Adding message about waiting a new request from the Client
-                        responseArrayList.addElementToTheResponseArrayList("\n" + "Enter a command: ");
-                        logger.info("Enter a command: ");
+                        if(!prepareToStop.isPrepareToStop()) {
+                            responseArrayList.addElementToTheResponseArrayList("\n" + "Enter a command: ");
+                            logger.info("Enter a command: ");
+                        }
 
 
                         // Output message back to the Client
@@ -220,6 +226,10 @@ public class Server {
 
                         // Clearing the ByteBufferResponse
                         byteBufferResponse.clear();
+
+                        if(prepareToStop.isPrepareToStop()) {
+                            System.exit(0);
+                        }
 
                         // Registration status of the SelectionKey
                         SelectionKey clientKey = clientChannel.register(selector, SelectionKey.OP_READ);

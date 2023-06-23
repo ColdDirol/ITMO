@@ -48,24 +48,30 @@ public class Client {
                     try {
                         if (bufferedReader.ready()) {
                             getResponse(bufferedReader);
-
                             //ввод следующей команды
                             //System.out.print("Enter a command: ");
-                            command = scanner.nextLine();
-
-                            //выполнение общей команды (если нужно)
-                            if (clientSideCommandsSet.commonSideCommandsContains(commandsManager.getCommand(command))) {
-                                //выполнение команды
-                                request = commandsManager.executeCommand(command, scanner, ConsoleOutputMode.READABLE);
-                                sendRequest(bufferedWriter, request);
-                                continue;
-                            }
-                            //выполнение ТОЛЬКО клиентской команды
-                            if (clientSideCommandsSet.clientSideCommandsContains(commandsManager.getCommand(command))) {
-                                //выполнение команды
-                                commandsManager.executeCommand(command, socket);
-                                clientSideCommandsSet.clearRecursionSet();
-                                continue;
+                            while (true) {
+                                command = scanner.nextLine();
+                                checkServerAvailability();
+                                try {
+                                    //выполнение общей команды (если нужно)
+                                    if (clientSideCommandsSet.commonSideCommandsContains(commandsManager.getCommand(command))) {
+                                        //выполнение команды
+                                        request = commandsManager.executeCommand(command, scanner, ConsoleOutputMode.READABLE);
+                                        sendRequest(bufferedWriter, request);
+                                        continue;
+                                    }
+                                    //выполнение ТОЛЬКО клиентской команды
+                                    if (clientSideCommandsSet.clientSideCommandsContains(commandsManager.getCommand(command))) {
+                                        //выполнение команды
+                                        commandsManager.executeCommand(command, socket);
+                                        clientSideCommandsSet.clearRecursionSet();
+                                        continue;
+                                    }
+                                    break;
+                                } catch (NullPointerException e) {
+                                    System.out.print("Enter a command: ");
+                                }
                             }
 
                             //если нет - отправка команды на сервер
@@ -77,6 +83,8 @@ public class Client {
                     } catch (NullPointerException e) {
                         System.out.println("NullPointerException: " + e.getMessage());
                         sendRequest(bufferedWriter, "null_command");
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
                     }
                 }
             } catch (IOException e) {
@@ -99,15 +107,19 @@ public class Client {
             throw new IOException();
         }
     }
-    private static void getResponse(BufferedReader bufferedReader) throws IOException {
+    private static void getResponse(BufferedReader bufferedReader) throws IOException, InterruptedException {
         // Server check
-        checkServerAvailability();
+        // checkServerAvailability();
 
 
         String response;
         //Чтение ArrayList'а ответов сервера
         while (bufferedReader.ready()) {
             response = bufferedReader.readLine();
+            if (response.equals("STOP")) {
+                Thread.sleep(10);
+                reconnect();
+            }
             if (response.isEmpty()) continue;
             if (!bufferedReader.ready()) {
                 System.out.print(response);

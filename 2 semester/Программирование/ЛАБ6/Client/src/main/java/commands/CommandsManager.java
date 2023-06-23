@@ -5,6 +5,9 @@ import commands.commands.*;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -14,7 +17,6 @@ import java.util.Scanner;
 public class CommandsManager {
     //SimpleCommandType
     Exit exit = new Exit();
-    X0Game x0Game = new X0Game();
 
     //CommandType
     ExecuteScript executeScript = new ExecuteScript();
@@ -29,7 +31,6 @@ public class CommandsManager {
         {
             //общие команды без атрибута
             commandsMap.put(exit.toString(), () -> exit.exit());
-            commandsMap.put(x0Game.toString(), () -> x0Game.game());
         }
         commandsMap.get(command).execute();
     }
@@ -71,7 +72,7 @@ public class CommandsManager {
     }
 
 
-    public String executeCommand(String fullCommand, Socket socket) {
+    public String executeCommand(String fullCommand, Socket socket) throws IOException {
         String command = getCommand(fullCommand);
         String attribute = getAttribute(fullCommand);
 
@@ -91,6 +92,7 @@ public class CommandsManager {
         } catch (NullPointerException exception) {
             System.out.println("Please check if the command or its attribute is correct.");
             System.out.println("A list of available commands can be found by entering the help command.");
+            throw new NullPointerException();
         }
         return null;
     }
