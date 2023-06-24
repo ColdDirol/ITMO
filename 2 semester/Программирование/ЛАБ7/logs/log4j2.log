@@ -1459,3 +1459,4 @@
 2023-06-23 07:42:22 INFO  ResponseLogic:88 - sendResponseArrayListAsJSONObject() - {"response":["Enter a command: "]}
 2023-06-23 07:42:24 INFO  ResponseLogic:88 - sendResponseArrayListAsJSONObject() - {"response":["Please check if the command or its attribute is correct.","\nA list of available commands can be found by entering the help command.","\nEnter a command: "]}
 2023-06-23 07:42:49 INFO  ResponseLogic:88 - sendResponseArrayListAsJSONObject() - {"response":["Enter a command: "]}
+2023-06-23 11:39:34 INFO  ResponseLogic:88 - sendResponseArrayListAsJSONObject() - {"response":["Enter a command: "]}

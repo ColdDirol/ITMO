@@ -12,6 +12,7 @@ public class UserActions {
     PgSQLRequestsHashtable pgSQLRequestsHashtable = new PgSQLRequestsHashtable();
     HashingMD2 hashingMD2 = new HashingMD2();
     private static Connection connection;
+    PreparedStatement preparedStatement = null;
 
     public static void setConnection(Connection connection) {
         UserActions.connection = connection;
@@ -20,11 +21,10 @@ public class UserActions {
     public boolean registerUser(String username, String password){
         try {
             if(!userExists(username)) {
-                PreparedStatement preparedStatement = connection.prepareStatement(pgSQLRequestsHashtable.getSqlUserRequest("SQL_USERS_INSERT"));
+                preparedStatement = connection.prepareStatement(pgSQLRequestsHashtable.getSqlUserRequest("SQL_USERS_INSERT"));
                 preparedStatement.setString(1, username);
                 preparedStatement.setString(2, hashingMD2.encodeStringMD2(password));
                 preparedStatement.executeUpdate();
-                preparedStatement.close();
                 return true;
             }
             else {

@@ -13,6 +13,7 @@ import org.json.simple.parser.ParseException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+import java.awt.event.KeyEvent;
 import java.io.*;
 import java.net.Socket;
 import java.util.*;
@@ -27,6 +28,7 @@ public class TCPClient {
     CommandManager commandManager = new CommandManager();
     ClientCommands clientCommands = new ClientCommands();
     private HashSet<String> clientCommandsHashSet = clientCommands.getClientCommandsHashSet();
+
     Scanner scanner = new Scanner(System.in);
 
     public TCPClient(String SERVER_HOST, int SERVER_PORT) throws IOException, InterruptedException {
@@ -65,13 +67,17 @@ public class TCPClient {
                         responseStringChannel.readRefuseStringFromServer();
                     }
                     while (true) {
-                        answer = scanner.nextLine();
                         try {
-                            if (Integer.parseInt(answer) == 3) Exit.exit(socket);
-                            if (Integer.parseInt(answer) >= 1 && Integer.parseInt(answer) <= 3) break;
-                            System.out.print("Enter answer correctly: ");
-                        } catch (NumberFormatException e) {
-                            System.out.print("Please, enter a number: ");
+                            answer = scanner.nextLine();
+                            try {
+                                if (Integer.parseInt(answer) == 3) Exit.exit(socket);
+                                if (Integer.parseInt(answer) >= 1 && Integer.parseInt(answer) <= 3) break;
+                                System.out.print("Enter answer correctly: ");
+                            } catch (NumberFormatException e) {
+                                System.out.print("Please, enter a number: ");
+                            }
+                        } catch (NoSuchElementException e) {
+                            System.out.println("Недопустимый символ!");
                         }
                     }
                     sendFastResponse(bufferedWriter, answer);
@@ -86,11 +92,19 @@ public class TCPClient {
                         }
                         responseStringChannel.readRefuseStringFromServer();
                     }
-                    username = scanner.nextLine();
-                    while (username.length() > 20 || username.trim().isEmpty()) {
-                        if (username.length() > 20) System.out.print("Length of your username must be less then 20: ");
-                        if (username.trim().isEmpty()) System.out.print("Username can't be empty: ");
-                        username = scanner.nextLine();
+                    while (true) {
+                        try {
+                            username = scanner.nextLine();
+                            while (username.length() > 20 || username.trim().isEmpty()) {
+                                if (username.length() > 20)
+                                    System.out.print("Length of your username must be less then 20: ");
+                                if (username.trim().isEmpty()) System.out.print("Username can't be empty: ");
+                                username = scanner.nextLine();
+                            }
+                            break;
+                        } catch (NoSuchElementException e) {
+                            System.out.println("Недопустимый символ!");
+                        }
                     }
                     sendFastResponse(bufferedWriter, username);
                     Thread.sleep(50);
@@ -104,12 +118,19 @@ public class TCPClient {
                         }
                         responseStringChannel.readRefuseStringFromServer();
                     }
-                    password = scanner.nextLine();
-                    while (password.length() > 8 || username.trim().isEmpty()) {
-                        if (username.length() > 8)
-                            System.out.print("Length of your password must be equals 8 or less then: ");
-                        if (username.trim().isEmpty()) System.out.print("Password can't be empty: ");
-                        username = scanner.nextLine();
+                    while (true) {
+                        try {
+                        password = scanner.nextLine();
+                        while (password.length() != 8) {
+                            if (username.length() != 8)
+                                System.out.print("Length of your password must be equals to 8: ");
+                            if (username.trim().isEmpty()) System.out.print("Password can't be empty: ");
+                            username = scanner.nextLine();
+                        }
+                        break;
+                        } catch (NoSuchElementException e) {
+                            System.out.println("Недопустимый символ!");
+                        }
                     }
                     sendFastResponse(bufferedWriter, password);
                     Thread.sleep(50);
@@ -145,6 +166,7 @@ public class TCPClient {
                             }
 
                             command = scanner.nextLine();
+
                             if (clientCommandsHashSet.contains(commandManager.getCommand(command))) {
                                 commandManager.executeCommand(command, socket);
                                 continue;
@@ -203,6 +225,7 @@ public class TCPClient {
 
     public void checkConnect() throws IOException {
         Socket checkSocket = new Socket(SERVER_HOST, SERVER_PORT);
+        checkSocket.close();
     }
 
     public void sendFastResponse(BufferedWriter bufferedWriter, String message) throws IOException {
