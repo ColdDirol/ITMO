@@ -14,7 +14,7 @@
 
 ---
 ### <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg" title="git" alt="git" width="20" height="20"/> Programming in Java
-* [LAB 8 [In progress...]]
+* [LAB 8](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/%D0%9B%D0%90%D0%918)
 * [LAB 7](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/%D0%9B%D0%90%D0%917)
 * [LAB 6](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/%D0%9B%D0%90%D0%916)
 * [LAB 5](https://github.com/ColdDirol/ITMO/tree/main/2%20semester/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/%D0%9B%D0%90%D0%915%2090%25)
