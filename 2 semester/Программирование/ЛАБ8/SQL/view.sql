@@ -1,0 +1,1 @@
+create type VIEW as enum ('YARD', 'PARK', 'BAD', 'GOOD');

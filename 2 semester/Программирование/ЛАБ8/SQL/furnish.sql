@@ -1,0 +1,1 @@
+create type FURNISH as enum ('DESIGNER', 'NONE', 'FINE', 'BAD', 'LITTLE');

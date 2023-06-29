@@ -1,0 +1,1 @@
+create type TRANSPORT as enum ('FEW', 'NONE', 'ENOUGH');
