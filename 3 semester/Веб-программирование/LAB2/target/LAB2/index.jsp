@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>LAB1</title>
 
+    <meta name="description" content="Описание страницы Описание страницы Описание страницы Описание страницы">
+    <meta name="keywords" content="I, hate, HTML, CSS, JavaScript">
+
     <link rel="icon" href="https://se.ifmo.ru/o/favicon/">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -13,11 +16,11 @@
 </video>
 
 <div class="content">
-    <h1 class="regular-text">Карташев Владимир P3231 1206</h1>
+    <h1 class="regular-text">Vladimir Kartashev P3215 888499</h1>
 
     <div class="wrapper">
         <div>
-            <img class="image" src="source/areas.png" alt="Coordinates area">
+            <canvas id="coordinates-canvas" width="300" height="300"></canvas>
         </div>
 
         <div>
@@ -52,10 +55,12 @@
                     <label for="x-positive-two">2</label>
                 </div>
             </div>
+
             <div class="form-row">
                 <label for="y-input" class="form-label">Y:</label>
-                <input type="text" id="y-input" class="form-input" placeholder="Введите Y">
+                <input type="text" id="y-input" class="form-input" placeholder="Enter Y">
             </div>
+
             <div class="form-row">
                 <label class="form-label">R:</label>
                 <div class="checkboxes">
@@ -79,7 +84,7 @@
     </div>
 
     <div>
-        <button id="check-button" class="button" onclick="checkValues()">check</button>
+        <button id="check-button" class="button">check</button>
     </div>
 
     <div class="table-container">
@@ -91,16 +96,21 @@
                 <th>r</th>
                 <th>result</th>
                 <th>completed_in</th>
-                <th>execution_time</th>
             </tr>
             </thead>
             <tbody>
-            <!-- Добавьте строки с результатами сюда -->
+            <!-- Добавить строки с результатами сюда -->
             </tbody>
         </table>
+
+
     </div>
+
+    <button id="clear-table-button" class="button clear-table-button">clear</button>
 </div>
 
-    <script src="index.js"></script>
+<script type="module" src="js/index.js"></script>
+<script type="module" src="js/graphics.js"></script>
+<script type="module" src="js/cleartable.js"></script>
 </body>
 </html>

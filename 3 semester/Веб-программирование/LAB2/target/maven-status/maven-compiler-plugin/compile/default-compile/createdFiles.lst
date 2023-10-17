@@ -1,0 +1,5 @@
+AreaCheckServlet.class
+services/ControllerService.class
+repositories/AreaCheckRepository.class
+services/AreaCheckService.class
+ControllerServlet.class
