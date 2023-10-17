@@ -16,7 +16,7 @@ public class ControllerServlet extends HttpServlet {
         processRequest(request, response);
     }
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
 
 
@@ -49,7 +49,7 @@ public class ControllerServlet extends HttpServlet {
             }
 
 
-            request.getRequestDispatcher("./api/check").forward(request, response);
+            request.getRequestDispatcher("./check").forward(request, response);
 
 
         } catch (Exception e) {

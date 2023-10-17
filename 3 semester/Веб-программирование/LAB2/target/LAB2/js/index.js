@@ -123,7 +123,7 @@ async function sendData(x, y, R) {
 
     try {
         // Отправляем запрос на сервер.
-        const result = await sendRequest("/controller", data);
+        const result = await sendRequest("/LAB2/controller", data);
 
         if (result) {
             // Получаем результаты и обрабатываем их.

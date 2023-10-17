@@ -42,36 +42,43 @@ public class AreaCheckServlet extends HttpServlet {
 
 
     public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        StringBuilder stringBuilder = new StringBuilder();
-        BufferedReader bufferedReader = request.getReader();
-        String line;
-        while ((line = bufferedReader.readLine()) != null) {
-            stringBuilder.append(line);
-        }
-
-        JSONParser parser = new JSONParser();
         try {
-            JSONObject json = (JSONObject) parser.parse(stringBuilder.toString());
-            double x = (double) json.get("x");
-            double y = (double) json.get("y");
-            double R = (double) json.get("R");
+            StringBuilder stringBuilder = new StringBuilder();
+            BufferedReader bufferedReader = request.getReader();
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuilder.append(line);
+            }
 
-            boolean result = check(x, y, R);
+            if (stringBuilder.toString() == null) throw new NullPointerException();
 
-            JSONObject responseJson = new JSONObject();
-            responseJson.put("x", x);
-            responseJson.put("y", y);
-            responseJson.put("R", R);
-            responseJson.put("result", result);
-            responseJson.put("compiled_in", LocalDateTime.now().toString());
+            JSONParser parser = new JSONParser();
+            try {
+                JSONObject json = (JSONObject) parser.parse(stringBuilder.toString()); // error here
+                double x = (double) json.get("x");
+                double y = (double) json.get("y");
+                double R = (double) json.get("R");
 
-            response.setContentType("application/json");
-            response.setCharacterEncoding("UTF-8");
-            response.getWriter().write(responseJson.toJSONString());
+                boolean result = check(x, y, R);
 
+                JSONObject responseJson = new JSONObject();
+                responseJson.put("x", x);
+                responseJson.put("y", y);
+                responseJson.put("R", R);
+                responseJson.put("result", result);
+                responseJson.put("compiled_in", LocalDateTime.now().toString());
+
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                response.getWriter().write(responseJson.toJSONString());
+
+            } catch (NullPointerException e) {
+                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing data in JSON.");
+            } catch (NumberFormatException e) {
+                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid number format in JSON.");
+            }
         } catch (Exception e) {
-            // Обработка ошибок парсинга JSON или других исключений
-            e.printStackTrace();
+
         }
     }
 
