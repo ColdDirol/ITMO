@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,18 +24,9 @@ public class AreaCheckServlet extends HttpServlet {
     private final double rMin = 1;
     private final double rMax = 4;
 
-
-    
     private double lengthFromNull;
 
-
-//    $data = [
-//            'x' => $x,
-//            'y' => $y,
-//            'r' => $R,
-//            'result' => ($isInRectangle || $isInCircle || $isInTriangle) ? 'true' : 'false',
-//            'compiled_in' => $compilationTime,
-//            ];
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm dd/MM/yy");
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         processRequest(request, response);
@@ -43,48 +35,47 @@ public class AreaCheckServlet extends HttpServlet {
 
     public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
-            StringBuilder stringBuilder = new StringBuilder();
-            BufferedReader bufferedReader = request.getReader();
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuilder.append(line);
-            }
 
-            if (stringBuilder.toString() == null) throw new NullPointerException();
+            Double x = request.getAttribute("x") != null ? Double.parseDouble(request.getAttribute("x").toString()) : null;
+            Double y = request.getAttribute("y") != null ? Double.parseDouble(request.getAttribute("y").toString()) : null;
+            Double R = request.getAttribute("R") != null ? Double.parseDouble(request.getAttribute("R").toString()) : null;
 
-            JSONParser parser = new JSONParser();
-            try {
-                JSONObject json = (JSONObject) parser.parse(stringBuilder.toString()); // error here
-                double x = (double) json.get("x");
-                double y = (double) json.get("y");
-                double R = (double) json.get("R");
+            boolean result = check(x, y, R);
 
-                boolean result = check(x, y, R);
+            JSONObject responseJson = new JSONObject();
+            responseJson.put("x", x);
+            responseJson.put("y", y);
+            responseJson.put("R", R);
+            responseJson.put("result", result);
+            responseJson.put("compiled_in", compiledDate(LocalDateTime.now()));
 
-                JSONObject responseJson = new JSONObject();
-                responseJson.put("x", x);
-                responseJson.put("y", y);
-                responseJson.put("R", R);
-                responseJson.put("result", result);
-                responseJson.put("compiled_in", LocalDateTime.now().toString());
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(responseJson.toJSONString());
 
-                response.setContentType("application/json");
-                response.setCharacterEncoding("UTF-8");
-                response.getWriter().write(responseJson.toJSONString());
-
-            } catch (NullPointerException e) {
-                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing data in JSON.");
-            } catch (NumberFormatException e) {
-                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid number format in JSON.");
-            }
+        } catch (NullPointerException e) {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing data in JSON.");
+        } catch (NumberFormatException e) {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid number format in JSON.");
         } catch (Exception e) {
-
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, e.getMessage());
         }
     }
 
 
+    private String compiledDate(LocalDateTime ldt) {
+        return ldt.format(formatter);
+    }
+
+
     public boolean check(double x, double y, double R) {
-        if(checkData(x, y, R) && checkIsInCircle(x, y, R) && checkIsInTriangle(x, y, R)) {
+        if(checkData(x, y, R) &&
+                (
+                    checkIsInRectangle(x, y, R) ||
+                    checkIsInCircle(x, y, R) ||
+                    checkIsInTriangle(x, y, R)
+                )
+        ) {
             return true;
         } else {
             return false;
@@ -97,6 +88,10 @@ public class AreaCheckServlet extends HttpServlet {
         return xValues.contains(x)
                 && (yMin <= y && y <= yMax)
                 && (rMin <= R && R <= rMax);
+    }
+
+    private boolean checkIsInRectangle(double x, double y, double R) {
+        return (y >= 0 && y <= R && x >= 0 && x <= R);
     }
 
     private boolean checkIsInCircle(double x, double y, double R) {

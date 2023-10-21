@@ -2,42 +2,8 @@ import { drawPoint } from './graphics.js';
 
 document.getElementById('check-button').addEventListener('click', checkValues);
 
-
-
-
-// function getResultsFromSession() {
-//     const xhr = new XMLHttpRequest();
-//     const url = 'getResultsFromSession.php';
-//
-//     console.log(`${url}`);
-//
-//     xhr.open('GET', url, true);
-//     xhr.onreadystatechange = function () {
-//         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-//             let tableBody = document.getElementById('results-table').getElementsByTagName('tbody')[0];
-//             tableBody.innerHTML = xhr.responseText; // заменить содержимое таблицы на данные сессии
-//
-//             // Прокрутка таблицы до последней строки
-//             const tableContainer = document.querySelector('.table-container');
-//             tableContainer.scrollTop = tableContainer.scrollHeight;
-//         }
-//     };
-//
-//     xhr.send();
-// }
-//
-// // Загружаем данные из сессии при загрузке страницы
-// window.onload = getResultsFromSession;
-
-
-
-
-
-
-
 const yInput = document.getElementById('y-input');
 let yValue;
-const yRegex = /^-?[0-9]+(\.[0-9]*)?$/; // Регулярное выражение для числа с плавающей точкой
 
 yInput.addEventListener("input", () =>{
     yValue = yInput.value;
@@ -47,25 +13,16 @@ yInput.addEventListener("input", () =>{
     }
 })
 
-
-const rInputs = document.getElementsByName('r-checkbox');
+const rInput = document.getElementById('r-input');
 let rValue;
 
-for (const rInput of rInputs) {
-    rInput.addEventListener('change', function () {
-        if (this.checked && rValue !== this.value) {
-            rValue = this.value;
-            console.log(rValue)
-            for (const otherInput of rInputs) {
-                if (otherInput !== this) {
-                    otherInput.checked = false;
-                }
-            }
-        } else if (!this.checked && rValue === this.value) {
-            rValue = undefined;
-        }
-    });
-}
+rInput.addEventListener("input", () =>{
+    rValue = rInput.value;
+
+    if (rValue !== '-' && isNaN(rValue) || parseFloat(rValue) < 1 || parseFloat(rValue) > 4) {
+        rInput.value = '';
+    }
+})
 
 
 
@@ -82,8 +39,8 @@ function checkValues() {
         }
     }
 
-    if (!isChecked) {
-        alert('Выберите значение для X');
+    if (!isChecked || typeof yValue === 'undefined' || typeof rValue === 'undefined') {
+        alert('Введите все значения');
         console.log('alert is HERE');
         return;
     }
@@ -93,24 +50,38 @@ function checkValues() {
     console.log('R:', rValue);
 
 
-    sendData(xValue, parseFloat(yValue), rValue);
+    sendData(xValue, parseFloat(yValue), parseFloat(rValue));
 }
 
-async function sendRequest(url, body) {
-    const fetchOptions = {
-        headers: {
-            "Content-Type": "application/json"
-        },
-        method: "POST",
-        body: JSON.stringify(body)
-    };
+async function sendRequest(url, data) {
+    // Преобразование данных в JSON.
+    const jsonData = JSON.stringify(data);
 
-    const response = await fetch(url, fetchOptions);
-    if (!response.ok) {
-        throw new Error(`Request failed: ${response.status}`);
+    try {
+        // Выполнение запроса.
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonData
+        });
+
+        // Если возникла ошибка, выбрасываем исключение.
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        // Преобразование ответа в JSON.
+        const responseData = await response.json();
+
+        // Возвращение данных.
+        return responseData;
+
+    } catch (error) {
+        console.error(`An error occured: ${error}`);
+        throw error;
     }
-
-    return response.json();
 }
 
 async function sendData(x, y, R) {
@@ -136,13 +107,21 @@ async function sendData(x, y, R) {
     }
 }
 
+
 function handleResponse(x, y, R, responseJson) {
     console.log(responseJson);
     let checkButton = document.getElementById('check-button');
     let tableBody = document.getElementById('results-table').getElementsByTagName('tbody')[0];
 
     // Создаем новую строку таблицы на основе полученных данных.
-    const newRow = `<tr><td>${responseJson.x}</td><td>${responseJson.y}</td><td>${responseJson.R}</td><td>${responseJson.result}</td><td>${responseJson.compiled_in}</td></tr>`;
+    const newRow =
+        `<tr>
+            <td>${responseJson.x}</td>
+            <td>${responseJson.y}</td>
+            <td>${responseJson.R}</td>
+            <td>${responseJson.result}</td>
+            <td>${responseJson.compiled_in}</td>
+        </tr>`;
 
     // Вставляем новую строку в таблицу на сайте.
     tableBody.insertAdjacentHTML('beforeend', newRow);

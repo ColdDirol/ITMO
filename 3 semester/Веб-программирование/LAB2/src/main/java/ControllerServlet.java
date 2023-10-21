@@ -28,30 +28,29 @@ public class ControllerServlet extends HttpServlet {
             }
 
 
-            try {
+            JSONObject json = (JSONObject) new JSONParser().parse(stringBuilder.toString());
 
-                JSONObject json = (JSONObject) new JSONParser().parse(stringBuilder.toString());
+            Double x = json.get("x") != null ? Double.parseDouble(json.get("x").toString()) : null;
+            Double y = json.get("y") != null ? Double.parseDouble(json.get("y").toString()) : null;
+            Double R = json.get("R") != null ? Double.parseDouble(json.get("R").toString()) : null;
 
-                Double x = json.get("x") != null ? Double.parseDouble(json.get("x").toString()) : null;
-                Double y = json.get("y") != null ? Double.parseDouble(json.get("y").toString()) : null;
-                Double R = json.get("R") != null ? Double.parseDouble(json.get("R").toString()) : null;
-
-                if (x == null || y == null || R == null) {
-                    throw new NullPointerException("Missing data in JSON.");
-                }
-
-            } catch (ParseException e) {
-                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Unable to parse JSON.");
-            } catch (NullPointerException e) {
-                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing data in JSON.");
-            } catch (NumberFormatException e) {
-                response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid number format in JSON.");
+            if (x == null || y == null || R == null) {
+                throw new NullPointerException("Missing data in JSON.");
             }
 
+            request.setAttribute("x", x);
+            request.setAttribute("y", y);
+            request.setAttribute("R", R);
 
             request.getRequestDispatcher("./check").forward(request, response);
 
 
+        } catch (ParseException e) {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Unable to parse JSON.");
+        } catch (NullPointerException e) {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
+        } catch (NumberFormatException e) {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid number format in JSON.");
         } catch (Exception e) {
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }

@@ -62,23 +62,8 @@
             </div>
 
             <div class="form-row">
-                <label class="form-label">R:</label>
-                <div class="checkboxes">
-                    <input type="checkbox" id="r-one" name="r-checkbox" value="1">
-                    <label for="r-one">1</label>
-
-                    <input type="checkbox" id="r-one-half" name="r-checkbox" value="1.5">
-                    <label for="r-one-half">1.5</label>
-
-                    <input type="checkbox" id="r-two" name="r-checkbox" value="2">
-                    <label for="r-two">2</label>
-
-                    <input type="checkbox" id="r-two-half" name="r-checkbox" value="2.5">
-                    <label for="r-two-half">2.5</label>
-
-                    <input type="checkbox" id="r-three" name="r-checkbox" value="3">
-                    <label for="r-three">3</label>
-                </div>
+                <label for="r-input" class="form-label">R:</label>
+                <input type="text" id="r-input" class="form-input" placeholder="Enter R">
             </div>
         </div>
     </div>

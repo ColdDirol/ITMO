@@ -104,8 +104,8 @@ function drawShapesByR(r) {
         let startPointInCanvas = axesToCanvasCoordinates(startPointInAxes.x, startPointInAxes.y, canvas);
 
 
-        // рисуем квадрат в 1 четверти:
-        let endPointInAxes = {x: r, y: r};
+        // рисуем квадрат в 4 четверти:
+        let endPointInAxes = {x: r, y: -r};
         let endScaledPointInAxes = {
             x: scaleXAxesCoordinate(endPointInAxes.x),
             y: scaleYAxesCoordinate(endPointInAxes.y)
@@ -116,21 +116,21 @@ function drawShapesByR(r) {
         ctx.fillRect(startPointInCanvas.x, startPointInCanvas.y, endScaledPointInAxes.x, -endScaledPointInAxes.y);
 
         // рисуем треугольник в 3 четверти:
-        let secondTrianglePointInAxes = {x: -(r/2), y: 0};
-        let thirdTrianglePointInAxes = {x: 0, y: -r};
+        let secondTrianglePointInAxes = {x: -r, y: 0};
+        let thirdTrianglePointInAxes = {x: 0, y: -(r/2)};
         drawTriangle(ctx, startPointInAxes, secondTrianglePointInAxes, thirdTrianglePointInAxes);
 
-        // рисуем часть 1/4 круга во 4 четверти
-        let calculatedRadius = scaleXAxesCoordinate(r / 2);
+        // рисуем часть 1/4 круга во 2 четверти
+        let calculatedRadius = scaleXAxesCoordinate(r);
 
         ctx.beginPath();
         //ctx.arc(startPointInCanvas.x, startPointInCanvas.y, calculatedRadius, 3 * Math.PI / 2, Math.PI, true);
-        ctx.arc(startPointInCanvas.x, startPointInCanvas.y, calculatedRadius, 0, Math.PI / 2, false);
+        ctx.arc(startPointInCanvas.x, startPointInCanvas.y, calculatedRadius, Math.PI, 3 * Math.PI / 2, false);
         ctx.fill();
 
         // рисуем недостающий треугольник до 1/4 круга во 2 четверти
-        let secondTrianglePointInAxesM = {x: r / 2, y: 0};
-        let thirdTrianglePointInAxesM = {x: 0, y: -r / 2};
+        let secondTrianglePointInAxesM = {x: -r, y: 0};
+        let thirdTrianglePointInAxesM = {x: 0, y: r};
         drawTriangle(ctx, startPointInAxes, secondTrianglePointInAxesM, thirdTrianglePointInAxesM);
     }
 }
