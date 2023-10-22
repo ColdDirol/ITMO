@@ -1,0 +1,134 @@
+openapi: 3.0.3
+info:
+  title: LAB2 - Vladimir Kartashev P3215 variant 888499
+  description: Servlets, Java EE, Beans (I hate java Beans and DTOs, they are stupid)
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/
+
+tags:
+  - name: controller
+    description: Receives incoming data from the server to check points and redirects to /LAB2/check
+  - name: check
+    description: Checks the received data and sends a response to the client
+  - name: session
+    description: Allows you to add, remove and read data from the session
+
+paths:
+  /LAB2/controller:
+    post:
+      tags:
+        - controller
+      summary: Process the input data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                x:
+                  type: number
+                y:
+                  type: number
+                R:
+                  type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  x:
+                    type: number
+                  y:
+                    type: number
+                  R:
+                    type: number
+                  result:
+                    type: boolean
+                  compiled_in:
+                    type: string
+        '400':
+          description: Bad request
+        '500':
+          description: Internal Server Error
+
+  /LAB2/check:
+    post:
+      tags:
+        - check
+      summary: Check the area
+      requestBody:
+        description: Input data to check
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                x:
+                  type: number
+                y:
+                  type: number
+                R:
+                  type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  x:
+                    type: number
+                  y:
+                    type: number
+                  R:
+                    type: number
+                  result:
+                    type: boolean
+                  compiled_in:
+                    type: string
+        '400':
+          description: Bad request
+        '500':
+          description: Internal Server Error
+
+  /LAB2/session:
+    get:
+      tags:
+        - session
+      summary: Get the session data
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    x:
+                      type: number
+                    y:
+                      type: number
+                    R:
+                      type: number
+                    result:
+                      type: boolean
+                    compiled_in:
+                      type: string
+        '500':
+          description: Internal Server Error
+    delete:
+      tags:
+        - session
+      summary: Delete the session data
+      responses:
+        '200':
+          description: OK

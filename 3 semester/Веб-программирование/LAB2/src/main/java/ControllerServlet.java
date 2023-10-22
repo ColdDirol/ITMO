@@ -1,6 +1,7 @@
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import services.JSONService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +29,7 @@ public class ControllerServlet extends HttpServlet {
             }
 
 
-            JSONObject json = (JSONObject) new JSONParser().parse(stringBuilder.toString());
+            JSONObject json = JSONService.parseToJSONObject(stringBuilder.toString());
 
             Double x = json.get("x") != null ? Double.parseDouble(json.get("x").toString()) : null;
             Double y = json.get("y") != null ? Double.parseDouble(json.get("y").toString()) : null;
@@ -41,6 +42,7 @@ public class ControllerServlet extends HttpServlet {
             request.setAttribute("x", x);
             request.setAttribute("y", y);
             request.setAttribute("R", R);
+            request.setAttribute("session", request.getSession());
 
             request.getRequestDispatcher("./check").forward(request, response);
 

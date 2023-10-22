@@ -1,11 +1,14 @@
+package beans;
+
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class ResultBean {
+public class ResultBean implements Serializable {
     private Double x;
     private Double y;
     private Double R;
     private boolean result;
-    private LocalDateTime compiledIn;
+    private String compiledIn;
 
 
     public Double getX() {
@@ -36,10 +39,10 @@ public class ResultBean {
         this.result = result;
     }
 
-    public LocalDateTime getCompiledIn() {
+    public String getCompiledIn() {
         return compiledIn;
     }
-    public void setCompiledIn(LocalDateTime compiledIn) {
+    public void setCompiledIn(String compiledIn) {
         this.compiledIn = compiledIn;
     }
 }

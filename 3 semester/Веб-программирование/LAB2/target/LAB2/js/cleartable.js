@@ -1,13 +1,18 @@
 document.getElementById('clear-table-button').addEventListener('click', clearTable);
 
-function clearTable() {
-    let tableBody = document.getElementById('results-table').getElementsByTagName('tbody')[0];
-    tableBody.innerHTML = '';
+async function clearTable() {
+    try {
+        const response = await fetch('/LAB2/session', {
+            method: 'DELETE'
+        });
 
-    // Очистка данных сессии на сервере
-    const xhr = new XMLHttpRequest();
-    const url = 'clearSession.php';
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
-    xhr.open('GET', url, true);
-    xhr.send();
+        let tableBody = document.getElementById('results-table').getElementsByTagName('tbody')[0];
+        tableBody.innerHTML = '';
+    } catch (error) {
+        console.error(`An error occured: ${error}`);
+    }
 }

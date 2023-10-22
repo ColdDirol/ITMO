@@ -1,8 +1,54 @@
 import { drawPoint } from './graphics.js';
 
+const xInputs = document.getElementsByName('x-radio');
+const yInput = document.getElementById('y-input');
+const rInput = document.getElementById('r-input');
+
+// Получить данные сессии и установить в таблицу результатов
+async function getSessionData() {
+    for (let i = 0; i < xInputs.length; i++) {
+        xInputs[i].checked = false;
+    }
+    yInput.value = '';
+    rInput.value = '';
+
+    // Отправляем запрос на сервер
+    const response = await fetch('/LAB2/session')
+
+    // Если возникла ошибка, выбрасываем исключение
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    // Извлечение данных JSON
+    const responseData = await response.json()
+
+    console.log(responseData)
+
+    let tableBody = document.getElementById('results-table').getElementsByTagName('tbody')[0];
+
+    // Очистка таблицы
+    tableBody.innerHTML = ''
+
+    // Заполнение таблицы данными сессии
+    for(let result of responseData) {
+        const newRow =
+            `<tr>
+                <td>${result.x}</td>
+                <td>${result.y}</td>
+                <td>${result.R}</td>
+                <td>${result.result}</td>
+                <td>${result.compiled_in}</td>
+            </tr>`;
+
+        tableBody.insertAdjacentHTML('beforeend', newRow);
+    }
+}
+
+window.onload = getSessionData;
+
 document.getElementById('check-button').addEventListener('click', checkValues);
 
-const yInput = document.getElementById('y-input');
 let yValue;
 
 yInput.addEventListener("input", () =>{
@@ -13,7 +59,6 @@ yInput.addEventListener("input", () =>{
     }
 })
 
-const rInput = document.getElementById('r-input');
 let rValue;
 
 rInput.addEventListener("input", () =>{
@@ -27,7 +72,6 @@ rInput.addEventListener("input", () =>{
 
 
 function checkValues() {
-    const xInputs = document.getElementsByName('x-radio');
     let xValue;
     let isChecked = false;
 
