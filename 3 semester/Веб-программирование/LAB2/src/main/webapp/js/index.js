@@ -8,7 +8,7 @@ let yValue;
 yInput.addEventListener("input", () =>{
     yValue = yInput.value;
 
-    if (yValue !== '-' && isNaN(yValue) || parseFloat(yValue) < -5 || parseFloat(yValue) > 3) {
+    if (yValue !== '-' && isNaN(yValue) || parseFloat(yValue) < -3 || parseFloat(yValue) > 3) {
         yInput.value = '';
     }
 })

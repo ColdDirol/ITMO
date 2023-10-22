@@ -34,6 +34,7 @@ public class AreaCheckServlet extends HttpServlet {
 
 
     public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
         try {
 
             Double x = request.getAttribute("x") != null ? Double.parseDouble(request.getAttribute("x").toString()) : null;
@@ -41,13 +42,14 @@ public class AreaCheckServlet extends HttpServlet {
             Double R = request.getAttribute("R") != null ? Double.parseDouble(request.getAttribute("R").toString()) : null;
 
             boolean result = check(x, y, R);
+            LocalDateTime compiledIn = LocalDateTime.now();
 
             JSONObject responseJson = new JSONObject();
             responseJson.put("x", x);
             responseJson.put("y", y);
             responseJson.put("R", R);
             responseJson.put("result", result);
-            responseJson.put("compiled_in", compiledDate(LocalDateTime.now()));
+            responseJson.put("compiled_in", compiledDate(compiledIn));
 
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
@@ -71,9 +73,9 @@ public class AreaCheckServlet extends HttpServlet {
     public boolean check(double x, double y, double R) {
         if(checkData(x, y, R) &&
                 (
-                    checkIsInRectangle(x, y, R) ||
-                    checkIsInCircle(x, y, R) ||
-                    checkIsInTriangle(x, y, R)
+                    checkIsInRectangle(x, y, R)
+                    || checkIsInCircle(x, y, R)
+                    || checkIsInTriangle(x, y, R)
                 )
         ) {
             return true;
@@ -86,30 +88,33 @@ public class AreaCheckServlet extends HttpServlet {
 
     private boolean checkData(double x, double y, double R) {
         return xValues.contains(x)
-                && (yMin <= y && y <= yMax)
-                && (rMin <= R && R <= rMax);
+                && (y >= yMin && y <= yMax)
+                && (R >= rMin && R <= rMax);
     }
 
+    // done
     private boolean checkIsInRectangle(double x, double y, double R) {
-        return (y >= 0 && y <= R && x >= 0 && x <= R);
+        return (y <= 0 && y >= -R && x >= 0 && x <= R);
     }
 
+    // done
     private boolean checkIsInCircle(double x, double y, double R) {
-        if (x >= 0 && y <= 0) {
+        if (x <= 0 && y >= 0) {
             lengthFromNull = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
-            return lengthFromNull <= R / 2;
+            return lengthFromNull <= R;
         } else {
             return false;
         }
     }
 
+    // done
     public static boolean checkIsInTriangle(double x, double y, double R) {
-        double x1 = -R / 2;
+        double x1 = -R;
         double x2 = 0;
         double x3 = 0;
         double y1 = 0;
         double y2 = 0;
-        double y3 = -R;
+        double y3 = -R / 2;
 
         double d1 = (x - x2) * (y3 - y2) - (x3 - x2) * (y - y2);
         double d2 = (x - x3) * (y1 - y3) - (x1 - x3) * (y - y3);

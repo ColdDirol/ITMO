@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LAB1</title>
+    <title>LAB2</title>
 
     <meta name="description" content="Описание страницы Описание страницы Описание страницы Описание страницы">
     <meta name="keywords" content="I, hate, HTML, CSS, JavaScript">
@@ -27,32 +27,32 @@
             <div class="form-row">
                 <label class="form-label">X:</label>
                 <div class="radios">
-                    <input type="radio" id="x-negative-two" name="x-radio" value="-2">
-                    <label for="x-negative-two">-2</label>
+                    <input type="radio" id="x-negative-two" name="x-radio" value="-5">
+                    <label for="x-negative-two">-5</label>
 
-                    <input type="radio" id="x-negative-one-half" name="x-radio" value="-1.5">
-                    <label for="x-negative-one-half">-1.5</label>
+                    <input type="radio" id="x-negative-one-half" name="x-radio" value="-4">
+                    <label for="x-negative-one-half">-4</label>
 
-                    <input type="radio" id="x-negative-one" name="x-radio" value="-1">
-                    <label for="x-negative-one">-1</label>
+                    <input type="radio" id="x-negative-one" name="x-radio" value="-3">
+                    <label for="x-negative-one">-3</label>
 
-                    <input type="radio" id="x-negative-half" name="x-radio" value="-0.5">
-                    <label for="x-negative-half">-0.5</label>
+                    <input type="radio" id="x-negative-half" name="x-radio" value="-2">
+                    <label for="x-negative-half">-2</label>
 
-                    <input type="radio" id="x-zero" name="x-radio" value="0">
-                    <label for="x-zero">0</label>
+                    <input type="radio" id="x-zero" name="x-radio" value="-1">
+                    <label for="x-zero">-1</label>
 
-                    <input type="radio" id="x-half" name="x-radio" value="0.5">
-                    <label for="x-half">0.5</label>
+                    <input type="radio" id="x-half" name="x-radio" value="0">
+                    <label for="x-half">0</label>
 
                     <input type="radio" id="x-positive-one" name="x-radio" value="1">
                     <label for="x-positive-one">1</label>
 
-                    <input type="radio" id="x-positive-one-half" name="x-radio" value="1.5">
-                    <label for="x-positive-one-half">1.5</label>
+                    <input type="radio" id="x-positive-one-half" name="x-radio" value="2">
+                    <label for="x-positive-one-half">2</label>
 
-                    <input type="radio" id="x-positive-two" name="x-radio" value="2">
-                    <label for="x-positive-two">2</label>
+                    <input type="radio" id="x-positive-two" name="x-radio" value="3">
+                    <label for="x-positive-two">3</label>
                 </div>
             </div>
 

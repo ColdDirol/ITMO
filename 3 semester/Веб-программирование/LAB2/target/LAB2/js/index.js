@@ -7,9 +7,8 @@ let yValue;
 
 yInput.addEventListener("input", () =>{
     yValue = yInput.value;
-    console.log(yValue)
 
-    if (yValue !== '-' && isNaN(yValue) || parseFloat(yValue) < -5 || parseFloat(yValue) > 3) {
+    if (yValue !== '-' && isNaN(yValue) || parseFloat(yValue) < -3 || parseFloat(yValue) > 3) {
         yInput.value = '';
     }
 })
@@ -19,7 +18,6 @@ let rValue;
 
 rInput.addEventListener("input", () =>{
     rValue = rInput.value;
-    console.log(rValue)
 
     if (rValue !== '-' && isNaN(rValue) || parseFloat(rValue) < 1 || parseFloat(rValue) > 4) {
         rInput.value = '';
