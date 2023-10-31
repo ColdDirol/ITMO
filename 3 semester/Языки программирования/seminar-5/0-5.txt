@@ -1,0 +1,34 @@
+public class Program {
+    public static void main(String[] args) {
+        int x = 100;
+        if (x > 0) {
+            System.out.println("Greater than zero");
+            int y = -50;
+            if (y > 0) {
+                System.out.println("Y is greater than zero");
+            } else {
+                System.out.println("Y is less than or equal to zero");
+            }
+        } else {
+            System.out.println("Less than or equal to zero");
+        }
+    }
+}
+
+
+- Root (Program)
+|  - Main Method
+|  |  - Variable Declaration (int x)
+|  |  |  - Literal Value (100)
+|  |  - If Statement (x > 0)
+|  |  |  - If Block
+|  |  |  |  - Print Statement ("Greater than zero")
+|  |  |  |  - Variable Declaration (int y)
+|  |  |  |  |  - Literal Value (-50)
+|  |  |  |  - Nested If Statement (y > 0)
+|  |  |  |  |  - If Block
+|  |  |  |  |  |  - Print Statement ("Y is greater than zero")
+|  |  |  |  |  - Else Block
+|  |  |  |  |  |  - Print Statement ("Y is less than or equal to zero")
+|  |  |  - Else Block
+|  |  |  |  - Print Statement ("Less than or equal to zero")
