@@ -13,7 +13,7 @@ async function getSessionData() {
     rInput.value = '';
 
     // Отправляем запрос на сервер
-    const response = await fetch('/LAB2/session')
+    const response = await fetch('/JAVAEElab2/session')
 
     // Если возникла ошибка, выбрасываем исключение
     if (!response.ok) {
@@ -138,7 +138,7 @@ async function sendData(x, y, R) {
 
     try {
         // Отправляем запрос на сервер.
-        const result = await sendRequest("/LAB2/controller", data);
+        const result = await sendRequest("/JAVAEElab2/controller", data);
 
         if (result) {
             // Получаем результаты и обрабатываем их.

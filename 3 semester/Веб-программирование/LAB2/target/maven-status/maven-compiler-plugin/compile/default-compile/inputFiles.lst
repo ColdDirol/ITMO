@@ -1,7 +1,8 @@
+/home/vladimir/Programs/IdeaProjects/LAB2/src/main/java/services/SessionService.java
+/home/vladimir/Programs/IdeaProjects/LAB2/src/main/java/beans/RequestBean.java
 /home/vladimir/Programs/IdeaProjects/LAB2/src/main/java/ControllerServlet.java
-/home/vladimir/Programs/IdeaProjects/LAB2/src/main/java/beans/ResultBeanManager.java
 /home/vladimir/Programs/IdeaProjects/LAB2/src/main/java/services/JSONService.java
 /home/vladimir/Programs/IdeaProjects/LAB2/src/main/java/AreaCheckServlet.java
-/home/vladimir/Programs/IdeaProjects/LAB2/src/main/java/beans/ResultBean.java
+/home/vladimir/Programs/IdeaProjects/LAB2/src/main/java/beans/ResponseBean.java
 /home/vladimir/Programs/IdeaProjects/LAB2/src/main/java/SessionServlet.java
 /home/vladimir/Programs/IdeaProjects/LAB2/src/main/java/services/AreaCheckService.java

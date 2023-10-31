@@ -1,15 +1,41 @@
 package beans;
 
-import java.io.Serializable;
-import java.time.LocalDateTime;
+import org.json.simple.JSONObject;
 
-public class ResultBean implements Serializable {
+import java.io.Serializable;
+
+/**
+ * Response bean.
+ * Contains:
+ * Double x,
+ * Double y,
+ * Double R.
+ */
+public class ResponseBean implements Serializable {
     private Double x;
     private Double y;
     private Double R;
     private boolean result;
     private String compiledIn;
 
+    public ResponseBean(Double x, Double y, Double R, Boolean result, String compiledIn) {
+        this.x = x;
+        this.y = y;
+        this.R = R;
+        this.result = result;
+        this.compiledIn = compiledIn;
+    }
+
+    public JSONObject toJson() {
+        JSONObject responseJson = new JSONObject();
+        responseJson.put("x", x);
+        responseJson.put("y", y);
+        responseJson.put("R", R);
+        responseJson.put("result", result);
+        responseJson.put("compiled_in", compiledIn);
+
+        return responseJson;
+    }
 
     public Double getX() {
         return x;

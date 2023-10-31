@@ -1,7 +1,8 @@
 AreaCheckServlet.class
 SessionServlet.class
-beans/ResultBeanManager.class
+beans/ResponseBean.class
+services/SessionService.class
 services/AreaCheckService.class
 services/JSONService.class
+beans/RequestBean.class
 ControllerServlet.class
-beans/ResultBean.class

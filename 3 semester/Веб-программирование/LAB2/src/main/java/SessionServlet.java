@@ -1,5 +1,5 @@
-import beans.ResultBean;
-import beans.ResultBeanManager;
+import beans.ResponseBean;
+import services.SessionService;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -19,10 +19,10 @@ public class SessionServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         try {
-            List<ResultBean> results = ResultBeanManager.getResultBeans(request.getSession());
+            List<ResponseBean> results = SessionService.getResultBeans(request.getSession());
             JSONArray resultsJsonArray = new JSONArray();
 
-            for (ResultBean result : results) {
+            for (ResponseBean result : results) {
                 JSONObject resultJson = new JSONObject();
                 resultJson.put("x", result.getX());
                 resultJson.put("y", result.getY());
@@ -40,6 +40,6 @@ public class SessionServlet extends HttpServlet {
     }
 
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        ResultBeanManager.clearBeans(request.getSession());
+        SessionService.clearBeans(request.getSession());
     }
 }

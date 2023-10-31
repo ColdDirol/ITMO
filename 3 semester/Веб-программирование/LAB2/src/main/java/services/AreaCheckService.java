@@ -29,9 +29,7 @@ public class AreaCheckService {
     public static boolean check(double x, double y, double R) {
         if(checkData(x, y, R) &&
                 (
-                        checkIsInRectangle(x, y, R)
-                                || checkIsInCircle(x, y, R)
-                                || checkIsInTriangle(x, y, R)
+                        checkIsInRectangle(x, y, R) || checkIsInCircle(x, y, R) || checkIsInTriangle(x, y, R)
                 )
         ) {
             return true;

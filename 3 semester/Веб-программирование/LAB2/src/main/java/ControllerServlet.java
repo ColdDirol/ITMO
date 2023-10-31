@@ -1,3 +1,4 @@
+import beans.RequestBean;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -20,29 +21,11 @@ public class ControllerServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
 
+            RequestBean requestBean = new RequestBean(request);
 
-            StringBuilder stringBuilder = new StringBuilder();
-            BufferedReader bufferedReader = request.getReader();
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuilder.append(line);
-            }
-
-
-            JSONObject json = JSONService.parseToJSONObject(stringBuilder.toString());
-
-            Double x = json.get("x") != null ? Double.parseDouble(json.get("x").toString()) : null;
-            Double y = json.get("y") != null ? Double.parseDouble(json.get("y").toString()) : null;
-            Double R = json.get("R") != null ? Double.parseDouble(json.get("R").toString()) : null;
-
-            if (x == null || y == null || R == null) {
-                throw new NullPointerException("Missing data in JSON.");
-            }
-
-            request.setAttribute("x", x);
-            request.setAttribute("y", y);
-            request.setAttribute("R", R);
+            request.setAttribute("request", requestBean);
             request.setAttribute("session", request.getSession());
+            request.setAttribute("Referer", request.getHeader("Referer"));
 
             request.getRequestDispatcher("./check").forward(request, response);
 

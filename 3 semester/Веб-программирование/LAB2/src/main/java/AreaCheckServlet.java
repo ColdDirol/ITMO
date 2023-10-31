@@ -1,10 +1,8 @@
-import beans.ResultBean;
-import beans.ResultBeanManager;
-import org.json.simple.JSONObject;
+import beans.RequestBean;
+import beans.ResponseBean;
+import services.SessionService;
 import services.AreaCheckService;
-import services.JSONService;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,31 +13,48 @@ import java.time.LocalDateTime;
 
 import static services.AreaCheckService.compiledDate;
 
+/**
+ * AreaCheckServlet with "/check" endpoint
+ * Allowed methods: POST
+ */
 @WebServlet("/check")
 public class AreaCheckServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    /**
+     * Override method from HttpServlet.
+     * Redirects the call to the processRequest() method.
+     *
+     * @param request - HttpServletRequest
+     * @param response - HttpServletResponse
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         processRequest(request, response);
     }
 
-
+    /**
+     * Receives a call from the doPost() method, processes it and sends a response.
+     */
     public void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
-            Double x = request.getAttribute("x") != null ? Double.parseDouble(request.getAttribute("x").toString()) : null;
-            Double y = request.getAttribute("y") != null ? Double.parseDouble(request.getAttribute("y").toString()) : null;
-            Double R = request.getAttribute("R") != null ? Double.parseDouble(request.getAttribute("R").toString()) : null;
+
+            RequestBean requestBean = (RequestBean) request.getAttribute("request");
+
+            Double x = requestBean.getX();
+            Double y = requestBean.getY();
+            Double R = requestBean.getR();
+
             Boolean result = AreaCheckService.check(x, y, R);
             String compiledIn = compiledDate(LocalDateTime.now());
 
 
-            ResultBean resultBean = ResultBeanManager.parseToResultBean(x, y, R, result, compiledIn);
-            ResultBeanManager.addResultBean((HttpSession) request.getAttribute("session"), resultBean);
-
-
-            JSONObject responseJson = JSONService.parseToResponceJSON(x, y, R, result, compiledIn);
+            ResponseBean responseBean = new ResponseBean(x, y, R, result, compiledIn);
+            SessionService.addResultBean((HttpSession) request.getAttribute("session"), responseBean);
 
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
-            response.getWriter().write(responseJson.toJSONString());
+
+            response.getWriter().write(request.getHeader("Referer"));
+//            response.getWriter().write(responseBean.toJson().toJSONString());
 
         } catch (NullPointerException e) {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing data in JSON.");
