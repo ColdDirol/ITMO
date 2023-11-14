@@ -132,6 +132,10 @@ void heap_debug_info(struct heap* h, FILE* f) {
 
 /*  -------- */
 
+void print_error(char* message) {
+    printf("%s \n", message);
+}
+
 int main() {
     printf("0: ");
     heap_debug_info(&global_heap, stdout);
@@ -147,7 +151,11 @@ int main() {
     heap_debug_info(&global_heap, stdout);
 
     // Test 3: Free the first allocation
-    block_free(bid1);
+    if(!block_is_free(bid1)) {
+        block_free(bid1);
+    } else {
+        print_error("Test 4: Block already is free.");
+    }
     printf("3: ");
     heap_debug_info(&global_heap, stdout);
 
@@ -157,21 +165,35 @@ int main() {
     heap_debug_info(&global_heap, stdout);
 
     // Test 5: Free the second allocation
-    block_free(bid2);
+    if(!block_is_free(bid2)) {
+        block_free(bid2);
+    } else {
+        print_error("Test 5: Block already is free.");
+    }
     printf("5: ");
     heap_debug_info(&global_heap, stdout);
 
     // Test 6: Try to allocate more blocks than available
     struct block_id bid4 = block_allocate(&global_heap, 5);
     if (!block_id_is_valid(bid4)) {
-        printf("Test 6: Allocation failed as expected.\n");
+        print_error("Test 6: Allocation failed as expected.");
     }
     printf("6: ");
     heap_debug_info(&global_heap, stdout);
 
     // Test 7: Free all
-    block_free(bid3);
-    block_free(bid4);
+    if(!block_is_free(bid3)) {
+        block_free(bid3);
+    } else {
+        print_error("Test 7: Block already is free.");
+    }
+
+    if(!block_is_free(bid4)) {
+        block_free(bid4);
+    } else {
+        print_error("Test 7: Block already is free.");
+    }
+
     printf("7: ");
     heap_debug_info(&global_heap, stdout);
 

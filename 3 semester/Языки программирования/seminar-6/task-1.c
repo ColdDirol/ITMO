@@ -68,7 +68,7 @@ const char* block_repr(struct block_id b) {
 
 /* Вывод отладочной информации для блока */
 void block_debug_info(struct block_id b, FILE* f) {
-    fprintf(f, "Block %zu: %s\n", b.value, block_repr(b));
+    fprintf(f, "%s", block_repr(b));
 }
 
 /* Вывод отладочной информации для всех блоков */
@@ -87,11 +87,16 @@ void heap_debug_info(struct heap* h, FILE* f) {
 
 int main() {
     heap_debug_info(&global_heap, stdout);
+
     block_allocate(&global_heap);
     struct block_id bid = block_allocate(&global_heap);
     block_allocate(&global_heap);
 
-    block_free(bid);
+    heap_debug_info(&global_heap, stdout);
+
+    if(!block_is_free(bid)) {
+        block_free(bid);
+    }
     heap_debug_info(&global_heap, stdout);
     return 0;
 }
