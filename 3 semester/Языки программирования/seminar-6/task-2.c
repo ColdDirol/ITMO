@@ -40,6 +40,8 @@ bool block_id_is_valid(struct block_id bid) {
     return bid.valid && bid.value < HEAP_BLOCKS;
 }
 
+
+
 /* Find block */
 bool block_is_free(struct block_id bid) {
     if (!block_id_is_valid(bid))
@@ -84,7 +86,6 @@ struct block_id block_allocate(struct heap* heap, size_t size) {
 }
 
 /* Free */
-/* Free */
 void block_free(struct block_id b) {
     if (block_id_is_valid(b)) {
         // Mark the blocks as free
@@ -101,6 +102,8 @@ void block_free(struct block_id b) {
         }
     }
 }
+
+
 
 /* Printer */
 const char* block_repr(struct block_id b) {
@@ -137,65 +140,60 @@ void print_error(char* message) {
 }
 
 int main() {
+    // Test 0: Just output
     printf("0: ");
     heap_debug_info(&global_heap, stdout);
+
 
     // Test 1: Allocate three contiguous blocks
     struct block_id bid1 = block_allocate(&global_heap, 3);
     printf("1: ");
     heap_debug_info(&global_heap, stdout);
 
+
     // Test 2: Allocate one block
     struct block_id bid2 = block_allocate(&global_heap, 1);
     printf("2: ");
     heap_debug_info(&global_heap, stdout);
 
+
     // Test 3: Free the first allocation
-    if(!block_is_free(bid1)) {
-        block_free(bid1);
-    } else {
-        print_error("Test 4: Block already is free.");
-    }
+    if(!block_is_free(bid1)) block_free(bid1);
+    else print_error("Test 4: Block already is free.");
     printf("3: ");
     heap_debug_info(&global_heap, stdout);
+
 
     // Test 4: Allocate two contiguous blocks
     struct block_id bid3 = block_allocate(&global_heap, 2);
     printf("4: ");
     heap_debug_info(&global_heap, stdout);
 
+
     // Test 5: Free the second allocation
-    if(!block_is_free(bid2)) {
-        block_free(bid2);
-    } else {
-        print_error("Test 5: Block already is free.");
-    }
+    if(!block_is_free(bid2)) block_free(bid2);
+    else print_error("Test 5: Block already is free.");
     printf("5: ");
     heap_debug_info(&global_heap, stdout);
 
+
     // Test 6: Try to allocate more blocks than available
     struct block_id bid4 = block_allocate(&global_heap, 5);
-    if (!block_id_is_valid(bid4)) {
-        print_error("Test 6: Allocation failed as expected.");
-    }
+    if (!block_id_is_valid(bid4)) print_error("Test 6: Allocation failed as expected.");
     printf("6: ");
     heap_debug_info(&global_heap, stdout);
 
-    // Test 7: Free all
-    if(!block_is_free(bid3)) {
-        block_free(bid3);
-    } else {
-        print_error("Test 7: Block already is free.");
-    }
 
-    if(!block_is_free(bid4)) {
-        block_free(bid4);
-    } else {
-        print_error("Test 7: Block already is free.");
-    }
+    // Test 7: Free all blocks
+    if(!block_is_free(bid3)) block_free(bid3);
+    else print_error("Test 7: Block already is free.");
+
+    if(!block_is_free(bid4)) block_free(bid4);
+    else print_error("Test 7: Block already is free.");
 
     printf("7: ");
     heap_debug_info(&global_heap, stdout);
+
 
     return 0;
 }

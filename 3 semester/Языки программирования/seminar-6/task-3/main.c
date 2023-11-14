@@ -5,13 +5,13 @@ int main() {
 
     // Fill the vector with squares of numbers from 0 to 100
     for (size_t i = 0; i <= 100; ++i) {
-        vector_push_back(vec, i * i);
+        vector_push_back(vec, i);
     }
 
     // Print the vector
     vector_print(stdout, vec);
 
-    // Cleanup
+    // Destroy
     vector_destroy(vec);
 
     return 0;
