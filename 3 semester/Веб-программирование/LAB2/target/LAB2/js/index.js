@@ -38,7 +38,7 @@ async function getJWTToken() {
             if (data.token) {
                 JWTToken = data.token;
                 // Используйте переменную JWTToken для необходимой обработки
-                console.log("JWT Token:", JWTToken);
+                console.log("Token:", JWTToken);
             } else {
                 console.log("Token not found in JSON response");
             }

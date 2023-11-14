@@ -1,8 +1,6 @@
 import beans.RequestBean;
 import org.json.simple.parser.ParseException;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +21,7 @@ public class ControllerServlet extends HttpServlet {
 
             request.setAttribute("request", requestBean);
             request.setAttribute("session", request.getSession());
-            request.getRequestDispatcher("./api/check").forward(request, response);
+            request.getRequestDispatcher("./check").forward(request, response);
 
 
         } catch (ParseException e) {

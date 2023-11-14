@@ -24,8 +24,28 @@ public class SecurityFilter implements Filter {
         HttpServletResponse httpResponse = (HttpServletResponse) response;
         String path = httpRequest.getRequestURI();
 
-        // Проверяем, если путь запроса не является /login, то применяем фильтр
-        if (path.contains("/session") || path.contains("/controller") ||  path.contains("/check")) {
+//        String token = httpRequest.getHeader("Authorization");
+//
+//        if (token != null && token.startsWith("Bearer ")) {
+//            token = token.substring(7); // Удалить "Bearer " из заголовка
+//
+//            try {
+//                DecodedJWT jwt = JWTUtil.verifyToken(token);
+//
+//                if ("admin".equals(jwt.getClaim("username").asString())) {
+//                    chain.doFilter(request, response);
+//                } else {
+//                    httpResponse.setStatus(HttpServletResponse.SC_FORBIDDEN);
+//                }
+//            } catch (JWTVerificationException e) {
+//                httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//            }
+//        } else {
+//            httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//        }
+
+//        if (path.contains("/session") || path.contains("/controller") ||  path.contains("/check")) {
+        if (path.contains("/controller") ||  path.contains("/check")) {
             String token = httpRequest.getHeader("Authorization");
 
             if (token != null && token.startsWith("Bearer ")) {
@@ -46,10 +66,10 @@ public class SecurityFilter implements Filter {
                 httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             }
 
-//            chain.doFilter(request, response);
+            chain.doFilter(request, response);
         } else {
             // do nothing
-//            chain.doFilter(request, response);
+            chain.doFilter(request, response);
         }
     }
 
