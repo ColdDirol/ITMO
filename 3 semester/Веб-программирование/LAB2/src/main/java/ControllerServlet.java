@@ -1,15 +1,13 @@
 import beans.RequestBean;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import services.JSONService;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
 import java.io.IOException;
 
 @WebServlet("/controller")
@@ -25,9 +23,7 @@ public class ControllerServlet extends HttpServlet {
 
             request.setAttribute("request", requestBean);
             request.setAttribute("session", request.getSession());
-            request.setAttribute("Referer", request.getHeader("Referer"));
-
-            request.getRequestDispatcher("./check").forward(request, response);
+            request.getRequestDispatcher("./api/check").forward(request, response);
 
 
         } catch (ParseException e) {

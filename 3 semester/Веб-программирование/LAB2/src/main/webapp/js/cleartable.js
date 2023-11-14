@@ -2,8 +2,12 @@ document.getElementById('clear-table-button').addEventListener('click', clearTab
 
 async function clearTable() {
     try {
-        const response = await fetch('/JAVAEElab2/session', {
-            method: 'DELETE'
+        const response = await fetch('/LAB2/session', {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${JWTToken}`
+            }
         });
 
         if (!response.ok) {

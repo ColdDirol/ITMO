@@ -53,8 +53,8 @@ public class AreaCheckServlet extends HttpServlet {
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
 
-            response.getWriter().write(request.getHeader("Referer"));
-//            response.getWriter().write(responseBean.toJson().toJSONString());
+//            response.getWriter().write(request.getHeader("Referer"));
+            response.getWriter().write(responseBean.toJson().toJSONString());
 
         } catch (NullPointerException e) {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Missing data in JSON.");

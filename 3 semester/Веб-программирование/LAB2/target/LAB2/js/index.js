@@ -4,6 +4,63 @@ const xInputs = document.getElementsByName('x-radio');
 const yInput = document.getElementById('y-input');
 const rInput = document.getElementById('r-input');
 
+const audioTrue = document.getElementById("audioTrue");
+const audioFalse = document.getElementById("audioFalse");
+
+let JWTToken;
+
+async function initializePage() {
+    await getJWTToken();
+    await getSessionData();
+}
+
+async function getJWTToken() {
+    const loginData = {
+        username: "admin",
+        password: "admin"
+    };
+
+    // Преобразование данных в JSON.
+    const jsonLoginData = JSON.stringify(loginData);
+
+    try {
+        // Выполнение запроса.
+        const response = await fetch('/LAB2/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonLoginData
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            if (data.token) {
+                JWTToken = data.token;
+                // Используйте переменную JWTToken для необходимой обработки
+                console.log("JWT Token:", JWTToken);
+            } else {
+                console.log("Token not found in JSON response");
+            }
+        } else {
+            console.log("Request failed with status:", response.status);
+        }
+
+        // Если возникла ошибка, выбрасываем исключение.
+        // if (!response.ok) {
+        //     throw new Error(`HTTP error! status: ${response.status}`);
+        // }
+        //
+        // JWTToken = response.body;
+        // console.log(JWTToken)
+
+    } catch (error) {
+        console.error(`An error occured: ${error}`);
+        throw error;
+    }
+}
+
+// Получить данные сессии и установить в таблицу результатов
 // Получить данные сессии и установить в таблицу результатов
 async function getSessionData() {
     for (let i = 0; i < xInputs.length; i++) {
@@ -13,7 +70,13 @@ async function getSessionData() {
     rInput.value = '';
 
     // Отправляем запрос на сервер
-    const response = await fetch('/JAVAEElab2/session')
+    const response = await fetch('/LAB2/session', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${JWTToken}`
+        }
+    })
 
     // Если возникла ошибка, выбрасываем исключение
     if (!response.ok) {
@@ -45,7 +108,7 @@ async function getSessionData() {
     }
 }
 
-window.onload = getSessionData;
+window.onload = initializePage;
 
 document.getElementById('check-button').addEventListener('click', checkValues);
 
@@ -106,7 +169,8 @@ async function sendRequest(url, data) {
         const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${JWTToken}`
             },
             body: jsonData
         });
@@ -138,7 +202,7 @@ async function sendData(x, y, R) {
 
     try {
         // Отправляем запрос на сервер.
-        const result = await sendRequest("/JAVAEElab2/controller", data);
+        const result = await sendRequest("/LAB2/controller", data);
 
         if (result) {
             // Получаем результаты и обрабатываем их.
@@ -171,10 +235,20 @@ function handleResponse(x, y, R, responseJson) {
     tableBody.insertAdjacentHTML('beforeend', newRow);
 
     if (responseJson.result === true) {
+        // audioSource.src = "../source/true.mp3";
+        // audio.load();
+        audioTrue.load();
+        audioTrue.play();
+
         checkButton.style.backgroundColor = 'green';
         checkButton.textContent = 'true';
         drawPoint(x, y, R, true);
     } else {
+        // audioSource.src = "../source/false.mp3";
+        // audio.load();
+        audioFalse.load();
+        audioFalse.play();
+
         checkButton.style.backgroundColor = 'red';
         checkButton.textContent = 'false';
         drawPoint(x, y, R, false);

@@ -109,6 +109,7 @@ int main() {
     struct AST *expr1 = add(lit(999), lit(728));
     struct AST *expr2 = add(lit(4), mul(lit(2), lit(9)));
     struct AST *expr3 = mul(add(lit(3), lit(5)), divide(lit(9), lit(7)));
+    struct AST *expr4 = neg(-3)
 
     // Выводим выражения
     printf("Expression 1: ");

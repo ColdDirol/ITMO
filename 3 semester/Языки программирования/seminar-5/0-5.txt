@@ -15,7 +15,6 @@ public class Program {
     }
 }
 
-
 - Root (Program)
 |  - Main Method
 |  |  - Variable Declaration (int x)
@@ -25,7 +24,7 @@ public class Program {
 |  |  |  |  - Print Statement ("Greater than zero")
 |  |  |  |  - Variable Declaration (int y)
 |  |  |  |  |  - Literal Value (-50)
-|  |  |  |  - Nested If Statement (y > 0)
+|  |  |  |  - If Statement (y > 0)
 |  |  |  |  |  - If Block
 |  |  |  |  |  |  - Print Statement ("Y is greater than zero")
 |  |  |  |  |  - Else Block

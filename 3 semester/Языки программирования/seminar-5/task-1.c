@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define print_var(x) printf(#x " is %d\n", x)
+#define print_var(x) printf(int is %d\n", x)
 #define MY_CONSTANT 42
 
 int main() {
@@ -14,4 +14,4 @@ int main() {
 }
 
 
-// gcc -E your_program.c
+// gcc -E task-1.c

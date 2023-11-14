@@ -11,6 +11,15 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+
+<audio id="audioFalse">
+    <source src="source/false.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="audioTrue">
+    <source src="source/true.mp3" type="audio/mpeg">
+</audio>
+
 <video autoplay muted loop>
     <source src="source/background.mp4" type="video/mp4">
 </video>
