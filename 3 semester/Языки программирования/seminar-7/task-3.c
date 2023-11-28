@@ -41,6 +41,17 @@ void print_users() {
   }
 }
 
+// void fill(FILE *f, char *where) {
+//   size_t read_total = 0;
+//   for (;;) {
+//     size_t read = fread(where + read_total, 1, 1, f);
+//     if (!read)
+//       break;
+//     else
+//       read_total += read;
+//   }
+// }
+
 void fill(FILE *f, char *where, size_t size) {
   size_t read_total = 0;
   while (read_total < size) {

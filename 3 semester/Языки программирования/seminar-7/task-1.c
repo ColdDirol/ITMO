@@ -24,7 +24,6 @@ struct list *c(int64_t head, struct list *tail) {
 //  return 1 + list_length(l->next);
 //}
 //после
-
 size_t list_length(const struct list *l) {
     size_t length = 0;
 
