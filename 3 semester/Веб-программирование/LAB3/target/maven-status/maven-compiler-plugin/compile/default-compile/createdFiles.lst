@@ -1,0 +1,5 @@
+Point.class
+validators/YValidator.class
+AreaCheckService.class
+PointsService.class
+SessionBean.class
