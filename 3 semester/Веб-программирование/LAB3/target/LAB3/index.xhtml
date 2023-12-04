@@ -78,14 +78,14 @@
             </div>
 
             <div>
-                <h:commandButton id="check-button" styleClass="button" value="check" action="#{pointsService.addPoint()}" >
+                <h:commandButton id="check-button" styleClass="button" value="check" action="#{pointsService.addPoint}">
                     <f:ajax execute="@form" render="results-table" />
                 </h:commandButton>
             </div>
 
 
             <div class="table-container">
-                <h:dataTable id="results-table" value="#{pointsService.pointList}" var="point">
+                <h:dataTable id="results-table" value="#{sessionBean.pointList}" var="point">
                     <h:column headerClass="variables">
                         <f:facet name="header">x</f:facet>
                         <h:outputText value="#{point.x}"/>
@@ -106,7 +106,7 @@
             </div>
 
             <div>
-                <h:commandButton id="clear-table-button" styleClass="button clear-table-button" value="clear" action="#{pointsService.clearPointList()}">
+                <h:commandButton id="clear-table-button" styleClass="button clear-table-button" value="clear" action="#{pointsService.clearPointList}" immediate="true">
                     <f:ajax execute="@form" render="results-table" />
                 </h:commandButton>
             </div>

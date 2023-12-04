@@ -218,3 +218,8 @@ function canvasToAxesCoordinates(canvasX, canvasY, canvas) {
 
     return { x: rescaleXAxesCoordinate(axesX), y: rescaleYAxesCoordinate(axesY) };
 }
+
+export function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    draw();
+}

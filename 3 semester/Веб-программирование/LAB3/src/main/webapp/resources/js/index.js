@@ -1,4 +1,6 @@
 import { drawPoint } from './graphics.js';
+import { clearCanvas } from './graphics.js';
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const formId = document.forms[0].id;
@@ -79,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function clean() {
         console.log("clearTableButton - click");
+        clearCanvas()
     }
     clearTableButton.addEventListener("click", clean);
 });

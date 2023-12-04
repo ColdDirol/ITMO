@@ -1,5 +1,8 @@
-/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/Point.java
-/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/SessionBean.java
-/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/PointsService.java
-/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/AreaCheckService.java
+/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/db/DatabaseUtils.java
+/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/beans/PointsService.java
+/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/beans/AreaCheckService.java
+/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/db/repositories/PointRepository.java
+/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/beans/Point.java
+/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/beans/SessionBean.java
+/home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/db/entities/PointsEntity.java
 /home/vladimir/Projects/IdeaProjects/LAB3/src/main/java/validators/YValidator.java

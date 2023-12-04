@@ -11,8 +11,14 @@
 
     <managed-bean>
         <managed-bean-name>sessionBean</managed-bean-name>
-        <managed-bean-class>SessionBean</managed-bean-class>
+        <managed-bean-class>beans.SessionBean</managed-bean-class>
         <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>pointsService</managed-bean-name>
+        <managed-bean-class>beans.PointsService</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
 
 </faces-config>
