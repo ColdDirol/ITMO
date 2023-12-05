@@ -183,18 +183,22 @@ export function drawPoint(x, y, r, result) {
 
 draw();
 
-// Добавьте следующий обработчик событий в конец вашего файла
 canvas.addEventListener("click", function (event) {
     const rect = canvas.getBoundingClientRect();
     const mouseX = event.clientX - rect.left;
     const mouseY = event.clientY - rect.top;
 
-    // Преобразуйте координаты canvas в координаты осей
+    // Преобразование координаты canvas в координаты осей
     const axesCoordinates = canvasToAxesCoordinates(mouseX, mouseY, canvas);
 
-    // Получите текущее значение R из HTML-элемента
+    // Получение текущее значение R из HTML-элемента
     const rInput = document.querySelector("input[name='formId:r-input']:checked");
     const currentR = rInput ? rInput.value : undefined;
+
+    if (currentR === null || currentR === undefined) {
+        alert("Please enter a valid value for R.");
+        return; // прерывание
+    }
 
     // Выведите значения в консоль
     console.log("Кликнуто по (x, y, R):", axesCoordinates.x, axesCoordinates.y, currentR);
@@ -202,13 +206,13 @@ canvas.addEventListener("click", function (event) {
     sendPointData(axesCoordinates.x, axesCoordinates.y, currentR);
 });
 
-// Добавьте эту функцию для отправки данных на сервер
+// Отправка данных на сервер
 function sendPointData(x, y, r) {
     // Вызов удаленной команды для отправки данных в управляемый бин
     sendPointRemoteCommand([{name:'x', value:x}, {name:'y', value:y}, {name:'r', value:r}]);
 }
 
-// Добавьте эту функцию для преобразования координат canvas в координаты осей
+// Преобразование координат canvas в координаты осей
 function canvasToAxesCoordinates(canvasX, canvasY, canvas) {
     let originX = canvas.width / 2;
     let originY = canvas.height / 2;

@@ -100,9 +100,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     rInput.addEventListener("click", function (event) {
-        // Получить текущее значение R из HTML-элемента
         const rInput = document.querySelector("input[name='formId:r-input']:checked");
         const currentR = rInput ? rInput.value : undefined;
+
+        if (currentR === null || currentR === undefined) {
+            alert("Please enter a valid value for R.");
+            return; // прерывание
+        }
 
         drawShapesByR(currentR);
 

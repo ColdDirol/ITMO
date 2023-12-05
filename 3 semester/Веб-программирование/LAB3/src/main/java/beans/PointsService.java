@@ -70,7 +70,7 @@ public class PointsService implements Serializable {
 
     public void clearPointList() {
         sessionBean.clearPointList();
-        pointRepository.deleteAll();
+        //pointRepository.deleteAll();
         System.out.println("Table has been cleared!");
 
         PrimeFaces.current().executeScript("PF('resultsTable').clearFilters()");
