@@ -6,3 +6,4 @@ beans/SessionBean.class
 validators/YValidator.class
 db/entities/PointsEntity.class
 beans/AreaCheckService.class
+clock/ClockViewBean.class

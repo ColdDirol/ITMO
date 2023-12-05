@@ -1,3 +1,4 @@
+import { drawShapesByR } from './graphics.js';
 import { drawPoint } from './graphics.js';
 import { clearCanvas } from './graphics.js';
 
@@ -38,6 +39,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
         yInput.value = '';
     }
+
+
+    let yValue;
+
+    yInput.addEventListener("input", () =>{
+        yValue = yInput.value;
+
+        if (yValue !== '-' && isNaN(yValue) || parseFloat(yValue) < -3 || parseFloat(yValue) > 5) {
+            yInput.value = '';
+        }
+    })
 
 
     function drawArea(x, y, r, result) {
@@ -84,4 +96,16 @@ document.addEventListener("DOMContentLoaded", function() {
         clearCanvas()
     }
     clearTableButton.addEventListener("click", clean);
+
+
+
+    rInput.addEventListener("click", function (event) {
+        // Получить текущее значение R из HTML-элемента
+        const rInput = document.querySelector("input[name='formId:r-input']:checked");
+        const currentR = rInput ? rInput.value : undefined;
+
+        drawShapesByR(currentR);
+
+        console.log("Кликнуто по (R):", currentR);
+    });
 });

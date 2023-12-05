@@ -94,7 +94,7 @@ function scaleYAxesCoordinate(coordinate) {
     return coordinate * yAxisScale;
 }
 
-function drawShapesByR(r) {
+export function drawShapesByR(r) {
     if (canvas.getContext) {
         // очищаем поле для рисунка
         ctx.clearRect(0, 0, canvas.width, canvas.height);

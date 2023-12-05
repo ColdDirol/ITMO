@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+    <title>LAB3</title>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Описание страницы Описание страницы Описание страницы Описание страницы"/>
+    <meta name="keywords" content="I, hate, HTML, CSS, JavaScript"/>
+    <link rel="icon" href="https://se.ifmo.ru/o/favicon/"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/temporary.css"/>
+</h:head>
+
+<h:body>
+    <h:form id="temporary-form">
+        <video autoplay="autoplay" muted="muted" loop="loop">
+            <source src="resources/source/temporary_background.mp4" type="video/mp4"/>
+        </video>
+
+        <div class="content">
+            <h1 class="regular-text">Vladimir Kartashev P3215 1212</h1>
+
+            <div class="wrapper">
+                <!--
+                <div id="analog-clock-container">
+                    <p:clock id="analog-clock" displayMode="analog" mode="server" value="#{clockView.dateTime}"/>
+                </div>
+                -->
+
+                <div id="interactive-clock-container">
+                    <!-- Interactive -->
+                    <!--
+                        <p:clock id="interactive-clock" pattern="HH:mm:ss dd.MM.yyyy" mode="server" value="#{clockView.dateTime}"/>
+                    -->
+                    <p:clock id="interactive-clock" pattern="HH:mm:ss" mode="server" value="#{clockViewBean.dateTime}"/>
+                </div>
+
+
+            </div>
+
+            <div>
+                <h:commandButton id="teleport-button" styleClass="button teleport-button" value="Go to Index Page" action="toIndex" />
+            </div>
+
+        </div>
+
+    </h:form>
+</h:body>
+</html>

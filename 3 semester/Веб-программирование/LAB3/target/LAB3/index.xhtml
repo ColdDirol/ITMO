@@ -19,7 +19,7 @@
 <h:body>
     <h:form id="formId">
         <video autoplay="autoplay" muted="muted" loop="loop">
-            <source src="resources/source/background.mp4" type="video/mp4"/>
+            <source src="resources/source/index_background.mp4" type="video/mp4"/>
         </video>
 
         <audio id="audioFalse">
@@ -32,6 +32,10 @@
 
         <div class="content">
             <h1 class="regular-text">Vladimir Kartashev P3215 1212</h1>
+
+            <div>
+                <h:commandButton id="teleport-button" styleClass="button teleport-button" value="Go to Temporary Page" action="toTemporary" immediate="true"/>
+            </div>
 
             <div class="wrapper">
                 <div>
