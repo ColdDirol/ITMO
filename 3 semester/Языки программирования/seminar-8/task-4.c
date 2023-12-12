@@ -23,6 +23,7 @@ void *thread0_impl( void *param )
         sem_wait( &sem_begin0 );
 
         x = 1;
+        asm volatile("mfence"::: "memory");
         read0 = y;
 
         sem_post( &sem_end );
@@ -36,6 +37,7 @@ void *thread1_impl( void *param )
         sem_wait( &sem_begin1 );
 
         y = 1;
+        asm volatile("mfence"::: "memory");
         read1 = x;
 
         sem_post( &sem_end );
@@ -55,7 +57,6 @@ int main( void ) {
     for (uint64_t i = 0; i < 1000000; i++)
     {
         x = 0;
-        asm volatile("mfence"::: "memory");
         y = 0;
         sem_post( &sem_begin0 );
         sem_post( &sem_begin1 );
