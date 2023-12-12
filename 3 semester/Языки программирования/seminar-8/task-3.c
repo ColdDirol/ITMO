@@ -12,11 +12,6 @@ void* create_shared_memory(size_t size) {
                 -1, 0);
 }
 
-struct Data {
-    int index;
-    int value;
-};
-
 int main() {
     int* shmem = (int*) create_shared_memory(10 * sizeof(int));
     int pipe_parent_to_child[2], pipe_child_to_parent[2];
@@ -40,25 +35,22 @@ int main() {
         close(pipe_child_to_parent[0]);  // Закрываем конец для чтения
 
         while (1) {
-            struct Data data;
-            // Читаем данные из родительского процесса
-            read(pipe_parent_to_child[0], &data, sizeof(struct Data));
-            if (data.index < 0) {
-                break;  // Если получен отрицательный индекс, завершаем цикл
+            int index, value;
+            // Читаем индекс и новое значение из родительского процесса
+            if (read(pipe_parent_to_child[0], &index, sizeof(int)) == 0 || read(pipe_parent_to_child[0], &value, sizeof(int)) == 0) {
+                printf("Pipes have been closed!");
+                break;
             }
 
             // Меняем соответствующее число в массиве
-            shmem[data.index] = data.value;
-            printf("Changed shmem[%d] to %d\n", data.index, data.value);
+            shmem[index] = value;
+            printf("Changed shmem[%d] to %d\n", index, value);
 
             printf("The final array is: ");
             for (int i = 0; i < 10; i++) {
                 printf("%d ", shmem[i]);
             }
             printf("\n");
-
-            // Отправляем сигнал родительскому процессу
-            write(pipe_child_to_parent[1], "OK", 2);
         }
 
         close(pipe_parent_to_child[0]);  // Закрываем конец для чтения
@@ -74,27 +66,22 @@ int main() {
         }
         printf("\n");
 
-        struct Data data;
+        int index, value;
 
         // Посылаем сообщения с индексами и значениями дочернему процессу
         for (int i = 0; i < 3; i++) {
             printf("Enter index and value: ");
-            scanf("%d %d", &data.index, &data.value);
-            if (data.index == -1) {
+            scanf("%d %d", &index, &value);
+            if (index == -1) {
+                close(pipe_parent_to_child[1]);
+                close(pipe_child_to_parent[0]);
                 break;
             }
 
-            // Пишем данные в конвейер
-            write(pipe_parent_to_child[1], &data, sizeof(struct Data));
-
-            // Ждем сигнала от дочернего процесса
-            char buf[2];
-            read(pipe_child_to_parent[0], buf, 2);
+            // Пишем индекс и значение в конвейер
+            write(pipe_parent_to_child[1], &index, sizeof(int));
+            write(pipe_parent_to_child[1], &value, sizeof(int));
         }
-
-        // Завершаем передачу данных, отправляя отрицательный индекс
-        data.index = -1;
-        write(pipe_parent_to_child[1], &data, sizeof(struct Data));
 
         // Закрываем конвейер после завершения передачи данных
         close(pipe_parent_to_child[1]);
