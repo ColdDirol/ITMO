@@ -37,13 +37,10 @@ int main() {
         while (1) {
             int index, value;
             // Читаем индекс и новое значение из родительского процесса
-            read(pipe_parent_to_child[0], &index, sizeof(int));
-            if (index < 0) {
-                break;  // Если получен отрицательный индекс, завершаем цикл
+            if (read(pipe_parent_to_child[0], &index, sizeof(int)) == 0 || read(pipe_parent_to_child[0], &value, sizeof(int)) == 0) {
+                printf("Pipes have been closed!");
+                break;
             }
-
-            // Читаем значение из родительского процесса
-            read(pipe_parent_to_child[0], &value, sizeof(int));
 
             // Меняем соответствующее число в массиве
             shmem[index] = value;
@@ -75,6 +72,11 @@ int main() {
         for (int i = 0; i < 3; i++) {
             printf("Enter index and value: ");
             scanf("%d %d", &index, &value);
+            if (index == -1) {
+                close(pipe_parent_to_child[1]);
+                close(pipe_child_to_parent[0]);
+                break;
+            }
 
             // Пишем индекс и значение в конвейер
             write(pipe_parent_to_child[1], &index, sizeof(int));
