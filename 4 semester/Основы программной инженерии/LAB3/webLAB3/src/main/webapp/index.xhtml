@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>LAB3</title>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Описание страницы Описание страницы Описание страницы Описание страницы"/>
+    <meta name="keywords" content="I, hate, HTML, CSS, JavaScript"/>
+    <link rel="icon" href="https://se.ifmo.ru/o/favicon/"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/styles.css"/>
+</h:head>
+
+<h:body>
+    <h:form id="formId">
+        <video autoplay="autoplay" muted="muted" loop="loop">
+            <source src="resources/source/index_background.mp4" type="video/mp4"/>
+        </video>
+
+        <audio id="audioFalse">
+            <source src="resources/source/false.mp3" type="audio/mpeg"/>
+        </audio>
+
+        <audio id="audioTrue">
+            <source src="resources/source/true.mp3" type="audio/mpeg"/>
+        </audio>
+
+        <div class="content">
+            <h1 class="regular-text">Vladimir Kartashev P3215 1212</h1>
+
+            <div>
+                <h:commandButton id="teleport-button" styleClass="button teleport-button" value="Go to Temporary Page" action="toTemporary" immediate="true"/>
+            </div>
+
+            <div class="wrapper">
+                <div>
+                    <canvas id="coordinates-canvas" width="300" height="300"></canvas>
+                </div>
+
+                <div>
+                    <div class="form-row">
+                        <label class="form-label">X:</label>
+                        <p:selectOneButton widgetVar="xInputWidget" id="x-input" value="#{pointsService.newPoint.x}">
+                            <f:selectItem itemValue="-3" itemLabel="-3"/>
+                            <f:selectItem itemValue="-2" itemLabel="-2"/>
+                            <f:selectItem itemValue="-1" itemLabel="-1"/>
+                            <f:selectItem itemValue="0" itemLabel="0"/>
+                            <f:selectItem itemValue="1" itemLabel="1"/>
+                            <f:selectItem itemValue="2" itemLabel="2"/>
+                            <f:selectItem itemValue="3" itemLabel="3"/>
+                            <f:selectItem itemValue="4" itemLabel="4"/>
+                            <f:selectItem itemValue="5" itemLabel="5"/>
+                        </p:selectOneButton>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="y-input" class="form-label">Y:</label>
+                        <p:inputText widgetVar="yInputWidget" id="y-input" styleClass="form-input" value="#{pointsService.newPoint.y}"
+                                     maxlength="8" placeholder="Enter Y" validator="custom.yValidator">
+                            <f:validateRequired />
+                            <f:validateDoubleRange minimum="-3" maximum="5"/>
+                        </p:inputText>
+                    </div>
+
+
+                    <div class="form-row">
+                        <label for="r-input" class="form-label">R:</label>
+                        <p:selectOneButton widgetVar="rInputWidget" id="r-input" value="#{pointsService.newPoint.r}">
+                            <f:selectItem itemValue="1" itemLabel="1"/>
+                            <f:selectItem itemValue="2" itemLabel="2"/>
+                            <f:selectItem itemValue="3" itemLabel="3"/>
+                            <f:selectItem itemValue="4" itemLabel="4"/>
+                            <f:selectItem itemValue="5" itemLabel="5"/>
+                        </p:selectOneButton>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h:commandButton id="check-button" styleClass="button" value="check" action="#{pointsService.addPoint}">
+                    <f:ajax execute="@form" render="results-table" />
+                </h:commandButton>
+            </div>
+
+
+            <div class="table-container">
+                <h:dataTable id="results-table" value="#{sessionBean.pointList}" var="point">
+                    <h:column headerClass="variables">
+                        <f:facet name="header">x</f:facet>
+                        <h:outputText value="#{point.x}"/>
+                    </h:column>
+                    <h:column headerClass="variables">
+                        <f:facet name="header">y</f:facet>
+                        <h:outputText value="#{point.y}"/>
+                    </h:column>
+                    <h:column headerClass="variables">
+                        <f:facet name="header">r</f:facet>
+                        <h:outputText value="#{point.r}"/>
+                    </h:column>
+                    <h:column headerClass="variables">
+                        <f:facet name="header">result</f:facet>
+                        <h:outputText value="#{point.result}"/>
+                    </h:column>
+                </h:dataTable>
+            </div>
+
+            <div>
+                <h:commandButton id="clear-table-button" styleClass="button clear-table-button" value="clear" action="#{pointsService.clearPointList}" immediate="true">
+                    <f:ajax execute="@form" render="results-table" />
+                </h:commandButton>
+            </div>
+
+            <script type="module" src="resources/js/index.js"></script>
+            <script type="module" src="resources/js/graphics.js"></script>
+        </div>
+
+        <p:remoteCommand name="sendPointRemoteCommand"
+                         actionListener="#{pointsService.receivePointData}"
+                         update="results-table"
+                         process="@this"/>
+    </h:form>
+</h:body>
+</html>
