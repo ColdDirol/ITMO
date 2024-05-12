@@ -1,24 +1,36 @@
 package db.repositories;
 
 import db.DatabaseUtils;
-
 import db.entities.PointsEntity;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Query;
 import jakarta.persistence.criteria.Root;
 
 import java.util.Collection;
 
 public class PointRepository {
-    private final EntityManager entityManager = DatabaseUtils.getFactory().createEntityManager();
+    private final EntityManager entityManager;
 
-    public void addNew(PointsEntity points) {
-        entityManager.getTransaction().begin();
-        entityManager.persist(points);
-        entityManager.getTransaction().commit();
+    public PointRepository() {
+        entityManager = DatabaseUtils.getFactory().createEntityManager();
     }
 
-    public PointsEntity getById(Long point_id) {
+    public void addNew(PointsEntity points) {
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            entityManager.persist(points);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            throw e;
+        }
+    }
+
+    public PointsEntity getByID(Long point_id) {
         return entityManager.getReference(PointsEntity.class, point_id);
     }
 
@@ -28,27 +40,36 @@ public class PointRepository {
         return entityManager.createQuery(cm.select(root)).getResultList();
     }
 
-    // update
-
     public void delete(PointsEntity points) {
-        entityManager.getTransaction().begin();
-        entityManager.remove(points);
-        entityManager.getTransaction().commit();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            entityManager.remove(points);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            throw e;
+        }
     }
 
     public void deleteAll() {
-        entityManager.getTransaction().begin();
+        EntityTransaction transaction = entityManager.getTransaction();
         try {
-            Query query = entityManager.createQuery("DELETE FROM PointsEntity r");
+            transaction.begin();
+            Query query = entityManager.createQuery("DELETE FROM PointsEntity");
             query.executeUpdate();
-            entityManager.getTransaction().commit();
+            transaction.commit();
         } catch (Exception e) {
-            if (entityManager.getTransaction().isActive()) {
-                entityManager.getTransaction().rollback();
+            if (transaction.isActive()) {
+                transaction.rollback();
             }
             throw e;
-        } finally {
-            entityManager.clear();
         }
+    }
+
+    EntityManager getEntityManager() {
+        return entityManager;
     }
 }

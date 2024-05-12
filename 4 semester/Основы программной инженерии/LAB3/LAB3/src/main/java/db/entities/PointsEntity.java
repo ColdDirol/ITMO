@@ -33,9 +33,7 @@ public class PointsEntity implements Serializable {
         this.result = point.isResult();
     }
 
-    public PointsEntity() {
-
-    }
+    public PointsEntity() {}
 
     public Long getId() {
         return id;

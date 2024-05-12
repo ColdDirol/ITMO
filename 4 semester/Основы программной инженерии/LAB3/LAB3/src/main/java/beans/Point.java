@@ -8,6 +8,15 @@ public class Point implements Serializable {
     private Double r;
     private boolean result;
 
+    public Point(Double x, Double y, Double r, boolean result) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.result = result;
+    }
+
+    public Point() {}
+
     public Double getX() {
         return x;
     }
