@@ -1,0 +1,2 @@
+src/main/java/beans/AreaCheckService.java
+src/main/java/beans/Points.java
