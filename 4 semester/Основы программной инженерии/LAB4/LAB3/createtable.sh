@@ -1,0 +1,7 @@
+CREATE TABLE point_model (
+    id SERIAL PRIMARY KEY,
+    x DOUBLE PRECISION,
+    y DOUBLE PRECISION,
+    r DOUBLE PRECISION,
+    result BOOLEAN
+);

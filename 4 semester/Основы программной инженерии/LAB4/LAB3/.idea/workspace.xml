@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3fce38fd-db39-43d3-982e-84c2ebda18c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.5/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/anime-ahh.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/beans/AreaCheckService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/beans/Point.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/beans/PointsService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/beans/SessionBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/clock/ClockViewBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/db/DatabaseUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/db/entities/PointsEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/db/repositories/PointRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/mbeans/HitPercentage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/mbeans/HitPercentageMBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/mbeans/PointCounter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/mbeans/PointCounterMBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/validators/YValidator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/beans/AreaCheckServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/beans/PointsServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/db/repositories/PointRepositoryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/libs/LAB3-1.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/libs/LAB3.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/db.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/test/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/test/db.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/lab-build/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/lab-compile/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/createtable.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/db_local.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/db_remote.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/immutable_classes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/beans/AreaCheckService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/beans/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/beans/PointsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/beans/SessionBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/clock/ClockViewBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/db/DatabaseUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/db/entities/PointsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/db/repositories/PointRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mbeans/HitPercentage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mbeans/HitPercentageMBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mbeans/PointCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mbeans/PointCounterMBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mbeans/PointNotificationListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/validators/YValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/main.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tmp.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/errors/404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/errors/500.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/errors.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/temporary.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/graphics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/source/areas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/source/clearSession.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/source/false.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/source/index_background.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/source/temporary_background.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/source/true.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/temporary.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/beans/AreaCheckServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/beans/PointServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/db/repositories/PointRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/db.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/svn-init.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/svn.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB3/LAB3/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB3/LAB3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB3/LAB3/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB3/LAB3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB3/LAB3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LAB3/LAB3/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../LAB3/LAB3/build.gradle.kts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="LAB3" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2gLW99PSGnPTg03Oksq2TpxzGkY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Gradle.AreaCheckServiceTest.executor": "Run",
+    "Gradle.Build LAB3.executor": "Run",
+    "Gradle.LAB3 [compileJava].executor": "Run",
+    "Gradle.LAB3 [lab-build-jar].executor": "Run",
+    "Gradle.LAB3 [lab-build].executor": "Run",
+    "Gradle.LAB3 [lab-clean].executor": "Run",
+    "Gradle.LAB3 [lab-compile].executor": "Run",
+    "Gradle.LAB3 [lab-music].executor": "Run",
+    "Gradle.LAB3 [lab-test].executor": "Run",
+    "Gradle.LAB3 [tasks].executor": "Debug",
+    "Gradle.LAB3 [war].executor": "Run",
+    "Gradle.PointRepositoryTest.executor": "Run",
+    "Gradle.PointRepositoryTest.testAddNew.executor": "Run",
+    "Gradle.PointRepositoryTest.testSum.executor": "Run",
+    "Gradle.PointsServiceTest.executor": "Run",
+    "JBoss/WildFly Server.Local.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/vladimirk/Downloads/HttpUnit",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle lab-compile" />
+      <command value="gradle lab-build-jar" />
+      <command value="gradle lab-clean" />
+      <command value="gradle lab-test" />
+      <command value="gradle lab-music" />
+      <command value="gradle lab-build" />
+      <command value="gradle war" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.LAB3 [war]">
+    <configuration name="LAB3 [lab-build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="lab-build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LAB3 [lab-clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="lab-clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LAB3 [lab-music]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="lab-music" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LAB3 [lab-test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="lab-test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LAB3 [war]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="war" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Local" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 27.0.1.Final" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/LAB3" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <file path="$PROJECT_DIR$/build/libs/LAB3.war">
+          <settings />
+        </file>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" />
+        <option name="USERNAME" value="ColdDirol" />
+        <option name="CREDENTIAL_ALIAS" value="6de1105e-4bd6-41e7-9eba-b32be7d08a0f" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="38733" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="Gradle.BeforeRunTask" enabled="true" tasks="war" externalProjectPath="$PROJECT_DIR$" vmOptions="" scriptParameters="" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.LAB3 [war]" />
+      <item itemvalue="Gradle.LAB3 [lab-music]" />
+      <item itemvalue="Gradle.LAB3 [lab-build]" />
+      <item itemvalue="Gradle.LAB3 [lab-clean]" />
+      <item itemvalue="Gradle.LAB3 [lab-test]" />
+      <item itemvalue="JBoss/WildFly Server.Local" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.LAB3 [war]" />
+        <item itemvalue="Gradle.LAB3 [lab-build]" />
+        <item itemvalue="Gradle.LAB3 [lab-music]" />
+        <item itemvalue="Gradle.LAB3 [lab-test]" />
+        <item itemvalue="Gradle.LAB3 [lab-clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3fce38fd-db39-43d3-982e-84c2ebda18c1" name="Changes" comment="" />
+      <created>1715477184176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715477184176</updated>
+      <workItem from="1715477185398" duration="626000" />
+      <workItem from="1715478569666" duration="16808000" />
+      <workItem from="1715497168839" duration="120000" />
+      <workItem from="1715896508984" duration="655000" />
+      <workItem from="1715897539924" duration="22135000" />
+      <workItem from="1715924098768" duration="5096000" />
+      <workItem from="1717109247228" duration="470000" />
+      <workItem from="1717109988159" duration="4655000" />
+      <workItem from="1717115074820" duration="390000" />
+      <workItem from="1717115600151" duration="623000" />
+      <workItem from="1717116460376" duration="8946000" />
+      <workItem from="1717131688052" duration="24000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
