@@ -50,8 +50,8 @@ public class Main {
                 System.out.println("Count: " + number++ + response);
 //                java.lang.Thread.sleep(200);
 
-                JavaScript.clearErrorMessages();
-                sc.clearContents();
+//                JavaScript.clearErrorMessages();
+//                sc.clearContents();
             }
 //        } catch (InterruptedException ex) {
 //            Logger.getLogger("global").log(Level.SEVERE, null, ex);
