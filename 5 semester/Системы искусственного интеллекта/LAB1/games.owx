@@ -1,0 +1,727 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/vladimir/ontologies/2024/9/untitled-ontology-6"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/vladimir/ontologies/2024/9/untitled-ontology-6">
+    <Prefix name="" IRI="http://www.semanticweb.org/vladimir/ontologies/2024/9/games/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Character"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CharacterInGame"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GameByGenre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GameByPlatform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlayStationActionGame"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PopularGame"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rules"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToGenre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCharacter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRating"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#action_adventure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#aloy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ellie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fps"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#geralt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#god_of_war"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#halo_infinite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#horizon_zero_dawn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#horror"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kratos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lara_croft"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#link"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mario"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#masterchief"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#metroid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nintendo_switch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#open_world"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#platformer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#playstation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rpg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#samus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sonic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sonic_mania"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stealth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#strategy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#super_mario_odyssey"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#survival"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#the_last_of_us"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#the_legend_of_zelda_breath_of_the_wild"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#the_witcher_3_wild_hunt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tomb_raider"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xbox"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Character"/>
+        <Class IRI="#Entities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CharacterInGame"/>
+        <Class IRI="#Rules"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Game"/>
+        <Class IRI="#Entities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GameByGenre"/>
+        <Class IRI="#Rules"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GameByPlatform"/>
+        <Class IRI="#Rules"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Genre"/>
+        <Class IRI="#Entities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Platform"/>
+        <Class IRI="#Entities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlayStationActionGame"/>
+        <Class IRI="#Rules"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PopularGame"/>
+        <Class IRI="#Rules"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#action_adventure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#aloy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#ellie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#fps"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#geralt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#god_of_war"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#halo_infinite"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#horizon_zero_dawn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#horror"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#kratos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#lara_croft"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#link"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#mario"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#masterchief"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#metroid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Platform"/>
+        <NamedIndividual IRI="#nintendo_switch"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#open_world"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Platform"/>
+        <NamedIndividual IRI="#pc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#platformer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Platform"/>
+        <NamedIndividual IRI="#playstation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#rpg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#samus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Character"/>
+        <NamedIndividual IRI="#sonic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#sonic_mania"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#stealth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#strategy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#super_mario_odyssey"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#survival"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#the_last_of_us"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#the_legend_of_zelda_breath_of_the_wild"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#the_witcher_3_wild_hunt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#tomb_raider"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Platform"/>
+        <NamedIndividual IRI="#xbox"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <NamedIndividual IRI="#god_of_war"/>
+        <NamedIndividual IRI="#playstation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <NamedIndividual IRI="#god_of_war"/>
+        <NamedIndividual IRI="#action_adventure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#god_of_war"/>
+        <NamedIndividual IRI="#kratos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <NamedIndividual IRI="#halo_infinite"/>
+        <NamedIndividual IRI="#xbox"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <NamedIndividual IRI="#halo_infinite"/>
+        <NamedIndividual IRI="#fps"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#halo_infinite"/>
+        <NamedIndividual IRI="#masterchief"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <NamedIndividual IRI="#horizon_zero_dawn"/>
+        <NamedIndividual IRI="#playstation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <NamedIndividual IRI="#horizon_zero_dawn"/>
+        <NamedIndividual IRI="#open_world"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#horizon_zero_dawn"/>
+        <NamedIndividual IRI="#aloy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <NamedIndividual IRI="#metroid"/>
+        <NamedIndividual IRI="#nintendo_switch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <NamedIndividual IRI="#metroid"/>
+        <NamedIndividual IRI="#platformer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#metroid"/>
+        <NamedIndividual IRI="#samus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <NamedIndividual IRI="#sonic_mania"/>
+        <NamedIndividual IRI="#pc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#sonic_mania"/>
+        <NamedIndividual IRI="#platformer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#sonic_mania"/>
+        <NamedIndividual IRI="#sonic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <NamedIndividual IRI="#super_mario_odyssey"/>
+        <NamedIndividual IRI="#nintendo_switch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <NamedIndividual IRI="#super_mario_odyssey"/>
+        <NamedIndividual IRI="#platformer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#super_mario_odyssey"/>
+        <NamedIndividual IRI="#mario"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <NamedIndividual IRI="#the_last_of_us"/>
+        <NamedIndividual IRI="#playstation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <NamedIndividual IRI="#the_last_of_us"/>
+        <NamedIndividual IRI="#survival"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#the_last_of_us"/>
+        <NamedIndividual IRI="#ellie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <NamedIndividual IRI="#the_legend_of_zelda_breath_of_the_wild"/>
+        <NamedIndividual IRI="#nintendo_switch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <NamedIndividual IRI="#the_legend_of_zelda_breath_of_the_wild"/>
+        <NamedIndividual IRI="#open_world"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#the_legend_of_zelda_breath_of_the_wild"/>
+        <NamedIndividual IRI="#link"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <NamedIndividual IRI="#the_witcher_3_wild_hunt"/>
+        <NamedIndividual IRI="#pc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <NamedIndividual IRI="#the_witcher_3_wild_hunt"/>
+        <NamedIndividual IRI="#rpg"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#the_witcher_3_wild_hunt"/>
+        <NamedIndividual IRI="#geralt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <NamedIndividual IRI="#tomb_raider"/>
+        <NamedIndividual IRI="#pc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <NamedIndividual IRI="#tomb_raider"/>
+        <NamedIndividual IRI="#action_adventure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <NamedIndividual IRI="#tomb_raider"/>
+        <NamedIndividual IRI="#lara_croft"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#god_of_war"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#halo_infinite"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#horizon_zero_dawn"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#metroid"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#sonic_mania"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8.9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#super_mario_odyssey"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#the_last_of_us"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#the_legend_of_zelda_breath_of_the_wild"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#the_witcher_3_wild_hunt"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#tomb_raider"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.0</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#belongsToGenre"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <Class IRI="#Game"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <Class IRI="#Game"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <Class IRI="#Game"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#availableOnPlatform"/>
+        <Class IRI="#Platform"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsToGenre"/>
+        <Class IRI="#Genre"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCharacter"/>
+        <Class IRI="#Character"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRating"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRating"/>
+        <Class IRI="#Game"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRating"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Правило для поиска игр по жанру</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>GameByGenre</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Genre"/>
+                <Variable abbreviatedIRI=":genre"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Game"/>
+                <Variable abbreviatedIRI=":g"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#belongsToGenre"/>
+                <Variable abbreviatedIRI=":g"/>
+                <Variable abbreviatedIRI=":genre"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#GameByGenre"/>
+                <Variable abbreviatedIRI=":g"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Правило для поиска игр по платформе</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>GameByPlatform</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#availableOnPlatform"/>
+                <Variable abbreviatedIRI=":g"/>
+                <Variable abbreviatedIRI=":p"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Game"/>
+                <Variable abbreviatedIRI=":g"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Platform"/>
+                <Variable abbreviatedIRI=":p"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#GameByPlatform"/>
+                <Variable abbreviatedIRI=":g"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Правило для поиска игр, которые являются экшенами на платформе PlayStation</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>PlayStationActionGame</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#belongsToGenre"/>
+                <Variable abbreviatedIRI=":g"/>
+                <NamedIndividual IRI="#action_adventure"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#availableOnPlatform"/>
+                <Variable abbreviatedIRI=":g"/>
+                <NamedIndividual IRI="#playstation"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Game"/>
+                <Variable abbreviatedIRI=":g"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#PlayStationActionGame"/>
+                <Variable abbreviatedIRI=":g"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Правило для определения популярности игры</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>PopularGame</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasRating"/>
+                <Variable abbreviatedIRI=":g"/>
+                <Variable abbreviatedIRI=":r"/>
+            </DataPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Game"/>
+                <Variable abbreviatedIRI=":g"/>
+            </ClassAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable abbreviatedIRI=":r"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#PopularGame"/>
+                <Variable abbreviatedIRI=":g"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
