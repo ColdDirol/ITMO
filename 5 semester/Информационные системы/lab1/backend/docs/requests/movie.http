@@ -1,0 +1,156 @@
+### Регистрация
+POST http://localhost:8080/backend-1.0-SNAPSHOT/api/auth/registration
+Content-Type: application/json
+
+{
+  "username": "vova1",
+  "email": "vova1@email.com",
+  "password": "12345",
+  "role": "ADMIN"
+}
+
+### Посчитать
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/count/all-public
+
+### Посчитать
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all-public/15/1
+
+### фильтрация юзера
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all-by-user-filtered/10/1?filter=action&columnWithRequest=id:,name:yub,director:,genre:
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZvdmEyIiwiZW1haWwiOiJ2b3ZhMkBlbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJwYWdlRWxlbWVudHNMaW1pdCI6MTUsImlhdCI6MTczMDQ2MzQxNSwiZXhwIjoxNzMwNTQ5ODE1fQ.hl2T3Qc3kRuYMaMgvEjKTvXRQ8L6sGUWVC50fqznrgQ
+
+### фильтрация паблик
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all-public-filterd/10/1?filter=action&columnWithRequest=id:123,name:Inception,director:Nolan,genre:Sci-Fi
+Authorization: Bearer
+
+### Создание нового фильма
+POST http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ItCy0YvRgNGE0LLRgNCz0YTQstGA0LPRhCIsImVtYWlsIjoidm92YUBnbWFpbC5jb20iLCJyb2xlIjoiRUdPU0hJTiIsInBhZ2VFbGVtZW50c0xpbWl0IjoxNSwiaWF0IjoxNzMwNTY0MjI3LCJleHAiOjE3MzA2NTA2Mjd9.bKZTEu7wcjPlaYRoOihvB9ZOCxlwPbW2aSBVtFr6EQo
+Content-Type: application/json
+
+{
+  "name": "бобибоба",
+  "coordinates": {
+    "x": 5.0,
+    "y": 100
+  },
+  "creationDate": "2024-10-04T10:00:00Z",
+  "oscarsCount": 4,
+  "budget": 212121,
+  "totalBoxOffice": 825532764,
+  "mpaaRating": "PG_13",
+  "screenwriter": {
+    "name": "Christopher Nolan",
+    "eyeColor": "BLUE",
+    "hairColor": "BLUE",
+    "location": {
+      "x": 1.0,
+      "y": 2.0,
+      "z": 3,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "director": {
+    "name": "Tsopa",
+    "eyeColor": "BLUE",
+    "hairColor": "RED",
+    "location": {
+      "x": 1.5,
+      "y": 2.5,
+      "z": 10,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "operator": {
+    "name": "biba",
+    "eyeColor": "BLUE",
+    "hairColor": "RED",
+    "location": {
+      "x": 1.5,
+      "y": 2.5,
+      "z": 10,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "length": 148,
+  "goldenPalmCount": 10,
+  "usaBoxOffice": 292576195,
+  "tagline": "Your mind is the scene of   the crime.",
+  "genre": "SCIENCE_FICTION",
+  "isPublic": true
+}
+
+### Получение фильма по ID
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/2
+
+### Получение всех фильмов
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all
+
+### Получение всех публичных фильмов
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all-public
+
+### Обновление фильма по ID
+PUT http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "huyubus",
+  "coordinates": {
+    "x": 5.0,
+    "y": 100
+  },
+  "creationDate": "2024-10-04T10:00:00Z",
+  "oscarsCount": 4,
+  "budget": 212121,
+  "totalBoxOffice": 825532764,
+  "mpaaRating": "PG_13",
+  "screenwriter": {
+    "name": "Christopher Nolan",
+    "eyeColor": "BLUE",
+    "hairColor": "BLUE",
+    "location": {
+      "x": 1.0,
+      "y": 2.0,
+      "z": 3,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "director": {
+    "name": "Aboba",
+    "eyeColor": "BLUE",
+    "hairColor": "RED",
+    "location": {
+      "x": 1.5,
+      "y": 2.5,
+      "z": 10,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "operator": {
+    "name": "biba",
+    "eyeColor": "BLUE",
+    "hairColor": "RED",
+    "location": {
+      "x": 1.5,
+      "y": 2.5,
+      "z": 10,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "length": 148,
+  "goldenPalmCount": 10,
+  "usaBoxOffice": 292576195,
+  "tagline": "Your mind is the scene of the crime.",
+  "genre": "SCIENCE_FICTION"
+}
+
+### Удаление фильма по ID
+DELETE http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/1
+
