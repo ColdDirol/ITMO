@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/lib" />
+            <option value="$PROJECT_DIR$/lib/contract" />
+            <option value="$PROJECT_DIR$/lib/contract/account-management" />
+            <option value="$PROJECT_DIR$/lib/contract/administration-management" />
+            <option value="$PROJECT_DIR$/lib/contract/common" />
+            <option value="$PROJECT_DIR$/lib/contract/user-management" />
+            <option value="$PROJECT_DIR$/services" />
+            <option value="$PROJECT_DIR$/services/account-management-service" />
+            <option value="$PROJECT_DIR$/services/administration-management-service" />
+            <option value="$PROJECT_DIR$/services/api-gateway-service" />
+            <option value="$PROJECT_DIR$/services/config-service" />
+            <option value="$PROJECT_DIR$/services/file-service" />
+            <option value="$PROJECT_DIR$/services/notification-service" />
+            <option value="$PROJECT_DIR$/services/user-management-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lib/contract/common" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/services/account-management-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/services/account-management-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/services/administration-management-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/services/administration-management-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/services/api-gateway-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/services/api-gateway-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/services/config-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/services/config-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/services/file-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/services/file-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/services/notification-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/services/notification-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/services/user-management-service" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/services/user-management-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
