@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="200.349 246.95 291.376 48.345" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:guide x="240.418" y="259.582" angle="90"/>
+    <bx:guide x="240.854" y="237.369" angle="0"/>
+    <bx:guide x="221.25435503309302" y="165.50522620585699" angle="90"/>
+    <bx:guide x="569.251" y="197.735" angle="180"/>
+  </defs>
+  <g transform="matrix(0.977472, 0, 0, 0.333565, 204.738663, 251.5)" style="fill: rgb(0, 0, 0);">
+    <rect x="0" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="6" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="12" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="22" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="26" y="0" width="6" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="34" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="44" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="52" y="0" width="6" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="60" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="66" y="0" width="6" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="74" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="78" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="88" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="98" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="106" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="110" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="118" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="124" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="132" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="138" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="146" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="154" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="162" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="170" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="176" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="186" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="190" y="0" width="6" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="198" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="204" y="0" width="6" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="212" y="0" width="6" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="220" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="224" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="234" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="242" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="252" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="258" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="264" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="274" y="0" width="6" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="282" y="0" width="2" height="100" style="fill: rgb(68, 26, 26);"/>
+    <rect x="286" y="0" width="4" height="100" style="fill: rgb(68, 26, 26);"/>
+    <text style="fill: rgb(74, 44, 44); font-family: monospace; font-size: 20px; line-height: normal;" x="0" y="122">MOVIE CRUD</text>
+  </g>
+</svg>

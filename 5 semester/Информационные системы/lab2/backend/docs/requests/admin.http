@@ -1,0 +1,32 @@
+### Регистрация
+POST http://localhost:8080/backend-1.0-SNAPSHOT/api/auth/registration
+Content-Type: application/json
+
+{
+  "username": "vov1a11131211q311155",
+  "email": "vova15112111q1123315@e1mail.com",
+  "password": "12345",
+  "role": "ADMIN"
+}
+
+### Авторизация
+POST http://localhost:8080/backend-1.0-SNAPSHOT/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "vova1@email.com",
+  "password": "12345"
+}
+
+### Статус
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/admin/requests/status
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZvdmEyIiwiZW1haWwiOiJ2b3ZhMkBlbWFpbC5jb20iLCJyb2xlIjoiUFJPQ0VTU0lORyIsInBhZ2VFbGVtZW50c0xpbWl0IjoxNSwiaWF0IjoxNzI5Mjg1Mzg0LCJleHAiOjE3MjkzNzE3ODR9.xfwTh3AoizqrkPZEZcIIrR-eL4NStmBSbzVP55uri6M
+
+### Запросы
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/admin/requests
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZvdmEiLCJlbWFpbCI6InZvdmFAZW1haWwuY29tIiwicm9sZSI6IkFETUlOIiwicGFnZUVsZW1lbnRzTGltaXQiOjE1LCJpYXQiOjE3MjkyODU4NDIsImV4cCI6MTcyOTM3MjI0Mn0.cvBy4VEgbEp0A7YoWlc1_n2VKLqWzvqgaegXk6Lty3M
+
+### Голосование
+POST http://localhost:8080/backend-1.0-SNAPSHOT/api/admin/vote/approve/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZvdmExIiwiZW1haWwiOiJ2b3ZhMUBlbWFpbC5jb20iLCJyb2xlIjoiQURNSU4iLCJwYWdlRWxlbWVudHNMaW1pdCI6MTUsImlhdCI6MTcyOTI4NTM3MSwiZXhwIjoxNzI5MzcxNzcxfQ.RoWlyD24RPfuwIPYmB-JC89-xyzRGjf2RHRY7V-JRng
+

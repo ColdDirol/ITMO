@@ -11,7 +11,6 @@ include("services:file-service")
 include("services:notification-service")
 
 include("services:user-management-service")
-include("services:administration-management-service")
 include("services:account-management-service")
 
 pluginManagement {
@@ -34,3 +33,16 @@ pluginManagement {
         }
     }
 }
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+}
+include("lib:contract:file-management")
+findProject(":lib:contract:file-management")?.name = "file-management"
+include("lib:contract:file-management")
+findProject(":lib:contract:file-management")?.name = "file-management"
+include("lib:contract:services-common")
+findProject(":lib:contract:services-common")?.name = "services-common"
+include("lib:services-common")
+findProject(":lib:services-common")?.name = "services-common"
+include("services:user-management-service")
+findProject(":services:user-management-service")?.name = "user-management-service"

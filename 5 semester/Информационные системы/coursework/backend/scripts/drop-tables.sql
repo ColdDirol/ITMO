@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS currency_in_user_possession CASCADE;
+DROP TABLE IF EXISTS currency_exchange_rate CASCADE;
+DROP TABLE IF EXISTS currency CASCADE;
+DROP TABLE IF EXISTS transaction_history_log CASCADE;
+DROP TABLE IF EXISTS user_account CASCADE;
+DROP TABLE IF EXISTS administrator_action_with_user_log CASCADE;
+DROP TABLE IF EXISTS video_path CASCADE;
+DROP TABLE IF EXISTS user_profile_picture_path CASCADE;
+DROP TABLE IF EXISTS path CASCADE;
+DROP TABLE IF EXISTS user_info_change_log CASCADE;
+DROP TABLE IF EXISTS users CASCADE;

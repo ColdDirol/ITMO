@@ -14,10 +14,12 @@
             <option value="$PROJECT_DIR$/lib/contract/account-management" />
             <option value="$PROJECT_DIR$/lib/contract/administration-management" />
             <option value="$PROJECT_DIR$/lib/contract/common" />
+            <option value="$PROJECT_DIR$/lib/contract/file-management" />
+            <option value="$PROJECT_DIR$/lib/contract/services-common" />
             <option value="$PROJECT_DIR$/lib/contract/user-management" />
+            <option value="$PROJECT_DIR$/lib/services-common" />
             <option value="$PROJECT_DIR$/services" />
             <option value="$PROJECT_DIR$/services/account-management-service" />
-            <option value="$PROJECT_DIR$/services/administration-management-service" />
             <option value="$PROJECT_DIR$/services/api-gateway-service" />
             <option value="$PROJECT_DIR$/services/config-service" />
             <option value="$PROJECT_DIR$/services/file-service" />

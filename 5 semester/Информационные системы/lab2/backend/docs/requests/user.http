@@ -1,0 +1,24 @@
+### Регистрация
+POST http://localhost:8080/backend-1.0-SNAPSHOT/api/auth/registration
+Content-Type: application/json
+
+{
+  "username": "vova",
+  "email": "vova@email.com",
+  "password": "12345",
+  "role": "ADMIN"
+}
+
+### Авторизация
+POST http://localhost:8080/backend-1.0-SNAPSHOT/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "vova@email.com",
+  "password": "12345"
+}
+
+### Проверка
+
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZvdmFAZW1haWwuY29tIiwicm9sZSI6IkVHT1NISU4iLCJpYXQiOjE3MjkxMTM0OTksImV4cCI6MTcyOTE5OTg5OX0.d0Ozj_YowyBhtF5x0YhzFLUFMxbTHxK9DS5Iu2HjN9k

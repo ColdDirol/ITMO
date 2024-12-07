@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV with JWT</title>
+</head>
+<body>
+<h1>Upload CSV File</h1>
+<form id="uploadForm" enctype="multipart/form-data">
+    <label for="jwtToken">JWT Token:</label>
+    <input type="text" id="jwtToken" name="jwtToken" placeholder="Enter JWT token" required><br><br>
+
+    <label for="csvFile">Choose CSV File:</label>
+    <input type="file" id="csvFile" name="file" accept=".csv" required><br><br>
+
+    <button type="submit">Upload</button>
+</form>
+
+<script>
+    document.getElementById('uploadForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = new FormData();
+        const jwtToken = document.getElementById('jwtToken').value;
+        const fileInput = document.getElementById('csvFile');
+        const file = fileInput.files[0];
+
+        formData.append('file', file);
+
+        fetch('http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/import', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer ' + jwtToken,
+            },
+            body: formData,
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    });
+</script>
+</body>
+</html>
