@@ -1,4 +1,4 @@
-package com.backend.backend.model.enumeration.movie;
+package com.backend.backend.model.enumeration;
 
 public enum MovieGenreEnum {
 

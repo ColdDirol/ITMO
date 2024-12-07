@@ -1,13 +1,12 @@
 package com.backend.backend.model.dto;
 
-import com.backend.backend.model.enumeration.movie.ColorEnum;
-import com.backend.backend.model.enumeration.movie.MovieGenreEnum;
-import com.backend.backend.model.enumeration.movie.MpaaRatingEnum;
+import com.backend.backend.model.enumeration.ColorEnum;
+import com.backend.backend.model.enumeration.MovieGenreEnum;
+import com.backend.backend.model.enumeration.MpaaRatingEnum;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvDate;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 @Data

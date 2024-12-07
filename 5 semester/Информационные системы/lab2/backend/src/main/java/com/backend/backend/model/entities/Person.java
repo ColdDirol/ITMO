@@ -1,6 +1,6 @@
 package com.backend.backend.model.entities;
 
-import com.backend.backend.model.enumeration.movie.ColorEnum;
+import com.backend.backend.model.enumeration.ColorEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;

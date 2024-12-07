@@ -1,7 +1,7 @@
 package com.backend.backend.model.entities;
 
-import com.backend.backend.model.enumeration.movie.MovieGenreEnum;
-import com.backend.backend.model.enumeration.movie.MpaaRatingEnum;
+import com.backend.backend.model.enumeration.MovieGenreEnum;
+import com.backend.backend.model.enumeration.MpaaRatingEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
@@ -22,6 +22,7 @@ public class Movie {
 
     @Column(nullable = false)
     @NotEmpty
+    // UNIQUE
     private String name; //Поле не может быть null, Строка не может быть пустой
 
     @OneToOne(cascade = CascadeType.ALL, optional = false)
