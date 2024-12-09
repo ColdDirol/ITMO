@@ -45,6 +45,19 @@ public class MovieRepositoryImpl extends AbstractRepository<Movie> {
         }
     }
 
+    public List<String> findAllNames() {
+        return entityManager.createQuery("SELECT m.name FROM Movie m", String.class)
+                .getResultList();
+    }
+
+    public Movie findByName(String name) {
+        return entityManager.createQuery("SELECT m FROM Movie m WHERE m.name = :name", Movie.class)
+                .setParameter("name", name)
+                .getResultStream()
+                .findFirst()
+                .orElse(null);
+    }
+
     public List<Movie> findAllByUser(Integer limit, Integer page) {
         return entityManager.createQuery("SELECT e FROM " + Movie.class.getSimpleName() + " e WHERE e.createdUser  = :email", Movie.class)
                 .setParameter("email", securityContext.getUserPrincipal().getName())

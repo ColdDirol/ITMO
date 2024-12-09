@@ -22,7 +22,7 @@ public class Movie {
 
     @Column(nullable = false)
     @NotEmpty
-    // UNIQUE
+    // Business logic UNIQUE
     private String name; //Поле не может быть null, Строка не может быть пустой
 
     @OneToOne(cascade = CascadeType.ALL, optional = false)

@@ -1,11 +1,8 @@
 package com.backend.backend.repository;
 
-import com.backend.backend.model.dto.MovieCsv;
-import com.backend.backend.model.entities.Movie;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
-import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 

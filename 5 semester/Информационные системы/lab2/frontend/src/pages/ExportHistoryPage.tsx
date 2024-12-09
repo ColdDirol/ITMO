@@ -1,4 +1,5 @@
 import {FlexboxGrid, Heading} from "rsuite";
+import ExportTableComponent from "../components/table/ExportTableComponent.tsx";
 
 const ExportHistoryPage = () => {
 
@@ -11,6 +12,8 @@ const ExportHistoryPage = () => {
                     </FlexboxGrid.Item>
                 </FlexboxGrid>
             </div>
+
+            <ExportTableComponent />
         </>
     );
 }

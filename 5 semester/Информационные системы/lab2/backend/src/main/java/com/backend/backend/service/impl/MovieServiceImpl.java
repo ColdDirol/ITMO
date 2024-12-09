@@ -9,21 +9,30 @@ import com.backend.backend.repository.impl.MovieRepositoryImpl;
 import com.backend.backend.service.ExportHistoryService;
 import com.backend.backend.service.ImportHistoryService;
 import com.backend.backend.service.MovieService;
+import jakarta.ejb.TransactionAttribute;
+import jakarta.ejb.TransactionAttributeType;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.ForbiddenException;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.SecurityContext;
 
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 
 @ApplicationScoped
+@TransactionAttribute(TransactionAttributeType.REQUIRED)
 public class MovieServiceImpl implements MovieService {
 
     @Inject
@@ -41,8 +50,10 @@ public class MovieServiceImpl implements MovieService {
     @Inject
     private ExportHistoryService exportHistoryService;
 
+    @PersistenceContext(unitName = "default")
+    private EntityManager entityManager;
+
     @Override
-    @Transactional
     public void deleteById(Long id) {
         Movie movie = findById(id);
         if (!securityContext.getUserPrincipal().getName().equals(movie.getCreatedUser())) {
@@ -65,17 +76,50 @@ public class MovieServiceImpl implements MovieService {
     public Movie update(Movie movie) {
         Movie oldMovie = findById(movie.getId());
         movie.setCreatedUser(oldMovie.getCreatedUser());
+
+        Movie existingMovie = repository.findByName(movie.getName());
+        if (existingMovie != null && !existingMovie.getId().equals(movie.getId())) {
+            throw new IllegalArgumentException("A movie with the name '" + movie.getName() + "' already exists.");
+        }
+
         return repository.update(movie);
     }
 
+    private final Lock lock = new ReentrantLock();
+
     @Override
-    @Transactional
     public void save(Movie movie) {
-        System.out.println("user1: " + securityContext.toString());
-        System.out.println("user1 email: " + securityContext.getUserPrincipal().getName());
-        movie.setCreatedUser(securityContext.getUserPrincipal().getName());
-        System.out.println("user1: " + securityContext.toString());
-        repository.save(movie);
+        lock.lock();
+        try {
+            Movie existingMovie = repository.findByName(movie.getName());
+            if (existingMovie != null) {
+                throw new IllegalArgumentException("A movie with the name '" + movie.getName() + "' already exists.");
+            }
+            movie.setCreatedUser (securityContext.getUserPrincipal().getName());
+            repository.save(movie);
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    @Transactional
+    public void saveAll(List<Movie> movies) {
+        List<String> existingNames = repository.findAllNames();
+        List<String> duplicateNames = movies.stream()
+                .map(Movie::getName)
+                .filter(existingNames::contains)
+                .collect(Collectors.toList());
+
+        if (!duplicateNames.isEmpty()) {
+            throw new IllegalArgumentException(
+                    "The following movie names already exist: " + String.join(", ", duplicateNames)
+            );
+        }
+
+        String currentUser = securityContext.getUserPrincipal().getName();
+        movies.forEach(movie -> movie.setCreatedUser(currentUser));
+
+        repository.saveAll(movies);
     }
 
     public void importMovies(List<MovieCsv> movieCsvList) {
@@ -83,14 +127,12 @@ public class MovieServiceImpl implements MovieService {
                 .map(parser::mapToMovie)
                 .collect(Collectors.toList());
 
-        movies.stream().findFirst().ifPresent(movie -> System.out.println("movies1: " + movie));
-
-        repository.saveAll(movies);
+        saveAll(movies);
 
         importHistoryService.save(
                 new ImportHistory(
-                    Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()),
-                    securityContext.getUserPrincipal().getName()
+                        Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()),
+                        securityContext.getUserPrincipal().getName()
                 )
         );
     }

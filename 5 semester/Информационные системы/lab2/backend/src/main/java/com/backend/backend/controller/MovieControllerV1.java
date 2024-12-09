@@ -14,6 +14,7 @@ import com.opencsv.exceptions.CsvValidationException;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.RollbackException;
+import jakarta.transaction.Transactional;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
@@ -48,6 +49,7 @@ public class MovieControllerV1 {
             service.save(movie);
             return Response.status(Response.Status.CREATED).entity(movie).build();
         } catch (Exception e) { // RollbackException + ConstraintViolationException
+            e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).entity("The data is not completely filled in. Please check the entered data.").build();
         }
     }

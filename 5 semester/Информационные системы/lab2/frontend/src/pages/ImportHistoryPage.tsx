@@ -1,6 +1,7 @@
 import {FlexboxGrid, Heading} from "rsuite";
-import {useCallback, useState} from "react";
+import React, {useCallback, useState} from "react";
 import ImportMovieFormComponent from "../components/importExport/ImportMovieFormComponent.tsx";
+import ImportTableComponent from "../components/table/ImportTableComponent.tsx";
 
 
 const ImportHistoryPage = () => {
@@ -27,6 +28,8 @@ const ImportHistoryPage = () => {
                     </FlexboxGrid.Item>
                 </FlexboxGrid>
             </div>
+
+            <ImportTableComponent />
         </>
     );
 };

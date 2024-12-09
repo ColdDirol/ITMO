@@ -43,6 +43,14 @@ class MovieApiService {
     return this.handleRequest(axios.post(this.API_URL, movie));
   }
 
+  async countAllImportHistoryByUser(): Promise<number> {
+    return this.handleRequest(axios.get(`${this.API_URL}/import/count`));
+  }
+
+  async countAllExportHistoryByUser(): Promise<number> {
+    return this.handleRequest(axios.get(`${this.API_URL}/export/count`));
+  }
+
   async countAllByUser(): Promise<number> {
     return this.handleRequest(axios.get(`${this.API_URL}/count/all-by-user`));
   }

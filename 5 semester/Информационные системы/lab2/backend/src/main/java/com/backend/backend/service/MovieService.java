@@ -3,6 +3,7 @@ package com.backend.backend.service;
 import com.backend.backend.model.dto.MovieCsv;
 import com.backend.backend.model.entities.Movie;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +17,7 @@ public interface MovieService {
 
     Movie update(Movie movie);
 
-    void save(Movie movie);
+    void save(Movie movie) throws SQLException;
 
     void importMovies(List<MovieCsv> movieCsvList);
 
