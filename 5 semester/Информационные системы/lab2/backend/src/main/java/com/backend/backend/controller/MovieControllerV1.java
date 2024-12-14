@@ -24,10 +24,7 @@ import org.jboss.resteasy.annotations.providers.multipart.MultipartForm;
 import org.jboss.resteasy.plugins.providers.multipart.InputPart;
 import org.jboss.resteasy.plugins.providers.multipart.MultipartFormDataInput;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.StringWriter;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
@@ -132,6 +129,32 @@ public class MovieControllerV1 {
                     .build();
         }
     }
+
+//    @GET
+//    @Path("/export")
+//    @Produces("application/octet-stream")
+//    public Response export() {
+//        try {
+//            List<MovieCsv> movies = service.exportMovies();
+//            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+//            StatefulBeanToCsv<MovieCsv> beanToCsv = new StatefulBeanToCsvBuilder<MovieCsv>(new PrintWriter(byteArrayOutputStream))
+//                    .withSeparator(';')
+//                    .build();
+//            beanToCsv.write(movies);
+//
+//            byte[] data = byteArrayOutputStream.toByteArray();
+//
+//            return Response.ok(data)
+//                    .header("Content-Disposition", "attachment; filename=\"movies.csv\"")
+//                    .build();
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return Response.serverError()
+//                    .entity("Произошла ошибка при экспорте CSV")
+//                    .build();
+//        }
+//    }
 
     @GET
     @Path("/{id}")

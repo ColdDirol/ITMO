@@ -9,13 +9,13 @@ import java.util.Map;
 
 public interface MovieService {
 
-    void deleteById(Long id);
+    void deleteById(Long id) throws SQLException;
 
     Movie findById(Long id);
 
     List<Movie> findAll(Integer limit, Integer page);
 
-    Movie update(Movie movie);
+    Movie update(Movie movie) throws SQLException;
 
     void save(Movie movie) throws SQLException;
 

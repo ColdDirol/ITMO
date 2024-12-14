@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  postgres:
+    restart: always
+    container_name: is-postgres
+    image: postgres:latest
+    volumes:
+      - ./.database/postgres/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+  minio:
+    image: minio/minio:latest
+    container_name: is-minio
+    command: server /data
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ACCESS_KEY: colddirol
+      MINIO_SECRET_KEY: colddirol
+    networks:
+      - minio-network
+
+networks:
+  minio-network:
+    driver: bridge

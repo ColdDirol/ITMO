@@ -9,24 +9,30 @@ import com.backend.backend.repository.impl.MovieRepositoryImpl;
 import com.backend.backend.service.ExportHistoryService;
 import com.backend.backend.service.ImportHistoryService;
 import com.backend.backend.service.MovieService;
+import jakarta.annotation.Resource;
 import jakarta.ejb.TransactionAttribute;
 import jakarta.ejb.TransactionAttributeType;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.PersistenceContext;
-import jakarta.transaction.Transactional;
+import jakarta.transaction.*;
+import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.ForbiddenException;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.SecurityContext;
 
+import javax.sql.DataSource;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
@@ -50,16 +56,38 @@ public class MovieServiceImpl implements MovieService {
     @Inject
     private ExportHistoryService exportHistoryService;
 
+    @Produces
     @PersistenceContext(unitName = "default")
     private EntityManager entityManager;
 
+    @Inject
+    private UserTransaction userTransaction;
+
+    @Resource(lookup = "java:jboss/datasources/PostgresDS")
+    private DataSource dataSource;
+
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(Long id) throws SQLException {
         Movie movie = findById(id);
         if (!securityContext.getUserPrincipal().getName().equals(movie.getCreatedUser())) {
             throw new ForbiddenException();
         }
-        repository.deleteById(id);
+
+        if (repository.findAllByName(movie.getName()).size() > 1) {
+            throw new IllegalArgumentException("Elements more than 1");
+        }
+
+        Connection connection = dataSource.getConnection();
+        try (connection) {
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+            System.out.println("DELETE transaction isolation level: " + connection.getTransactionIsolation());
+
+            userTransaction.begin();
+            repository.deleteById(id);
+            userTransaction.commit();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -73,22 +101,44 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Transactional
-    public Movie update(Movie movie) {
+    public Movie update(Movie movie) throws SQLException {
         Movie oldMovie = findById(movie.getId());
+
+        if (repository.findAllByName(movie.getName()).size() > 1) {
+            throw new IllegalArgumentException("Elements more than 1");
+        }
+
         movie.setCreatedUser(oldMovie.getCreatedUser());
 
         Movie existingMovie = repository.findByName(movie.getName());
         if (existingMovie != null && !existingMovie.getId().equals(movie.getId())) {
             throw new IllegalArgumentException("A movie with the name '" + movie.getName() + "' already exists.");
         }
+        if (!Objects.equals(existingMovie.getCreatedUser(), securityContext.getUserPrincipal().getName()) && securityContext.isUserInRole("ADMIN")) {
+            throw new ForbiddenException("Element is not yours");
+        }
 
-        return repository.update(movie);
+        Connection connection = dataSource.getConnection();
+
+        Movie newMovie = null;
+
+        try (connection) {
+            connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+            System.out.println("UPDATE transaction isolation level: " + connection.getTransactionIsolation());
+
+            userTransaction.begin();
+            newMovie = repository.update(movie);
+            userTransaction.commit();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return newMovie;
     }
 
     private final Lock lock = new ReentrantLock();
 
     @Override
-    public void save(Movie movie) {
+    public void save(Movie movie) throws IllegalArgumentException {
         lock.lock();
         try {
             Movie existingMovie = repository.findByName(movie.getName());
@@ -103,7 +153,7 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Transactional
-    public void saveAll(List<Movie> movies) {
+    public void saveAll(List<Movie> movies) throws SystemException, SQLException {
         List<String> existingNames = repository.findAllNames();
         List<String> duplicateNames = movies.stream()
                 .map(Movie::getName)
@@ -119,7 +169,25 @@ public class MovieServiceImpl implements MovieService {
         String currentUser = securityContext.getUserPrincipal().getName();
         movies.forEach(movie -> movie.setCreatedUser(currentUser));
 
-        repository.saveAll(movies);
+        Connection connection = dataSource.getConnection();
+        connection.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
+        System.out.println("Current transaction isolation level: " + connection.getTransactionIsolation());
+
+        try {
+            userTransaction.begin();
+            System.out.println("Transaction status: " + userTransaction.getStatus());
+            movies.forEach(this::save);
+            userTransaction.commit();
+        } catch (IllegalArgumentException e) {
+            userTransaction.rollback();
+            throw new BadRequestException(
+                    "Some attributes from the importing CSV file have the same name!"
+            );
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            connection.close();
+        }
     }
 
     public void importMovies(List<MovieCsv> movieCsvList) {
@@ -127,7 +195,11 @@ public class MovieServiceImpl implements MovieService {
                 .map(parser::mapToMovie)
                 .collect(Collectors.toList());
 
-        saveAll(movies);
+        try {
+            saveAll(movies);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         importHistoryService.save(
                 new ImportHistory(

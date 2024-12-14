@@ -1,4 +1,4 @@
-@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZvdmEiLCJlbWFpbCI6InZvdmFAZW1haWwuY29tIiwicm9sZSI6IkFETUlOIiwicGFnZUVsZW1lbnRzTGltaXQiOjE1LCJpYXQiOjE3MzM1NjIyNDIsImV4cCI6MTczMzY0ODY0Mn0.Ohd7uk_quXGdAO7F4wdDnukvHyty7xGYws5Rcz-ieb4
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZvdmEiLCJlbWFpbCI6InZvdmFAZW1haWwuY29tIiwicm9sZSI6IkFETUlOIiwicGFnZUVsZW1lbnRzTGltaXQiOjE1LCJpYXQiOjE3MzQxNTQ4OTIsImV4cCI6MTczNDI0MTI5Mn0.d7ma5fZwMsn0mL_B3zpJHoR9L1xrC9xbxYGNwJaHIdc
 
 ### Регистрация
 POST http://localhost:8080/backend-1.0-SNAPSHOT/api/auth/registration
@@ -11,15 +11,8 @@ Content-Type: application/json
   "role": "ADMIN"
 }
 
-> {%
-    client.test("Extract token", function() {
-        const response = JSON.parse(responseBody);
-        client.global.set("authToken", response.token);
-    });
-%}
-
 ### Посчитать
-GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/count/all-public
+GET http://localhost:8080/ba3ckend-1.0-SNAPSHOT/api/v1/movie/count/all-public
 
 ### Посчитать
 GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all-public/15/1

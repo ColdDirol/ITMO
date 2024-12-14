@@ -1,0 +1,178 @@
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZvdmEiLCJlbWFpbCI6InZvdmFAZW1haWwuY29tIiwicm9sZSI6IkFETUlOIiwicGFnZUVsZW1lbnRzTGltaXQiOjE1LCJpYXQiOjE3MzQxMzE1NDAsImV4cCI6MTczNDIxNzk0MH0.um9kxKxgMtkVKL2Qfm0SQAQ7Ci6b2A0lEoWxRsmyG7Q
+
+### Регистрация
+POST http://localhost:8080/backend-1.0-SNAPSHOT/api/auth/registration
+Content-Type: application/json
+
+{
+  "username": "vova",
+  "email": "vova@email.com",
+  "password": "12345",
+  "role": "ADMIN"
+}
+
+### Посчитать
+GET http://localhost:8080/ba3ckend-1.0-SNAPSHOT/api/v1/movie/count/all-public
+
+### Посчитать
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all-public/15/1
+
+### фильтрация юзера
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all-by-user-filtered/10/1?filter=action&columnWithRequest=id:,name:yub,director:,genre:
+Authorization: Bearer {{authToken}}
+
+### фильтрация паблик
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all-public-filterd/10/1?filter=action&columnWithRequest=id:123,name:Inception,director:Nolan,genre:Sci-Fi
+Authorization: Bearer {{authToken}}
+
+### экспорт
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/export
+Authorization: Bearer {{authToken}}
+
+### импорт
+POST http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/import
+Authorization: Bearer {{authToken}}
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="import-movies.csv"
+Content-Type: multipart/form-data
+@/home/vladimir/ITMO/5 semester/Информационные системы/lab2/import-movies.csv
+--boundary--
+
+### таблица экспортов
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/import-export/export/15/1
+Authorization: Bearer {{authToken}}
+
+### Создание нового фильма
+POST http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+  "name": "бобибоба",
+  "coordinates": {
+    "x": 5.0,
+    "y": 100
+  },
+  "creationDate": "2024-10-04T10:00:00Z",
+  "oscarsCount": 4,
+  "budget": 212121,
+  "totalBoxOffice": 825532764,
+  "mpaaRating": "PG_13",
+  "screenwriter": {
+    "name": "Christopher Nolan",
+    "eyeColor": "BLUE",
+    "hairColor": "BLUE",
+    "location": {
+      "x": 1.0,
+      "y": 2.0,
+      "z": 3,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "director": {
+    "name": "Tsopa",
+    "eyeColor": "BLUE",
+    "hairColor": "RED",
+    "location": {
+      "x": 1.5,
+      "y": 2.5,
+      "z": 10,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "operator": {
+    "name": "biba",
+    "eyeColor": "BLUE",
+    "hairColor": "RED",
+    "location": {
+      "x": 1.5,
+      "y": 2.5,
+      "z": 10,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "length": 148,
+  "goldenPalmCount": 10,
+  "usaBoxOffice": 292576195,
+  "tagline": "Your mind is the scene of   the crime.",
+  "genre": "SCIENCE_FICTION",
+  "isPublic": true
+}
+
+### Получение фильма по ID
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/2
+
+### Получение всех фильмов
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZvdmEiLCJlbWFpbCI6InZvdmFAZW1haWwuY29tIiwicm9sZSI6IkFETUlOIiwicGFnZUVsZW1lbnRzTGltaXQiOjE1LCJpYXQiOjE3MzM1MjY4MTYsImV4cCI6MTczMzYxMzIxNn0.eRE8Uvvtl8jdGTmwBHm4Lhg4VY3xoQh4EEGTcqwULXE
+
+### Получение всех публичных фильмов
+GET http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/all-public
+
+### Обновление фильма по ID
+PUT http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "huyubus",
+  "coordinates": {
+    "x": 5.0,
+    "y": 100
+  },
+  "creationDate": "2024-10-04T10:00:00Z",
+  "oscarsCount": 4,
+  "budget": 212121,
+  "totalBoxOffice": 825532764,
+  "mpaaRating": "PG_13",
+  "screenwriter": {
+    "name": "Christopher Nolan",
+    "eyeColor": "BLUE",
+    "hairColor": "BLUE",
+    "location": {
+      "x": 1.0,
+      "y": 2.0,
+      "z": 3,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "director": {
+    "name": "Aboba",
+    "eyeColor": "BLUE",
+    "hairColor": "RED",
+    "location": {
+      "x": 1.5,
+      "y": 2.5,
+      "z": 10,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "operator": {
+    "name": "biba",
+    "eyeColor": "BLUE",
+    "hairColor": "RED",
+    "location": {
+      "x": 1.5,
+      "y": 2.5,
+      "z": 10,
+      "name": "Los Angeles"
+    },
+    "birthday": "2024-10-04T10:00:00Z"
+  },
+  "length": 148,
+  "goldenPalmCount": 10,
+  "usaBoxOffice": 292576195,
+  "tagline": "Your mind is the scene of the crime.",
+  "genre": "SCIENCE_FICTION"
+}
+
+### Удаление фильма по ID
+DELETE http://localhost:8080/backend-1.0-SNAPSHOT/api/v1/movie/1
+

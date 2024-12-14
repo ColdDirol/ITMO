@@ -50,6 +50,12 @@ public class MovieRepositoryImpl extends AbstractRepository<Movie> {
                 .getResultList();
     }
 
+    public List<Movie> findAllByName(String name) {
+        return entityManager.createQuery("SELECT m FROM Movie m WHERE m.name = :name", Movie.class)
+                .setParameter("name", name)
+                .getResultList();
+    }
+
     public Movie findByName(String name) {
         return entityManager.createQuery("SELECT m FROM Movie m WHERE m.name = :name", Movie.class)
                 .setParameter("name", name)
