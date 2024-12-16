@@ -175,24 +175,22 @@ public class MovieServiceImpl implements MovieService {
         String currentUser = securityContext.getUserPrincipal().getName();
         movies.forEach(movie -> movie.setCreatedUser(currentUser));
 
-        Connection connection = dataSource.getConnection();
-        connection.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
-        System.out.println("SAVE ALL transaction isolation level: " + connection.getTransactionIsolation());
+//        Connection connection = dataSource.getConnection();
+//        connection.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
+//        System.out.println("SAVE ALL transaction isolation level: " + connection.getTransactionIsolation());
 
         try {
-            userTransaction.begin();
-            System.out.println("Transaction status: " + userTransaction.getStatus());
+//            userTransaction.begin();
+//            System.out.println("Transaction status: " + userTransaction.getStatus());
             movies.forEach(this::save);
-            userTransaction.commit();
+//            userTransaction.commit();
         } catch (IllegalArgumentException e) {
-            userTransaction.rollback();
+//            userTransaction.rollback();
             throw new BadRequestException(
                     "Attributes in the importing CSV file have the same name!"
             );
         } catch (Exception e) {
             throw new RuntimeException(e);
-        } finally {
-            connection.close();
         }
     }
 
@@ -216,18 +214,13 @@ public class MovieServiceImpl implements MovieService {
 //        );
     }
 
-//    @Transactional
-    public Response importMoviesStream(InputStream inputStream) throws SQLException, SystemException {
-//        Connection connection = dataSource.getConnection();
+    @Transactional
+    public Response importMoviesStream(InputStream inputStream) throws Exception {
+        UUID fileIndex = UUID.randomUUID();
 
         try (BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
              InputStreamReader reader = new InputStreamReader(bufferedInputStream, StandardCharsets.UTF_8)) {
-//            connection.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
-//            System.out.println("SAVE ALL transaction isolation level: " + connection.getTransactionIsolation());
 
-//            userTransaction.begin();
-
-            // Устанавливаем маркер
             bufferedInputStream.mark(Integer.MAX_VALUE);
 
             CsvToBean<MovieCsv> csvToBean = new CsvToBeanBuilder<MovieCsv>(reader)
@@ -250,8 +243,6 @@ public class MovieServiceImpl implements MovieService {
 
             saveAll(movies);
 
-            UUID fileIndex = UUID.randomUUID();
-
             importHistoryService.save(
                     new ImportHistory(
                             Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()),
@@ -260,18 +251,20 @@ public class MovieServiceImpl implements MovieService {
                     )
             );
 
-            // Сохраняем файл в MinIO
-            String objectName = fileIndex.toString() + ".csv";
-            bufferedInputStream.reset(); // Сбрасываем поток для повторного использования
-            minioService.uploadFile(objectName, bufferedInputStream, bufferedInputStream.available(), "text/csv");
+            String objectName = fileIndex + ".csv";
+            bufferedInputStream.reset();
 
-//            userTransaction.commit();
+            if (!minioService.uploadUncommitedFile(fileIndex, bufferedInputStream, bufferedInputStream.available())) {
+                throw new RuntimeException("Failed to upload movie file");
+            }
+
+            minioService.commitFile(fileIndex);
 
             return Response.ok("Movies imported successfully, total: " + movieCsvList.size())
                     .header("MinIO-Object-Name", objectName)
                     .build();
         } catch (Exception e) {
-//            userTransaction.rollback();
+            minioService.rollbackFile(fileIndex);
             throw new RuntimeException(e);
         }
     }
@@ -291,44 +284,6 @@ public class MovieServiceImpl implements MovieService {
         return movieCsvList;
     }
 
-//    public Response importMoviesFromHistory(UUID fileIndex) {
-//        try {
-//            // Получаем InputStream для файла CSV из MinIO
-//            InputStream fileInputStream = minioService.getFile(fileIndex.toString() + ".csv");
-//
-//            // Проверяем, что файл не пустой
-//            if (fileInputStream == null) {
-//                return Response.status(Response.Status.NOT_FOUND)
-//                        .entity("Файл не найден")
-//                        .build();
-//            }
-//
-//            // Читаем содержимое InputStream в строку
-//            StringWriter writer = new StringWriter();
-//            BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
-//            String line;
-//            while ((line = reader.readLine()) != null) {
-//                writer.write(line + "\n"); // Добавляем новую строку
-//            }
-//
-//            // Закрываем потоки
-//            reader.close();
-//            fileInputStream.close();
-//
-//            // Возвращаем CSV в ответе
-//            return Response.ok(writer.toString())
-//                    .header("Content-Disposition", "attachment; filename=\"movies.csv\"")
-//                    .header("Content-Type", "text/csv") // Устанавливаем правильный тип контента
-//                    .build();
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return Response.serverError()
-//                    .entity("Произошла ошибка при экспорте CSV")
-//                    .build();
-//        }
-//    }
-
     public Response importMoviesFromHistory(UUID fileIndex) {
         try {
             // Получаем InputStream для файла CSV из MinIO
@@ -344,6 +299,7 @@ public class MovieServiceImpl implements MovieService {
             // Возвращаем CSV в ответе с InputStream
             return Response.ok(fileInputStream)
                     .header("Content-Disposition", "attachment; filename=\"movies.csv\"")
+                    .header("Object-Name", "archive-"+fileIndex+".csv")
                     .header("Content-Type", "application/octet-stream") // Устанавливаем тип контента для файла
                     .build();
 

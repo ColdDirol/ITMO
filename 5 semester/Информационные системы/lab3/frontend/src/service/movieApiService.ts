@@ -156,9 +156,37 @@ class MovieApiService {
           document.body.removeChild(link);
         })
         .catch(error => console.error(error));
-
   }
 
+
+  async importMoviesFromHistory(fileIndex: string): Promise<void> {
+    const response = await fetch(`${this.API_URL}/import/history/${fileIndex}`, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem("token")}`,
+        'Accept': 'application/octet-stream',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch the file');
+    }
+
+    // Получаем blob из ответа
+    const blob = await response.blob();
+
+    // Создаем URL для blob
+    const url = window.URL.createObjectURL(blob);
+
+    // Создаем ссылку для скачивания
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `archive-${fileIndex}.csv`); // Имя файла, под которым будет сохранен файл
+    document.body.appendChild(link);
+    link.click(); // Имитируем клик для скачивания
+    document.body.removeChild(link); // Удаляем ссылку из DOM
+    window.URL.revokeObjectURL(url); // Освобождаем память
+  }
 
   // Обновление фильма по ID
   async update(movie: Partial<IMovie>): Promise<IMovie> {

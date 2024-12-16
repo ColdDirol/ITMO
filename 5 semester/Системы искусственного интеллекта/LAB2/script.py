@@ -6,19 +6,19 @@ prolog.consult("knowledge-base.pl")  # Загрузка базы знаний
 
 def humanize_name(name):
     """
-    Преобразует строку в человекочитаемый вид (с заглавными буквами).
+        Преобразует строку в человекочитаемый вид (с заглавными буквами).
     """
     return " ".join(word.capitalize() for word in name.replace("_", " ").split())
 
 def machinize_name(name):
     """
-    Преобразует строку в формат first_second (строчные буквы с подчеркиваниями).
+        Преобразует строку в формат first_second (строчные буквы с подчеркиваниями).
     """
     return "_".join(name.lower().split())
 
 def get_user_preferences():
     """
-    Сбор информации о предпочтениях пользователя через диалог.
+        Сбор информации о предпочтениях пользователя через диалог.
     """
     print("Введите жанры, которые вам нравятся (через запятую):")
     genres = input("Пример: RPG, Action, Survival: ").strip().lower().split(", ")
@@ -28,7 +28,7 @@ def get_user_preferences():
 
 def find_games_by_preferences(genres, platforms):
     """
-    Поиск игр по жанрам и платформам.
+        Поиск игр по жанрам и платформам.
     """
     recommendations = []
     for genre in genres:
@@ -41,7 +41,7 @@ def find_games_by_preferences(genres, platforms):
 
 def find_top_games_on_platform(platform):
     """
-    Поиск всех игр на заданной платформе.
+        Поиск всех игр на заданной платформе.
     """
     query = f"game_platform(Game, {machinize_name(platform)})"
     results = list(prolog.query(query))
@@ -49,7 +49,7 @@ def find_top_games_on_platform(platform):
 
 def find_popular_games():
     """
-    Поиск всех популярных игр.
+        Поиск всех популярных игр.
     """
     query = "popular_game(Game)"
     results = list(prolog.query(query))
@@ -57,7 +57,7 @@ def find_popular_games():
 
 def find_top_characters():
     """
-    Поиск всех персонажей.
+        Поиск всех персонажей.
     """
     query = "character(X)"
     results = list(prolog.query(query))
@@ -65,7 +65,7 @@ def find_top_characters():
 
 def get_all_platforms():
     """
-    Получение всех доступных платформ в системе.
+        Получение всех доступных платформ в системе.
     """
     query = "game_platform(_, Platform)"
     results = list(prolog.query(query))
@@ -74,7 +74,7 @@ def get_all_platforms():
 
 def get_all_genres():
     """
-    Получение всех доступных жанров в системе.
+        Получение всех доступных жанров в системе.
     """
     query = "game_genre(_, Genre)"
     results = list(prolog.query(query))
@@ -83,7 +83,7 @@ def get_all_genres():
 
 def main():
     """
-    Основная функция программы.
+        Основная функция программы.
     """
     print("Добро пожаловать в рекомендательную систему для выбора видеоигр!")
     print("Выберите действие:")

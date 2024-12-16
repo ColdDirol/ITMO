@@ -1,6 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { IMovie, IMovieCreate } from "../intefaces/movieInterface";
-import {ImportExportHistoryInterface} from "../intefaces/importExportHistoryInterface.ts";
+import {ExportHistoryInterface, ImportHistoryInterface} from "../intefaces/importExportHistoryInterface.ts";
 
 class ImportExportApiService {
     private API_URL: string;
@@ -45,7 +44,7 @@ class ImportExportApiService {
     }
 
     // admin - all, user - owns
-    async getAllImportsByUser(limit: number, page: number): Promise<ImportExportHistoryInterface[]> {
+    async getAllImportsByUser(limit: number, page: number): Promise<ImportHistoryInterface[]> {
         return this.handleRequest(
             axios.get(`${this.API_URL}/import/${limit}/${page}`)
         );
@@ -57,7 +56,7 @@ class ImportExportApiService {
     }
 
     // admin - all, user - owns
-    async getAllExportsByUser(limit: number, page: number): Promise<ImportExportHistoryInterface[]> {
+    async getAllExportsByUser(limit: number, page: number): Promise<ExportHistoryInterface[]> {
         return this.handleRequest(
             axios.get(`${this.API_URL}/export/${limit}/${page}`)
         );

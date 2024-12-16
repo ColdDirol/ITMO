@@ -54,14 +54,24 @@ public class JwtService {
         return decodedJWT.getClaim("role").asString();
     }
 
+//    public static boolean isTokenExpired(String token) {
+//        DecodedJWT decodedJWT = null;
+//        try {
+//            decodedJWT = verifyToken(token);
+//        } catch (JWTVerificationException e) {
+//            throw new JWTDecodeException("Invalid token");
+//        }
+//        Date expirationDate = decodedJWT.getExpiresAt();
+//        return expirationDate == null || expirationDate.before(new Date());
+//    }
+
     public static boolean isTokenExpired(String token) {
-        DecodedJWT decodedJWT = null;
         try {
-            decodedJWT = verifyToken(token);
+            DecodedJWT decodedJWT = verifyToken(token);
+            Date expirationDate = decodedJWT.getExpiresAt();
+            return expirationDate == null || expirationDate.before(new Date());
         } catch (JWTVerificationException e) {
-            throw new JWTDecodeException("Invalid token");
+            return true;
         }
-        Date expirationDate = decodedJWT.getExpiresAt();
-        return expirationDate == null || expirationDate.before(new Date());
     }
 }

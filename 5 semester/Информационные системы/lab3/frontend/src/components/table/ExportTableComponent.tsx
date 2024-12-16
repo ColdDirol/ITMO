@@ -2,13 +2,13 @@ import Column from "rsuite/TableColumn";
 import {Cell, HeaderCell} from "rsuite-table";
 import {FlexboxGrid, Pagination, Table} from "rsuite";
 import {useEffect, useState} from "react";
-import {ImportExportHistoryInterface} from "../../intefaces/importExportHistoryInterface.ts";
 import userStore from "../../store/UserStore.ts";
 import ImportExportApiService from "../../service/importExportApiService.ts";
 import {format} from "rsuite/cjs/internals/utils/date";
+import {ExportHistoryInterface} from "../../intefaces/importExportHistoryInterface.ts";
 
 const ExportTableComponent = () => {
-    const [data, setData] = useState<ImportExportHistoryInterface[]>([]);
+    const [data, setData] = useState<ExportHistoryInterface[]>([]);
     const [loading, setLoading] = useState(false);
     const [totalElements, setTotalElements] = useState(0);
     const {pageElementsLimit} = userStore();

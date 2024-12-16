@@ -25,7 +25,7 @@ public interface MovieService {
 
     void importMovies(List<MovieCsv> movieCsvList);
 
-    Response importMoviesStream(InputStream inputStream) throws SQLException, SystemException;
+    Response importMoviesStream(InputStream inputStream) throws Exception;
 
     List<MovieCsv> exportMovies();
 

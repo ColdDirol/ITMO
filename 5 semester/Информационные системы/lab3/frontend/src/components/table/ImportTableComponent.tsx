@@ -1,4 +1,3 @@
-import {ImportExportHistoryInterface} from "../../intefaces/importExportHistoryInterface.ts";
 import {useEffect, useState} from "react";
 import userStore from "../../store/UserStore.ts";
 import Column from "rsuite/esm/Table/TableColumn";
@@ -6,9 +5,11 @@ import {Cell, HeaderCell} from "rsuite-table";
 import {FlexboxGrid, Pagination, Table} from "rsuite";
 import ImportExportApiService from "../../service/importExportApiService.ts";
 import {format} from "rsuite/cjs/internals/utils/date";
+import {ImportHistoryInterface} from "../../intefaces/importExportHistoryInterface.ts";
+import MovieApiService from "../../service/movieApiService.ts";
 
 const ImportMovieFormComponent = () => {
-    const [data, setData] = useState<ImportExportHistoryInterface[]>([])
+    const [data, setData] = useState<ImportHistoryInterface[]>([])
     const [loading, setLoading] = useState(false);
 
     const [totalElements, setTotalElements] = useState(0);
@@ -16,6 +17,7 @@ const ImportMovieFormComponent = () => {
     const [activePage, setActivePage] = useState(1);
 
     const importExportApi: ImportExportApiService = new ImportExportApiService();
+    const moviesApi: MovieApiService = new MovieApiService();
 
     const refreshData = async () => {
         setLoading(true);
@@ -55,6 +57,13 @@ const ImportMovieFormComponent = () => {
         return () => clearInterval(intervalId);
     }, [activePage]);
 
+
+    const handleClick = (rowData: ImportHistoryInterface) => {
+        console.log(rowData);
+        moviesApi.importMoviesFromHistory(rowData.fileIndex);
+    };
+
+
     const DateCell = ({rowData, dataKey, ...props}: any) => (
         <Cell {...props}>
             {rowData[dataKey]
@@ -71,6 +80,7 @@ const ImportMovieFormComponent = () => {
                 bordered={true}
                 data={data}
                 loading={loading}
+                onRowClick={handleClick}
             >
                 <Column flexGrow={1} sortable resizable>
                     <HeaderCell>ID</HeaderCell>
