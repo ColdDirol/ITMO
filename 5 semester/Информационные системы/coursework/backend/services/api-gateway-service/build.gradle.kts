@@ -21,6 +21,8 @@ dependencies {
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
+	implementation("org.springframework.cloud:spring-cloud-starter-gateway:4.2.0")
+
 	implementation(project(":lib:contract:common"))
 }
 
