@@ -8,8 +8,7 @@ import user.external.TokenDto
 
 @Service
 class LoginUserAction {
-    @Transactional(isolation = Isolation.REPEATABLE_READ)
     operator fun invoke(request: AuthenticationRequestDto): TokenDto {
-
+        return TokenDto("token")
     }
 }

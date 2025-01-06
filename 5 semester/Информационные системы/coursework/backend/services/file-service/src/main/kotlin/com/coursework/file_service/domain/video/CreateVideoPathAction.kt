@@ -7,8 +7,7 @@ import org.springframework.transaction.annotation.Transactional
 
 @Service
 class CreateVideoPathAction {
-    @Transactional(isolation = Isolation.REPEATABLE_READ)
     operator fun invoke(dto: PathDto): PathDto {
-
+        return dto
     }
 }

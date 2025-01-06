@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional
 class BlockUserAction(
     private val repository: AdminActionRepository
 ) {
-    @Transactional(isolation = Isolation.REPEATABLE_READ)
     operator fun invoke(request: AdminActionOnUserRequestDto) {
     }
 }

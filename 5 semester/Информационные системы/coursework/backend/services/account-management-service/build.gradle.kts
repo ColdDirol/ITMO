@@ -2,7 +2,8 @@ import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
 	kotlin("jvm")
-	kotlin("plugin.spring")
+	kotlin("plugin.jpa")
+	kotlin("plugin.allopen")
 	id("org.springframework.boot")
 	id("io.spring.dependency-management")
 }
@@ -11,6 +12,14 @@ java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
 	mavenCentral()
+}
+
+allOpen {
+	annotations(
+		"jakarta.persistence.MappedSuperclass",
+		"jakarta.persistence.Entity",
+		"org.springframework.context.annotation.Configuration",
+	)
 }
 
 dependencies {
@@ -22,6 +31,8 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+	implementation("org.postgresql:postgresql:42.7.4")
 
 	implementation(project(":lib:contract:common"))
 	implementation(project(":lib:contract:account-management"))

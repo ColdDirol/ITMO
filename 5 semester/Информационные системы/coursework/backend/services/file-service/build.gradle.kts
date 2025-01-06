@@ -2,7 +2,7 @@ import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
 	kotlin("jvm")
-	kotlin("plugin.spring")
+	kotlin("plugin.jpa")
 	kotlin("plugin.allopen")
 	id("org.springframework.boot")
 	id("io.spring.dependency-management")
@@ -18,6 +18,7 @@ allOpen {
 	annotations(
 		"jakarta.persistence.MappedSuperclass",
 		"jakarta.persistence.Entity",
+		"org.springframework.context.annotation.Configuration",
 	)
 }
 
@@ -33,6 +34,8 @@ dependencies {
 
 	implementation(project(":lib:contract:common"))
 	implementation(project(":lib:contract:file-management"))
+
+	implementation("org.postgresql:postgresql:42.7.4")
 
 	implementation("io.minio:minio:8.5.14")
 

@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional
 
 @Service
 class DeleteUserAction {
-    @Transactional(isolation = Isolation.REPEATABLE_READ)
     operator fun invoke(userId: Long) {
 
     }

@@ -1,3 +1,22 @@
 spring:
   application:
     name: api-gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: account-management-service
+          uri: http://172.20.0.4:8080/api/v1/
+          predicates:
+            - Path=/account-management-service/api/v1/{segment}
+        - id: file-service
+          uri: http://172.20.0.5:8080/api/v1/
+          predicates:
+            - Path=/file-service/api/v1/{segment}
+        - id: notification-service
+          uri: http://172.20.0.6:8080/api/v1/
+          predicates:
+            - Path=/notification-service/api/v1/{segment}
+        - id: user-management-service
+          uri: http://172.20.0.7:8080/api/v1/
+          predicates:
+            - Path=/user-management-service/api/v1/{segment}

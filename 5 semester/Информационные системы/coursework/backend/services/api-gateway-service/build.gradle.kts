@@ -2,7 +2,8 @@ import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
 	kotlin("jvm")
-	kotlin("plugin.spring")
+	kotlin("plugin.jpa")
+	kotlin("plugin.allopen")
 	id("org.springframework.boot")
 	id("io.spring.dependency-management")
 }
@@ -13,15 +14,22 @@ repositories {
 	mavenCentral()
 }
 
+allOpen {
+	annotations(
+		"jakarta.persistence.MappedSuperclass",
+		"jakarta.persistence.Entity",
+		"org.springframework.context.annotation.Configuration",
+	)
+}
+
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-web")
+//	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.cloud:spring-cloud-starter-gateway:4.2.0")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-
-	implementation("org.springframework.cloud:spring-cloud-starter-gateway:4.2.0")
 
 	implementation(project(":lib:contract:common"))
 }

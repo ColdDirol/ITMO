@@ -1,21 +1,37 @@
 rootProject.name = "backend"
 
-include("lib:contract:common")
-include("lib:contract:user-management")
-include("lib:contract:administration-management")
-include("lib:contract:account-management")
+val libContracts = listOf(
+    "common",
+    "user-management",
+    "account-management",
+    "file-management",
+)
 
-include("services:config-service")
-include("services:api-gateway-service")
-include("services:file-service")
-include("services:notification-service")
+val services = listOf(
+    "config-service",
+    "api-gateway-service",
+    "file-service",
+    "notification-service",
+    "user-management-service",
+    "account-management-service"
+)
 
-include("services:user-management-service")
-include("services:account-management-service")
+// Подключение всех контрактов из lib:contract
+libContracts.forEach { contract ->
+    include("lib:contract:$contract")
+    project(":lib:contract:$contract")?.name = contract
+}
+
+// Подключение всех сервисов
+services.forEach { service ->
+    include("services:$service")
+    project(":services:$service")?.name = service
+}
 
 pluginManagement {
     val kotlinVersion: String by settings
     val springBootVersion: String by settings
+//    val springCloudVersion: String by settings
 
     resolutionStrategy {
         eachPlugin {
@@ -25,24 +41,15 @@ pluginManagement {
                 "org.jetbrains.kotlin.plugin.jpa" -> useVersion(kotlinVersion)
                 "org.jetbrains.kotlin.plugin.allopen" -> useVersion(kotlinVersion)
                 "org.jetbrains.kotlin.plugin.noarg" -> useVersion(kotlinVersion)
-                "org.jetbrains.kotlin.kapt" -> useVersion(kotlinVersion)
 
                 "org.springframework.boot" -> useVersion(springBootVersion)
-                "io.spring.dependency-management" -> useVersion("1.1.6")
+//                "org.springframework.cloud" -> useVersion(springCloudVersion)
+                "io.spring.dependency-management" -> useVersion("1.0.14.RELEASE")
             }
         }
     }
 }
+
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
-include("lib:contract:file-management")
-findProject(":lib:contract:file-management")?.name = "file-management"
-include("lib:contract:file-management")
-findProject(":lib:contract:file-management")?.name = "file-management"
-include("lib:contract:services-common")
-findProject(":lib:contract:services-common")?.name = "services-common"
-include("lib:services-common")
-findProject(":lib:services-common")?.name = "services-common"
-include("services:user-management-service")
-findProject(":services:user-management-service")?.name = "user-management-service"

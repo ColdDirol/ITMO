@@ -1,6 +1,6 @@
 spring:
   application:
-    name: notification-service
+    name: account-management-service
 
   datasource:
     url: jdbc:postgresql://coursework-postgres:5432/postgres

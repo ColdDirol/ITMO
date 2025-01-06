@@ -15,8 +15,6 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":lib:contract:common"))
-
     testImplementation(kotlin("test"))
 }
 

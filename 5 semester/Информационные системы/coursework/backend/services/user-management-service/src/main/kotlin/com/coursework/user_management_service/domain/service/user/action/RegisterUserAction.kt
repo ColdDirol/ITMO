@@ -8,8 +8,7 @@ import user.external.TokenDto
 
 @Service
 class RegisterUserAction {
-    @Transactional(isolation = Isolation.REPEATABLE_READ)
     operator fun invoke(request: RegisterRequestDto): TokenDto {
-        return
+        return TokenDto("token")
     }
 }

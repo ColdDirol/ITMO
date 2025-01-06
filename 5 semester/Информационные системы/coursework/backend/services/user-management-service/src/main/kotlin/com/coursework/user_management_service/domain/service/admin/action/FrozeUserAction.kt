@@ -7,7 +7,6 @@ import org.springframework.transaction.annotation.Transactional
 
 @Service
 class FrozeUserAction {
-    @Transactional(isolation = Isolation.REPEATABLE_READ)
     operator fun invoke(request: AdminActionOnUserRequestDto) {
 
     }

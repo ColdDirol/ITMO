@@ -7,8 +7,7 @@ import org.springframework.transaction.annotation.Transactional
 
 @Service
 class GetPathAction {
-    @Transactional(isolation = Isolation.REPEATABLE_READ)
     operator fun invoke(pathId: Long): PathDto {
-
+        return PathDto(pathId, "aaa", "aaa")
     }
 }

@@ -3,17 +3,70 @@ version: '3'
 services:
   postgres:
     image: postgres:latest
-    container_name: postgres
+    container_name: coursework-postgres
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: postgres\
       POSTGRES_DB: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    networks:
+      coursework-network:
+        ipv4_address: 172.20.0.2
 
+  api-gateway-service:
+    build: services/api-gateway-service
+    container_name: coursework-api-gateway-service
+    depends_on:
+      - postgres
+    networks:
+      coursework-network:
+        ipv4_address: 172.20.0.3
 
+  account-management-service:
+    build: services/account-management-service
+    container_name: coursework-account-management-service
+    depends_on:
+      - postgres
+    networks:
+      coursework-network:
+        ipv4_address: 172.20.0.4
+
+  file-service:
+    build: services/file-service
+    container_name: coursework-file-service
+    depends_on:
+      - postgres
+    networks:
+      coursework-network:
+        ipv4_address: 172.20.0.5
+
+  notification-service:
+    build: services/notification-service
+    container_name: coursework-notification-service
+    depends_on:
+      - postgres
+    networks:
+      coursework-network:
+        ipv4_address: 172.20.0.6
+
+  user-management-service:
+    build: services/user-management-service
+    container_name: coursework-user-management-service
+    depends_on:
+      - postgres
+    networks:
+      coursework-network:
+        ipv4_address: 172.20.0.7
 
 volumes:
   postgres_data:
+
+networks:
+  coursework-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
