@@ -9,6 +9,7 @@ import java.time.LocalDateTime
 @Table(name = "users")
 class UsersEntity(
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long,
     var email: String,
     var password: String,

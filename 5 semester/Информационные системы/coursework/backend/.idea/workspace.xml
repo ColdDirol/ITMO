@@ -5,52 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbcea44a-933b-4447-bdf9-81bff3e88c04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/config/SecurityBeans.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/JWTService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/PublicController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/PublicController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/api/http/PictureControllerV1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/api/http/PublicController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/PictureService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/infrastructure/storage/model/PicturePathEntity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/s3/MinioFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/notification-service/src/main/kotlin/com/coursework/notification_service/PublicController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/http/PublicController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/config/CorsConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/JwtDetailsService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/JwtProperties.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/config/JwtConfiguration.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/config/SecurityConfiguration.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/filter/JwtAuthenticationFilter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contract/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/common/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/services-common/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/services-common/src/main/kotlin/Main.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/resources/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/api-gateway-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/api-gateway-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contract/common/src/main/kotlin/internal/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/common/src/main/kotlin/internal/dto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contract/file-management/src/main/kotlin/internal/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/file-management/src/main/kotlin/internal/dto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/responses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/responses.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/internal/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/internal/dto.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/api-gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/config-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/config-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/config-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/config-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/config-service/src/main/kotlin/com/coursework/config_service/ConfigServiceApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/config-service/src/main/kotlin/com/coursework/config_service/ConfigServiceApplication.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/file-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/api/http/VideoControllerV1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/api/http/VideoControllerV1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/config/S3Config.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/config/S3Config.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/path/CreatePathAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/path/CreatePathAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/path/GetPathAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/path/GetPathAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/video/CreateVideoPathAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/video/CreateVideoPathAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/video/GetVideoPathAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/video/GetVideoPathAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/notification-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/notification-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/notification-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/notification-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/AdministrationManagementServiceApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/AdministrationManagementServiceApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/AdminActionService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/AdminActionService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/config/S3Config.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/config/properties/S3BucketsProperties.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/config/properties/S3ConfigProperties.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/PathService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/VideoService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/VideoService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/path/CreatePathAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/picture/SavePicture.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/path/GetPathAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/picture/GetPicture.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/video/CreateVideoPathAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/video/SaveVideo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/video/GetVideoPathAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/domain/video/GetVideo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/infrastructure/storage/model/PathEntity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/infrastructure/storage/model/VideoPathEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/infrastructure/storage/model/VideoPathEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/infrastructure/storage/repo/PathRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/infrastructure/storage/repo/PicturePathRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/infrastructure/storage/repo/VideoPathRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/src/main/kotlin/com/coursework/file_service/infrastructure/storage/repo/VideoPathRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/AdministrationManagementServiceApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/UserManagementServiceApplication.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/admin/action/BlockUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/admin/action/BlockUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/admin/action/FrozeUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/admin/action/FrozeUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/admin/action/UnblockUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/admin/action/UnblockUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/admin/action/UnfrozeUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/admin/action/UnfrozeUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/user/action/DeleteUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/user/action/DeleteUserAction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/user/action/LoginUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/user/action/LoginUserAction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/user/action/RegisterUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/service/user/action/RegisterUserAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/AdminActionOnUserLogEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/storage/model/AdminActionOnUserLogEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/UsersEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/storage/model/UsersEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/repo/AdminActionRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/storage/repo/AdminActionRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/repo/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/storage/repo/UserRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/JWTService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/JwtService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,21 +97,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="backend" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="backend" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="backend" type="f1a62948:ProjectNode" />
-                <item name="lib" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="backend" type="f1a62948:ProjectNode" />
-                <item name="services" type="2d1252cf:ModuleNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -122,9 +108,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Data Class" />
-        <option value="Class" />
         <option value="Kotlin Interface" />
         <option value="Kotlin File" />
+        <option value="Class" />
+        <option value="package-info" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -143,43 +130,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build backend.executor": "Run",
-    "Gradle.Build config-service.executor": "Run",
-    "Gradle.Building Gradle Dependencies.executor": "Run",
-    "Gradle.backend [:services:config-service:classes].executor": "Run",
-    "Gradle.backend [build].executor": "Run",
-    "Gradle.backend [clean build].executor": "Run",
-    "Gradle.backend [clean].executor": "Run",
-    "Gradle.backend [projects].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ConfigServiceApplication (1).executor": "Run",
-    "Spring Boot.ConfigServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/vladimir/ITMO/5 semester/Информационные системы/coursework/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/home/vladimir/ITMO/5 semester/Информационные системы/coursework/backend/services/user-management-service/src/main/kotlin/Main.kt",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.40110394",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build backend.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build config-service.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Building Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [:services:config-service:classes].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [clean build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [projects].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ConfigServiceApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ConfigServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vladimir/ITMO/5 semester/Информационные системы/coursework/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/vladimir/ITMO/5 semester/Информационные системы/coursework/backend/services/user-management-service/src/main/kotlin/Main.kt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.40110394&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin.scripting&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -196,17 +187,27 @@
       <recent name="$PROJECT_DIR$/services/config-service/src/main/resources/config" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.coursework.user_management_service.security.config" />
+      <recent name="com.coursework.user_management_service.security" />
       <recent name="com.coursework.administration_management_service.domain.service" />
       <recent name="com.coursework.administration_management_service.domain" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.coursework.account_management_service" />
+      <recent name="com.coursework.api_gateway_service" />
+      <recent name="" />
+      <recent name="com.coursework.file_service.api.http" />
+      <recent name="com.coursework.user_management_service.api.http" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle projects" />
       <command value="gradle :services:config-service:classes" />
-      <command value="gradle clean" />
       <command value="gradle build --refresh-dependencies" />
       <command value="gradle clean build --refresh-dependencies" />
+      <command value="gradle clean build --refresh-dependencies " />
+      <command value="gradle clean" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -219,7 +220,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.backend [clean build]">
+  <component name="RunManager" selected="Gradle.backend [clean]">
     <configuration name="backend [:services:config-service:classes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -345,14 +346,14 @@
       </method>
     </configuration>
     <configuration name="AccountManagementServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="backend.services.account-management-service.main" />
+      <module name="account-management-service.backend.services.account-management-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.coursework.account_management_service.AccountManagementServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="AdministrationManagementServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="backend.services.user-management-service.main" />
+      <module name="user-management-service.backend.services.user-management-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.coursework.user_management_service.AdministrationManagementServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -401,7 +402,7 @@
       </method>
     </configuration>
     <configuration name="FileServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="backend.services.file-service.main" />
+      <module name="file-service.backend.services.file-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.coursework.file_service.FileServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -473,7 +474,11 @@
       <workItem from="1732979134085" duration="1279000" />
       <workItem from="1733135589659" duration="10000" />
       <workItem from="1736110623762" duration="29000" />
-      <workItem from="1736116589208" duration="8487000" />
+      <workItem from="1736116589208" duration="17167000" />
+      <workItem from="1736134588565" duration="900000" />
+      <workItem from="1736135497275" duration="295000" />
+      <workItem from="1736196947805" duration="879000" />
+      <workItem from="1736202062472" duration="6730000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,7 @@
 package user.internal
 
 import com.newdex.services.contract.common.external.UserMainInfoDto
-import com.newdex.services.contract.common.internal.PathDto
+import internal.PathDto
 import java.time.LocalDateTime
 
 data class UserProfilePicturePathInternalDto(

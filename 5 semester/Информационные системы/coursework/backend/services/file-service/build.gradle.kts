@@ -38,6 +38,7 @@ dependencies {
 	implementation("org.postgresql:postgresql:42.7.4")
 
 	implementation("io.minio:minio:8.5.14")
+	implementation(kotlin("stdlib-jdk8"))
 
 }
 

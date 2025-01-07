@@ -6,7 +6,7 @@ services:
     container_name: coursework-postgres
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres\
+      POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -16,6 +16,28 @@ services:
       coursework-network:
         ipv4_address: 172.20.0.2
 
+  minio:
+    image: minio/minio:latest
+    container_name: coursework-minio
+    command: server /data
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ACCESS_KEY: colddirol
+      MINIO_SECRET_KEY: colddirol
+    networks:
+      coursework-network:
+        ipv4_address: 172.20.0.3
+
+#  config-service:
+#    build: services/config-service
+#    container_name: coursework-config-service
+#    depends_on:
+#      - postgres
+#    networks:
+#      coursework-network:
+#        ipv4_address: 172.20.0.4
+
   api-gateway-service:
     build: services/api-gateway-service
     container_name: coursework-api-gateway-service
@@ -23,7 +45,7 @@ services:
       - postgres
     networks:
       coursework-network:
-        ipv4_address: 172.20.0.3
+        ipv4_address: 172.20.0.5
 
   account-management-service:
     build: services/account-management-service
@@ -32,16 +54,17 @@ services:
       - postgres
     networks:
       coursework-network:
-        ipv4_address: 172.20.0.4
+        ipv4_address: 172.20.0.6
 
   file-service:
     build: services/file-service
     container_name: coursework-file-service
     depends_on:
       - postgres
+      - minio
     networks:
       coursework-network:
-        ipv4_address: 172.20.0.5
+        ipv4_address: 172.20.0.7
 
   notification-service:
     build: services/notification-service
@@ -50,7 +73,7 @@ services:
       - postgres
     networks:
       coursework-network:
-        ipv4_address: 172.20.0.6
+        ipv4_address: 172.20.0.8
 
   user-management-service:
     build: services/user-management-service
@@ -59,7 +82,7 @@ services:
       - postgres
     networks:
       coursework-network:
-        ipv4_address: 172.20.0.7
+        ipv4_address: 172.20.0.9
 
 volumes:
   postgres_data:

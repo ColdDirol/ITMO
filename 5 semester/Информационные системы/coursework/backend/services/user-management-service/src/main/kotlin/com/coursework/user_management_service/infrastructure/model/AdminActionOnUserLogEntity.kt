@@ -5,9 +5,10 @@ import jakarta.persistence.*
 import java.time.LocalDateTime
 
 @Entity
-@Table(name = "administrator_action_with_user_log")
+@Table(name = "administrator_action_on_user_log")
 class AdminActionOnUserLogEntity(
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long,
     var date: LocalDateTime,
     @ManyToOne

@@ -1,0 +1,8 @@
+package com.coursework.account_management_service.infrastructure.persistence
+
+import com.coursework.account_management_service.infrastructure.model.BankAccountEntity
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
+
+@Repository
+interface BankAccountRepository: JpaRepository<BankAccountEntity, Long>

@@ -1,7 +1,7 @@
-package com.newdex.services.contract.common.internal
+package internal
 
 data class PathDto(
-    val id: Long,
+    var id: Long,
     val bucket: String,
-    val fileName: String,
+    var path: String,
 )

@@ -5,18 +5,32 @@ spring:
     gateway:
       routes:
         - id: account-management-service
-          uri: http://172.20.0.4:8080/api/v1/
+          uri: http://172.20.0.6:8080/
           predicates:
-            - Path=/account-management-service/api/v1/{segment}
+            - Path=/account-management-service/api/v1/**
+          filters:
+            - RewritePath=/account-management-service/api/v1/(?<segment>.*), /api/v1/${segment}
+
         - id: file-service
-          uri: http://172.20.0.5:8080/api/v1/
+          uri: http://172.20.0.7:8080/
           predicates:
-            - Path=/file-service/api/v1/{segment}
+            - Path=/file-service/api/v1/**
+          filters:
+            - RewritePath=/file-service/api/v1/(?<segment>.*), /api/v1/${segment}
+
         - id: notification-service
-          uri: http://172.20.0.6:8080/api/v1/
+          uri: http://172.20.0.8:8080/
           predicates:
-            - Path=/notification-service/api/v1/{segment}
+            - Path=/notification-service/api/v1/**
+          filters:
+            - RewritePath=/notification-service/api/v1/(?<segment>.*), /api/v1/${segment}
+
         - id: user-management-service
-          uri: http://172.20.0.7:8080/api/v1/
+          uri: http://172.20.0.9:8080/
           predicates:
-            - Path=/user-management-service/api/v1/{segment}
+            - Path=/user-management-service/api/v1/**
+          filters:
+            - RewritePath=/user-management-service/api/v1/(?<segment>.*), /api/v1/${segment}
+
+server:
+  forward-headers-strategy: framework

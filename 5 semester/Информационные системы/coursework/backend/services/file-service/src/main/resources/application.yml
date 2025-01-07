@@ -14,3 +14,13 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# not using
+s3:
+  datasource:
+    url: "http://localhost:9000"
+    user: "colddirol"
+    password: "colddirol"
+  buckets:
+    pictureBucket: "pucture"
+    videoBucket: "video"
