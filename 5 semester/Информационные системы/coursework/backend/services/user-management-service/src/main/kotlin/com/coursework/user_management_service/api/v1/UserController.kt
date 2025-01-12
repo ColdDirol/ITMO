@@ -28,4 +28,5 @@ class UserController(
     ) {
         service.deleteUser(userId)
     }
+
 }

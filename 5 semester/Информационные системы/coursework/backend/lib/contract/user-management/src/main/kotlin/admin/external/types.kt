@@ -5,4 +5,6 @@ enum class ActionType {
     UNBLOCKED,
     FROZEN,
     UNFROZEN,
+
+    DELETED,
 }

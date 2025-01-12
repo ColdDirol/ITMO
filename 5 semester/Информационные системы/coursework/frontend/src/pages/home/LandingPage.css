@@ -1,0 +1,41 @@
+.features, .plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature, .plan {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.feature:hover, .plan:hover {
+    transform: scale(1.05);
+}
+
+.testimonials {
+    padding: 30px; /* Убедитесь, что отступы установлены здесь */
+}
+
+.testimonials blockquote {
+    border-left: 4px solid #007bff; /* Цвет левой границы */
+    padding-left: 30px; /* Отступ слева для текста */
+    margin: 20px 0; /* Отступ сверху и снизу */
+    font-style: italic; /* Курсив для текста */
+    text-align: left; /* Выравнивание текста по левому краю */
+    max-width: 600px; /* Максимальная ширина для центрирования блока */
+    margin-left: auto; /* Центрирование блока */
+    margin-right: auto; /* Центрирование блока */
+}
+
+.content {
+    margin-top: 20px;
+    background-color: rgba(26, 29, 36, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}

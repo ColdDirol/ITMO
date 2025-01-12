@@ -1,5 +1,9 @@
 rootProject.name = "backend"
 
+val lib = listOf(
+    "security"
+)
+
 val libContracts = listOf(
     "common",
     "user-management",

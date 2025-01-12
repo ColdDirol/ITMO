@@ -15,8 +15,8 @@ class TransactionHistoryLogEntity (
     @Column(name = "user_id", nullable = false)
     var userId: Long,
     var action: ActionTypes,
-    @Column(name = "bank_account_id", nullable = false)
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "bank_account_id", nullable = false)
     var bankAccount: BankAccountEntity,
     var sum: BigDecimal,
 )

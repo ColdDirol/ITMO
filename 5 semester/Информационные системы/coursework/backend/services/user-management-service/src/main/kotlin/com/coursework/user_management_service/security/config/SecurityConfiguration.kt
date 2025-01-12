@@ -1,6 +1,7 @@
 package com.coursework.user_management_service.security.config
 
 import com.coursework.user_management_service.security.filter.JwtAuthenticationFilter
+import internal.RoleType
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.HttpMethod
@@ -25,14 +26,12 @@ class SecurityConfiguration(
             .csrf { it.disable() }
             .authorizeHttpRequests {
                 it
-                    .requestMatchers("/api/auth", "api/auth/refresh", "/error")
+                    .requestMatchers(HttpMethod.POST, "/api/v1/user/login", "/api/v1/user/register")
                     .permitAll()
-                    .requestMatchers(HttpMethod.POST, "/api/v1/user/login")
-                    .permitAll()
-                    .requestMatchers(HttpMethod.POST, "/api/v1/user/register")
-                    .permitAll()
-                    .requestMatchers("/api/user**")
-                    .hasRole("ADMIN")
+
+                    .requestMatchers("/api/v1/admin/**") // админ маршруты
+                    .hasRole(RoleType.ADMIN.name)
+
                     .anyRequest()
                     .fullyAuthenticated()
             }

@@ -5,4 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface CurrencyRepository: JpaRepository<CurrencyEntity, Long>
+interface CurrencyRepository: JpaRepository<CurrencyEntity, Long> {
+
+    fun findByShortName(shortName: String): CurrencyEntity?
+}

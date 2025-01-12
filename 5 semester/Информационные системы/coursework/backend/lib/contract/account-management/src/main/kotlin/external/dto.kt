@@ -1,6 +1,7 @@
 package external
 
 import com.newdex.services.contract.common.external.UserMainInfoDto
+import java.math.BigDecimal
 
 data class CurrencyDto(
     val id: Long,
@@ -8,10 +9,16 @@ data class CurrencyDto(
     val shortName: String,
 )
 
-data class UserAccountDto(
+data class BankAccountDto(
     val id: Long,
-    val user: UserMainInfoDto,
+    val email: String,
     val name: String,
-    val balance: String, // Long Long Long Long
-    val currency: String,
+    val balance: BigDecimal,
+    val currencyShortName: String,
+)
+
+data class TransferDto(
+    val idFrom: Long,
+    val idTo: Long,
+    val amount: BigDecimal,
 )

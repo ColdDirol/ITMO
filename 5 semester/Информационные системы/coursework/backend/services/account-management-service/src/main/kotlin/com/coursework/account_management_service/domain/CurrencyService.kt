@@ -1,4 +1,8 @@
 package com.coursework.account_management_service.domain
 
-class CurrencyService {
-}
+import org.springframework.stereotype.Service
+
+@Service
+class CurrencyService(
+
+)

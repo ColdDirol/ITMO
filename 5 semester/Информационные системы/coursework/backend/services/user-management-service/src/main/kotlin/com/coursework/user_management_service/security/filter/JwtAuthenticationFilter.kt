@@ -2,6 +2,7 @@ package com.coursework.user_management_service.security.filter
 
 import com.coursework.user_management_service.security.JwtUserDetailsService
 import com.coursework.user_management_service.security.JwtService
+import io.jsonwebtoken.JwtParser
 
 import jakarta.servlet.FilterChain
 import jakarta.servlet.http.HttpServletRequest
@@ -16,7 +17,7 @@ import org.springframework.web.filter.OncePerRequestFilter
 @Component
 class JwtAuthenticationFilter(
     private val userDetailsService: JwtUserDetailsService,
-    private val tokenService: JwtService,
+    private val tokenService: JwtService
 ) : OncePerRequestFilter() {
 
     override fun doFilterInternal(

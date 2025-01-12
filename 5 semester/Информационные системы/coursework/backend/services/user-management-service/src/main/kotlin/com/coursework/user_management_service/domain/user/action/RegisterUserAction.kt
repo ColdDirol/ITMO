@@ -29,6 +29,7 @@ class RegisterUserAction(
             role = RoleType.USER,
             phone = request.phone,
             name = request.fullName,
+            sex = request.sex,
             dateOfBirth = request.dateOfBirth,
             status = UserStatusType.ACTIVE
         )

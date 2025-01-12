@@ -10,10 +10,10 @@ class CurrencyInUserPossessionEntity (
     var id: Long,
     @Column(name = "user_id", nullable = false)
     var userId: Long,
-    @Column(name = "currency_id", nullable = false)
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "currency_id", nullable = false)
     var currency: CurrencyEntity,
-    @Column(name = "bank_account_id", nullable = false)
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "bank_account_id", nullable = false)
     var bankAccount: BankAccountEntity,
 )

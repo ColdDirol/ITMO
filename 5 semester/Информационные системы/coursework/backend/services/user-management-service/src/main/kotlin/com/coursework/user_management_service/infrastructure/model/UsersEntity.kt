@@ -3,6 +3,7 @@ package com.coursework.user_management_service.infrastructure.model
 import internal.RoleType
 import internal.UserStatusType
 import jakarta.persistence.*
+import user.external.SexType
 import java.time.LocalDateTime
 
 @Entity
@@ -16,6 +17,7 @@ class UsersEntity(
     var role: RoleType,
     var phone: String,
     var name: String,
+    var sex: SexType,
     var dateOfBirth: LocalDateTime,
     var status: UserStatusType,
 )

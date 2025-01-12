@@ -1,34 +1,40 @@
 spring:
-  application:
-    name: api-gateway-service
   cloud:
     gateway:
       routes:
+        # Маршрут для account-management-service
         - id: account-management-service
           uri: http://172.20.0.6:8080/
           predicates:
             - Path=/account-management-service/api/v1/**
           filters:
             - RewritePath=/account-management-service/api/v1/(?<segment>.*), /api/v1/${segment}
+            - name: AuthorizationHeaderFilter # Применяем фильтр
 
+        # Маршрут для file-service
         - id: file-service
           uri: http://172.20.0.7:8080/
           predicates:
             - Path=/file-service/api/v1/**
           filters:
             - RewritePath=/file-service/api/v1/(?<segment>.*), /api/v1/${segment}
+            - name: AuthorizationHeaderFilter # Применяем фильтр
 
+        # Маршрут для notification-service
         - id: notification-service
           uri: http://172.20.0.8:8080/
           predicates:
             - Path=/notification-service/api/v1/**
           filters:
             - RewritePath=/notification-service/api/v1/(?<segment>.*), /api/v1/${segment}
+            - name: AuthorizationHeaderFilter # Применяем фильтр
 
+        # Исключаем фильтр для login и register в user-management-service
         - id: user-management-service
           uri: http://172.20.0.9:8080/
           predicates:
             - Path=/user-management-service/api/v1/**
+            - Path=/user-management-service/api/v1/login, /user-management-service/api/v1/register
           filters:
             - RewritePath=/user-management-service/api/v1/(?<segment>.*), /api/v1/${segment}
 

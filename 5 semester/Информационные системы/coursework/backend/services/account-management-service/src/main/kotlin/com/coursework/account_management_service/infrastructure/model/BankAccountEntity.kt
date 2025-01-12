@@ -1,5 +1,6 @@
 package com.coursework.account_management_service.infrastructure.model
 
+import external.BankAccountDto
 import jakarta.persistence.*
 import java.math.BigDecimal
 
@@ -13,7 +14,7 @@ class BankAccountEntity (
     var userId: Long,
     var name: String,
     var balance: BigDecimal,
-    @Column(name = "currency_id", nullable = false)
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "currency_id", nullable = false)
     var currency: CurrencyEntity,
 )

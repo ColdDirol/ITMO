@@ -37,4 +37,11 @@ class AdminActionController(
     ) {
         service.unfrozeUser(dto)
     }
+
+    @PostMapping("/delete")
+    fun deleteUser(
+        @RequestBody dto: AdminActionOnUserRequestDto
+    ) {
+        service.deleteUser(dto)
+    }
 }

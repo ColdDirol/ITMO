@@ -1,4 +1,8 @@
 package com.coursework.account_management_service.domain
 
-class TransactionHistoryLogService {
-}
+import org.springframework.stereotype.Service
+
+@Service
+class TransactionHistoryLogService(
+
+)

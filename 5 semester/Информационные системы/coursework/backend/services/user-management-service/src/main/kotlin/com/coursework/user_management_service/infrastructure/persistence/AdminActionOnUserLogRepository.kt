@@ -6,9 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface AdminActionOnUserLogRepository : JpaRepository<AdminActionOnUserLogEntity, Long> {
+interface AdminActionOnUserLogRepository : JpaRepository<com.coursework.user_management_service.infrastructure.model.AdminActionOnUserLogEntity, Long> {
 
-    fun findByUser(user: UsersEntity): MutableList<AdminActionOnUserLogEntity>
+    fun findByUser(user: com.coursework.user_management_service.infrastructure.model.UsersEntity): MutableList<com.coursework.user_management_service.infrastructure.model.AdminActionOnUserLogEntity>
 
-    fun findByAdministrator(administrator: UsersEntity): List<AdminActionOnUserLogEntity>
+    fun findByAdministrator(administrator: com.coursework.user_management_service.infrastructure.model.UsersEntity): List<com.coursework.user_management_service.infrastructure.model.AdminActionOnUserLogEntity>
 }

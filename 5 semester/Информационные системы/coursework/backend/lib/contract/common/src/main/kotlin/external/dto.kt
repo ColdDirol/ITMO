@@ -10,6 +10,7 @@ data class UserInfoDto(
     val role: RoleType,
     val phone: String,
     val name: String,
+    val sex: String, // Enum
     val dateOfBirth: LocalDateTime,
     val status: UserStatusType,
 )
