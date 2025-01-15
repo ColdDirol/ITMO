@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository
 @Repository
 interface TransactionHistoryLogRepository: JpaRepository<TransactionHistoryLogEntity, Long> {
     fun findAllByAccountFromInOrAccountToIn(accountFromIds: List<Long>, accountToIds: List<Long>, pageable: Pageable): Page<TransactionHistoryLogEntity>
+    fun findAllByAccountFromInOrAccountToIn(accountFromIds: List<Long>, accountToIds: List<Long>): List<TransactionHistoryLogEntity>
 }

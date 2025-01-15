@@ -36,6 +36,8 @@ dependencies {
 
 	implementation(project(":lib:contract:common"))
 	implementation(project(":lib:contract:account-management"))
+
+	implementation("com.opencsv:opencsv:5.10")
 }
 
 springBoot {

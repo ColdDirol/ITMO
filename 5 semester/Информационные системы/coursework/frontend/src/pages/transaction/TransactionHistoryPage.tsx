@@ -51,6 +51,15 @@ const TransactionHistoryPage = () => {
         return () => clearInterval(intervalId);
     }, [email, request.page, request.size]);
 
+    const handleExport = async () => {
+        try {
+            const updatedRequest = { ...request, userEmail: email };
+            await transactionHistoryApi.exportHistoryForAllBankAccounts(updatedRequest);
+        } catch (error) {
+            console.error("Error fetching data: ", error);
+        }
+    }
+
 
     const DateCell = ({rowData, dataKey, ...props}: any) => (
         <Cell {...props}>
@@ -63,7 +72,7 @@ const TransactionHistoryPage = () => {
     return (
         <>
             <div style={{ padding: "20px" }} color="green">
-                <IconButton appearance="primary" color="green" icon={<SortDownIcon />}>
+                <IconButton appearance="primary" color="green" icon={<SortDownIcon />} onClick={handleExport}>
                     Export history
                 </IconButton>
             </div>

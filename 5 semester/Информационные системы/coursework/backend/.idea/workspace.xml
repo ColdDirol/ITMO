@@ -5,125 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbcea44a-933b-4447-bdf9-81bff3e88c04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/test-data/test-data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/CurrencyExchangeRateController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/TransactionHistoryLogController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/filter/GetAllBankAccountsByUserEmailFilter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/currency_echange_rate/filter/GetAllExchangeRates.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/transaction_history_log/filter/GetTransactionHistoryLogsByUserEmailFilter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/AuthController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/SuperAdminController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/AuthService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/SuperAdminService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/ActivateUserAdminAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/filter/GetAllAdminActionHistoryFilter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/auth/action/LoginUserAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/super_admin/action/DismissAdminAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/super_admin/action/MakeUserAdminAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/filter/GetUserByPersonalDataFilter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar/admin_woman.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar6.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar7.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/credit-card/card1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/credit-card/card2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/public/credit-card/card3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/api/adminActionsHistoryApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/api/authApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/api/bankAccountApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/api/superAdminApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/api/transactionHistoryApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/components/header/UserFindingComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/components/message/MessageComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/AdminActionsHistoryInterface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/AdminInterface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/BankAccountInterface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/CurrencyInterface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/TransactionHistoryLogInterface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/UserInterface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/admin/AdminActionsHistoryPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/transaction/TransactionHistoryPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/user/UserBankAccountsPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/user/UserProfilePage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/user/UserSettingsPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/transaction_history_log/action/ExportTransactionHistoryToCsvAction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contract/account-management/src/main/kotlin/external/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/account-management/src/main/kotlin/external/dto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contract/account-management/src/main/kotlin/internal/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/account-management/src/main/kotlin/internal/dto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contract/common/src/main/kotlin/external/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/common/src/main/kotlin/external/dto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/admin/external/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/admin/external/dto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/admin/external/types.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/admin/external/types.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/dto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/requests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/requests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/internal/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/internal/dto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/create-tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/BankAccountController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/BankAccountController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/BankAccountService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/BankAccountService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/CurrencyExchangeRateService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/CurrencyExchangeRateService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/TransactionHistoryLogController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/TransactionHistoryLogController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/TransactionHistoryLogService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/TransactionHistoryLogService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/action/TransferMoneyAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/action/TransferMoneyAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/filter/GetAllBankAccountsByUserIdFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/filter/GetAllBankAccountsByUserIdFilter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/mapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/mapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyEntity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyExchangeRateEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyExchangeRateEntity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/TransactionHistoryLogEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/TransactionHistoryLogEntity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/CurrencyExchangeRateRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/CurrencyExchangeRateRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/TransactionHistoryLogRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/TransactionHistoryLogRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/user/UserMainInfoRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/user/UserMainInfoRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/api-gateway-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/AuthorizationHeaderFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/AuthorizationHeaderFilter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/GatewayConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/config/GatewayConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/api-gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/config-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/config-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/file-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/notification-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/notification-service/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/AdminActionController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/AdminActionController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/UserController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/UserController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/config/CorsConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/config/CorsConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/AdminActionService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/AdminActionService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/UserService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/BlockUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/BlockUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/DeleteUserAdminAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/DeleteUserAdminAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/FrozeUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/FrozeUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/UnblockUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/UnblockUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/UnfrozeUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/UnfrozeUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/action/DeleteUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/auth/action/DeleteUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/action/LoginUserAction.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/action/RegisterUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/auth/action/RegisterUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/filter/GetUserByIdFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/filter/GetUserByIdFilter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/AdminActionOnUserLogEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/AdminActionOnUserLogEntity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/persistence/AdminActionOnUserLogRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/persistence/AdminActionOnUserLogRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/persistence/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/persistence/UserRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/JwtService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/JwtService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/config/SecurityConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/config/SecurityConfiguration.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/avatar/admin.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/avatar/admin_man.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/bg1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/background/bg1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/bg2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/background/bg2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/bg_light.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/background/bg_light.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/gradient_waves.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/background/gradient_waves.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/landing.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/background/landing.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/api/adminApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/adminApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/api/transactionApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/transactionApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/api/userApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/userApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/auth/LoginComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/auth/LoginComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/auth/RegisterComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/auth/RegisterComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/header/HeaderComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/header/HeaderComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/header/UserDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/header/UserDropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/interfaces/AuthInterface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/interfaces/AuthInterface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/home/GreetingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/home/GreetingPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/home/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/home/LandingPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/home/UserBankAccountsPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/user/UserProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/user/UserProfilePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/store/UserStore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/store/UserStore.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/api/transactionHistoryApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/transactionHistoryApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/transaction/TransactionHistoryPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/transaction/TransactionHistoryPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -468,7 +358,7 @@
       </method>
     </configuration>
     <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="backend.services.config-service.backend.services.config-service.main" />
+      <module name="backend.services.config-service.main~1" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.coursework.config_service.ConfigServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -572,7 +462,7 @@
       <workItem from="1736789082202" duration="2432000" />
       <workItem from="1736798907324" duration="7375000" />
       <workItem from="1736839020812" duration="12768000" />
-      <workItem from="1736875872195" duration="35615000" />
+      <workItem from="1736875872195" duration="38060000" />
     </task>
     <servers />
   </component>
