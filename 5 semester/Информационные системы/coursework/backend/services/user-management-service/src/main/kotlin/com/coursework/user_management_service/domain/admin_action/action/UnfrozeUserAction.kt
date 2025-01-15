@@ -14,11 +14,12 @@ import org.springframework.transaction.annotation.Transactional
 import java.time.LocalDateTime
 
 @Service
-class UnfrozeUserAction(
-    private val userRepository: com.coursework.user_management_service.infrastructure.persistence.UserRepository,
-    private val adminActionOnUserLogRepository: com.coursework.user_management_service.infrastructure.persistence.AdminActionOnUserLogRepository,
+open class UnfrozeUserAction(
+    private val userRepository: UserRepository,
+    private val adminActionOnUserLogRepository: AdminActionOnUserLogRepository,
 ) {
-    operator fun invoke(request: AdminActionOnUserRequestDto) {
+    @Transactional(isolation = Isolation.REPEATABLE_READ)
+    open operator fun invoke(request: AdminActionOnUserRequestDto) {
         val user = userRepository.findById(request.userId)
             .orElseThrow { EntityNotFoundException("User not found with id: ${request.userId}") }
 
@@ -31,7 +32,7 @@ class UnfrozeUserAction(
             .orElseThrow { EntityNotFoundException("User not found with email: $administratorEmail") }
 
         adminActionOnUserLogRepository.save(
-            com.coursework.user_management_service.infrastructure.model.AdminActionOnUserLogEntity(
+            AdminActionOnUserLogEntity(
                 id = 0,
                 date = LocalDateTime.now(),
                 administrator = administrator,

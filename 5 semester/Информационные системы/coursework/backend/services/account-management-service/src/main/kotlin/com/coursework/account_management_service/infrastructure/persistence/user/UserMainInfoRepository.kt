@@ -1,7 +1,7 @@
 package com.coursework.account_management_service.infrastructure.persistence.user
 
 import com.coursework.account_management_service.infrastructure.model.BankAccountEntity
-import com.newdex.services.contract.common.external.UserMainInfoDto
+import external.UserMainInfoProjection
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.query.Param
@@ -20,7 +20,7 @@ interface UserMainInfoRepository : JpaRepository<BankAccountEntity, Long> {
     )
     fun userById(
         @Param("userId") userId: Long
-    ): Optional<UserMainInfoDto>
+    ): Optional<UserMainInfoProjection>
 
     @Query(
         """
@@ -31,5 +31,5 @@ interface UserMainInfoRepository : JpaRepository<BankAccountEntity, Long> {
     )
     fun userByEmail(
         @Param("userEmail") userEmail: String
-    ): UserMainInfoDto?
+    ): UserMainInfoProjection?
 }

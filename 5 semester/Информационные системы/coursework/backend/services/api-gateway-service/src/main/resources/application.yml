@@ -1,6 +1,26 @@
 spring:
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOriginPatterns:
+              - "http://**"
+            allowedMethods:
+              - OPTIONS
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders:
+              - "Authorization"
+              - "Content-Type"
+              - "Accept"
+              - "X-Requested-With"
+            exposedHeaders:
+              - "Authorization"
+            allowCredentials: false
+            maxAge: 3600
       routes:
         # Маршрут для account-management-service
         - id: account-management-service
@@ -9,7 +29,7 @@ spring:
             - Path=/account-management-service/api/v1/**
           filters:
             - RewritePath=/account-management-service/api/v1/(?<segment>.*), /api/v1/${segment}
-            - name: AuthorizationHeaderFilter # Применяем фильтр
+#            - name: AuthorizationHeaderFilter # Применяем фильтр
 
         # Маршрут для file-service
         - id: file-service
@@ -18,7 +38,7 @@ spring:
             - Path=/file-service/api/v1/**
           filters:
             - RewritePath=/file-service/api/v1/(?<segment>.*), /api/v1/${segment}
-            - name: AuthorizationHeaderFilter # Применяем фильтр
+#            - name: AuthorizationHeaderFilter # Применяем фильтр
 
         # Маршрут для notification-service
         - id: notification-service
@@ -27,14 +47,13 @@ spring:
             - Path=/notification-service/api/v1/**
           filters:
             - RewritePath=/notification-service/api/v1/(?<segment>.*), /api/v1/${segment}
-            - name: AuthorizationHeaderFilter # Применяем фильтр
+#            - name: AuthorizationHeaderFilter # Применяем фильтр
 
-        # Исключаем фильтр для login и register в user-management-service
         - id: user-management-service
           uri: http://172.20.0.9:8080/
           predicates:
             - Path=/user-management-service/api/v1/**
-            - Path=/user-management-service/api/v1/login, /user-management-service/api/v1/register
+#            - Path=/user-management-service/api/v1/login, /user-management-service/api/v1/register
           filters:
             - RewritePath=/user-management-service/api/v1/(?<segment>.*), /api/v1/${segment}
 

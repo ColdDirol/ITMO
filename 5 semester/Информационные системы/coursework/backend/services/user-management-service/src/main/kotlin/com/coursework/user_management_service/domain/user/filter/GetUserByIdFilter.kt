@@ -1,5 +1,7 @@
+package com.coursework.user_management_service.domain.user.filter
+
 import com.coursework.user_management_service.infrastructure.persistence.UserRepository
-import com.newdex.services.contract.common.external.UserInfoDto
+import external.UserInfoDto
 import jakarta.persistence.EntityNotFoundException
 import org.springframework.stereotype.Service
 

@@ -11,6 +11,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy
 import org.springframework.security.web.DefaultSecurityFilterChain
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
+import org.springframework.web.cors.CorsConfiguration
+import org.springframework.web.cors.CorsConfigurationSource
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource
 
 @Configuration
 @EnableWebSecurity
@@ -23,14 +26,20 @@ class SecurityConfiguration(
         jwtAuthenticationFilter: JwtAuthenticationFilter
     ): DefaultSecurityFilterChain {
         http
+//            .cors { it.configurationSource(corsConfigurationSource()) } // Включение CORS
             .csrf { it.disable() }
             .authorizeHttpRequests {
                 it
-                    .requestMatchers(HttpMethod.POST, "/api/v1/user/login", "/api/v1/user/register")
+                    .requestMatchers(HttpMethod.POST, "/api/v1/auth/login", "/api/v1/auth/register")
                     .permitAll()
 
+                    .requestMatchers("/api/v1/admin/actions/**") // админ маршруты
+                    .permitAll()
+//                    .hasRole("ADMIN")
+
                     .requestMatchers("/api/v1/admin/**") // админ маршруты
-                    .hasRole(RoleType.ADMIN.name)
+                    .permitAll()
+//                    .hasRole("SUPER_ADMIN")
 
                     .anyRequest()
                     .fullyAuthenticated()
@@ -42,4 +51,5 @@ class SecurityConfiguration(
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter::class.java)
         return http.build()
     }
+
 }

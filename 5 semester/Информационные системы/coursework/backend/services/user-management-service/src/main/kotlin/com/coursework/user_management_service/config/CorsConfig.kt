@@ -9,7 +9,9 @@
 //
 //    override fun addCorsMappings(registry: CorsRegistry) {
 //        registry.addMapping("/**") // разрешает все маршруты
-//            .allowedOrigins("*") // разрешенные домены
+//            .allowedOriginPatterns(
+//                "http://localhost:5173"
+//            ) // разрешает все домены с http и https
 //            .allowedMethods("GET", "POST", "PUT", "DELETE") // разрешенные методы
 //            .allowedHeaders("*") // разрешенные заголовки
 //            .exposedHeaders("*") // выставленные заголовки

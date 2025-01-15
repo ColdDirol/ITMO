@@ -4,6 +4,7 @@ import com.coursework.account_management_service.domain.bank_account.action.Crea
 import com.coursework.account_management_service.domain.bank_account.action.DeleteBankAccountAction
 import com.coursework.account_management_service.domain.bank_account.action.TransferMoneyAction
 import com.coursework.account_management_service.domain.bank_account.filter.GetAllBankAccountsByUserIdFilter
+import com.coursework.account_management_service.domain.bank_account.filter.GetAllBankAccountsByUserEmailFilter
 import com.coursework.account_management_service.domain.bank_account.filter.GetBankAccountByIdFilter
 import org.springframework.stereotype.Service
 
@@ -14,6 +15,7 @@ class BankAccountService(
     val getById: GetBankAccountByIdFilter,
     val getAllByUserId: GetAllBankAccountsByUserIdFilter,
     val delete: DeleteBankAccountAction,
+    val getAllByUserEmail: GetAllBankAccountsByUserEmailFilter,
 
     val transfer: TransferMoneyAction,
 )

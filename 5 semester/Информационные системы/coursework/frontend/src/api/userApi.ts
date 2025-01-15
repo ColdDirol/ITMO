@@ -1,53 +1,39 @@
-import {LoginInterface, RegisterInterface} from "../interfaces/AuthInterface.ts";
-import useUserStore from "../store/UserStore.tsx";
+import axios from 'axios';
+import {UserInfoInterface, UserSearchRequest} from "../interfaces/UserInterface.ts";
 
 class UserApi {
     private API_URL: string;
 
     constructor() {
-        this.API_URL = 'http://172.20.0.5:8080/user-management-service/api/v1';
+        this.API_URL = 'http://172.20.0.5:8080/user-management-service/api/v1/user';
     }
 
-    async register(
-        user: RegisterInterface
-    ) {
+    async searchUser(request: UserSearchRequest): Promise<UserInfoInterface[]> {
         try {
-            console.log("rigistradion data: ", user);
+            console.log("user request data: ", request);
 
-            const response = await axios.post<{ token: string }>(
-                `${this.API_URL}/registration`,
-                user,
+            const response = await axios.post<UserInfoInterface[]>(
+                `${this.API_URL}/search`,
+                request,
                 {
                     headers: {
                         "Content-Type": "application/json",
+                        "Authorization": `Bearer ${localStorage.getItem("token")}`,
                     },
                 }
             );
 
-            return response.data.token;
+            return response.data.content;
         } catch (error) {
-            console.log(error.response.data.message);
+            if (axios.isAxiosError(error)) {
+                console.log('Error Response:', error.response?.data);
+                console.log('Error Status:', error.response?.status);
+                console.log('Error Headers:', error.response?.headers);
+            }
             throw error;
         }
     }
 
-    async login(user: LoginInterface) {
-        try {
-            const response = await axios.post<{ token: string }>(
-                `${this.API_URL}/login`,
-                user,
-                {
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                }
-            );
-
-            return response.data.token;
-        } catch (error) {
-            throw error;
-        }
-    }
 
 }
 

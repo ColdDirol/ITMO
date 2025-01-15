@@ -56,10 +56,13 @@ class JwtService(
             .payload
     }
 
-    fun createAccessToken(user: UserDetails) = generate(
-        userDetails = user,
-        expirationDate = getAccessTokenExpiration()
-    )
+    fun createAccessToken(user: UserDetails, additionalClaims: Map<String, Any>): String {
+        return generate(
+            userDetails = user,
+            expirationDate = getAccessTokenExpiration(),
+            additionalClaims = additionalClaims
+        )
+    }
 
     fun getAccessTokenExpiration(): Date =
         Date(System.currentTimeMillis() + jwtProperties.accessTokenExpiration)

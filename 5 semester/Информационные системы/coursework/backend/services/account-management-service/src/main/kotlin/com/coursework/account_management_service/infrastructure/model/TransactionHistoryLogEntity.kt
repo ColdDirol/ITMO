@@ -11,12 +11,20 @@ class TransactionHistoryLogEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long,
+
     var date: LocalDateTime,
-    @Column(name = "user_id", nullable = false)
-    var userId: Long,
-    var action: ActionTypes,
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "bank_account_id", nullable = false)
-    var bankAccount: BankAccountEntity,
-    var sum: BigDecimal,
+
+    @Column(name = "account_from", nullable = false)
+    var accountFrom: Long,
+
+    @Column(name = "account_to", nullable = false)
+    var accountTo: Long,
+
+    var senderCurrency: String,
+
+    var receiverCurrency: String,
+
+    var amountInSenderCurrency: BigDecimal,
+
+    var amountInReceiverCurrency: BigDecimal,
 )

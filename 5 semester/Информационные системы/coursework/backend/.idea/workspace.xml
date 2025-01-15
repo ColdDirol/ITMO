@@ -5,699 +5,125 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbcea44a-933b-4447-bdf9-81bff3e88c04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/types.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/BankAccountController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/action/CreateBankAccountAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/action/DeleteBankAccountAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/action/TransferMoneyAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/filter/GetAllBankAccountsByUserIdFilter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/filter/GetBankAccountByIdFilter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/mapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/user/UserMainInfoRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/AuthorizationHeaderFilter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/GatewayConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/AdminController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/AdminService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin/filter/GetUserCurrenciesFilter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/BlockUserAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/DeleteUserAdminAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/FrozeUserAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/UnblockUserAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/UnfrozeUserAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/filter/GetUserByIdFilter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/persistence/AdminRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/api/adminApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/api/transactionApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/api/userApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/components/auth/AuthComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/components/auth/LoginComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/components/header/HeaderComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/components/header/UserDropdown.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/AuthInterface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/home/GreetingPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/home/LandingPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/home/LandingPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/home/UserBankAccountsPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/transaction/DepositsPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/user/UserProfilePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/store/UserStore.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/test-data/test-data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/CurrencyExchangeRateController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/TransactionHistoryLogController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/filter/GetAllBankAccountsByUserEmailFilter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/currency_echange_rate/filter/GetAllExchangeRates.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/transaction_history_log/filter/GetTransactionHistoryLogsByUserEmailFilter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/AuthController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/SuperAdminController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/AuthService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/SuperAdminService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/ActivateUserAdminAction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/filter/GetAllAdminActionHistoryFilter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/auth/action/LoginUserAction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/super_admin/action/DismissAdminAction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/super_admin/action/MakeUserAdminAction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/filter/GetUserByPersonalDataFilter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar/admin_woman.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/avatar7.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/credit-card/card1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/credit-card/card2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/public/credit-card/card3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/api/adminActionsHistoryApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/api/authApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/api/bankAccountApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/api/superAdminApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/api/transactionHistoryApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/components/header/UserFindingComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/components/message/MessageComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/AdminActionsHistoryInterface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/AdminInterface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/BankAccountInterface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/CurrencyInterface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/TransactionHistoryLogInterface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/interfaces/UserInterface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/admin/AdminActionsHistoryPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/transaction/TransactionHistoryPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/user/UserBankAccountsPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/user/UserProfilePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/user/UserSettingsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/contract/account-management/src/main/kotlin/external/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/account-management/src/main/kotlin/external/dto.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/contract/account-management/src/main/kotlin/internal/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/account-management/src/main/kotlin/internal/dto.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/contract/common/src/main/kotlin/external/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/common/src/main/kotlin/external/dto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/admin/external/requests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/admin/external/requests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/admin/external/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/admin/external/dto.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/admin/external/types.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/admin/external/types.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/dto.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/requests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/external/requests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/PublicController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/internal/dto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/contract/user-management/src/main/kotlin/user/internal/dto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/create-tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/BankAccountController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/BankAccountController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/BankAccountService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/BankAccountService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/CurrencyExchangeRateService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/CurrencyExchangeRateService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/CurrencyInUserPossessionService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/CurrencyService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/CurrencyService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/TransactionHistoryLogService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/TransactionHistoryLogService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/BankAccountEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/BankAccountEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/action/TransferMoneyAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/action/TransferMoneyAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/filter/GetAllBankAccountsByUserIdFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/filter/GetAllBankAccountsByUserIdFilter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/mapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/bank_account/mapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyEntity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyExchangeRateEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyExchangeRateEntity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyInUserPossessionEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyInUserPossessionEntity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/TransactionHistoryLogEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/TransactionHistoryLogEntity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/BankAccountRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/BankAccountRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/CurrencyRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/CurrencyRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/CurrencyExchangeRateRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/CurrencyExchangeRateRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/TransactionHistoryLogRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/TransactionHistoryLogRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/user/UserMainInfoRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/user/UserMainInfoRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/api-gateway-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/config/SecurityBeans.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/AuthorizationHeaderFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/AuthorizationHeaderFilter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/GatewayConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/config/GatewayConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/api-gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/config-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/config-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/file-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/file-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/notification-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/notification-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/AdminActionController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/AdminActionController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/UserController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/api/v1/UserController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/config/CorsConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/config/CorsConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/AdminActionService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/AdminActionService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin/action/BlockUserAction.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin/action/FrozeUserAction.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin/action/UnblockUserAction.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin/action/UnfrozeUserAction.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/action/DeleteUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/action/DeleteUserAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/action/RegisterUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/action/RegisterUserAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/UserService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/BlockUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/BlockUserAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/DeleteUserAdminAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/DeleteUserAdminAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/FrozeUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/FrozeUserAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/UnblockUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/UnblockUserAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/UnfrozeUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/admin_action/action/UnfrozeUserAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/action/DeleteUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/auth/action/DeleteUserAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/action/LoginUserAction.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/action/RegisterUserAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/auth/action/RegisterUserAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/filter/GetUserByIdFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/domain/user/filter/GetUserByIdFilter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/AdminActionOnUserLogEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/AdminActionOnUserLogEntity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/UsersEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/UsersEntity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/persistence/AdminActionOnUserLogRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/persistence/AdminActionOnUserLogRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/persistence/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/persistence/UserRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/JwtService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/JwtService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/config/SecurityConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/config/SecurityConfiguration.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/filter/JwtAuthenticationFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/security/filter/JwtAuthenticationFilter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.idea/frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.pnp.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.pnp.loader.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@alloc-quick-lru-npm-5.2.0-eb83517088-bdc35758b5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@babel-runtime-npm-7.26.0-9afa3c4ef6-c8e2c0504a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@eslint-community-eslint-utils-npm-4.4.1-c83a271e90-a7ffc838eb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@eslint-community-regexpp-npm-4.12.1-ef4ab5217e-0d628680e2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@eslint-eslintrc-npm-2.1.4-1ff4b5f908-10957c7592.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@eslint-js-npm-8.57.1-dec269f278-2afb77454c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@floating-ui-core-npm-1.6.8-496cdfbb6e-82faa6ea9d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@floating-ui-dom-npm-1.6.12-4d4284e824-956514ed10.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@floating-ui-react-dom-npm-2.1.2-9e283fcbfa-25bb031686.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@floating-ui-utils-npm-0.2.8-01a00634a5-deb98bba01.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@humanwhocodes-config-array-npm-0.13.0-843095a032-eae69ff913.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@humanwhocodes-module-importer-npm-1.0.1-9d07ed2e4a-0fd22007db.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@humanwhocodes-object-schema-npm-2.0.3-4f0e508cd9-d3b78f6c58.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@isaacs-cliui-npm-8.0.2-f4364666d5-4a473b9b32.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@jridgewell-gen-mapping-npm-0.3.5-d8b85ebeaf-ff7a1764eb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@jridgewell-resolve-uri-npm-3.1.2-5bc4245992-83b85f72c5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@jridgewell-set-array-npm-1.2.1-2312928209-832e513a85.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@jridgewell-sourcemap-codec-npm-1.5.0-dfd9126d71-05df4f2538.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@jridgewell-trace-mapping-npm-0.3.25-c076fd2279-9d3c40d225.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@juggle-resize-observer-npm-3.4.0-659544c6b5-2505028c05.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@next-env-npm-14.2.16-60a1da6c52-a81d98802f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@next-eslint-plugin-next-npm-14.2.16-f28a7eebca-2ed9e8fa2e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@next-swc-linux-x64-gnu-npm-14.2.16-310233fd76-8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@nodelib-fs.scandir-npm-2.1.5-89c67370dd-a970d595bd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@nodelib-fs.stat-npm-2.0.5-01f4dd3030-012480b5ca.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@nodelib-fs.walk-npm-1.2.8-b4a89da548-190c643f15.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@nolyfill-is-core-module-npm-1.0.39-9ff248572b-0d6e098b87.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@npmcli-agent-npm-2.2.2-e2f559d6c0-67de7b88cc.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@npmcli-fs-npm-3.1.1-c19bd09f3c-d960cab4b9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@pkgjs-parseargs-npm-0.11.0-cd2a3fe948-6ad6a00fc4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-primitive-npm-1.1.0-9aa14acf6b-7cbf70bfd4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-arrow-npm-1.1.0-0cb9dd0b59-8522e0a809.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-collection-npm-1.1.0-8fec2d3db8-70cee7f23c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-compose-refs-npm-1.1.0-98156c7f82-047a4ed5f8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-context-npm-1.1.0-91ec9af4c8-d48df5e519.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-context-npm-1.1.1-bafaecc686-9a04db2366.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-direction-npm-1.1.0-5fb6b21578-25ad0d1d65.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-dismissable-layer-npm-1.1.1-d646fd79c0-18450111de.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-dropdown-menu-npm-2.1.2-15a41c0067-9b5036e6c7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-focus-guards-npm-1.1.1-81f7ac7cf0-ac8dd31f48.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-focus-scope-npm-1.1.0-a22e188582-bea6c99375.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-id-npm-1.1.0-520751ed60-6fbc9d1739.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-menu-npm-2.1.2-efa08b3431-7d9a0f0975.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-popper-npm-1.2.0-f2172bb5cb-95b2390181.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-portal-npm-1.1.2-9ea5114950-2f737dc044.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-presence-npm-1.1.1-47c74fcd40-1831b5f5d0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-primitive-npm-2.0.0-ab3a5426b6-04afc0f3a5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-roving-focus-npm-1.1.0-6061ae7a81-6f3a3fd047.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-slot-npm-1.1.0-f9e1623e18-3c9cd90aab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-use-callback-ref-npm-1.1.0-1727bf35c9-2ec7903c67.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-use-controllable-state-npm-1.1.0-53300dd6f2-a6c167cf8e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-use-escape-keydown-npm-1.1.0-2bbf5ae5e9-9bf88ea272.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-use-layout-effect-npm-1.1.0-710cee2d09-271ea0bf1c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-use-rect-npm-1.1.0-a020038f55-facc9528af.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-react-use-size-npm-1.1.0-88eb70d5c8-01a11d4c07.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@radix-ui-rect-npm-1.1.0-83488db692-1ad93efbc9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@rsuite-icon-font-npm-4.1.0-10e182bf10-0b9627c19a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@rsuite-icons-npm-1.3.0-79355d10d1-b73b4a786a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@rtsao-scc-npm-1.1.0-f4ba9ceb2c-17d04adf40.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@rushstack-eslint-patch-npm-1.10.4-a760e177e3-ec17ac954e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@swc-counter-npm-0.1.3-ce42b0e3f5-df8f9cfba9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@swc-helpers-npm-0.5.5-a0698e6ac9-d4f207b191.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-e60b153664.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@types-lodash-npm-4.17.13-ec44e3530a-d0bf8fbd95.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@types-node-npm-20.17.6-c5a007c486-d51dbb9881.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@types-prop-types-npm-15.7.13-ac81cbe352-8935cad87c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@types-react-dom-npm-18.3.1-15935b4e84-ad28ecce39.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@types-react-npm-18.3.12-69c5fbaab9-4ab1577a8c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@types-react-window-npm-1.8.8-b17f024dd0-253c9d6e0c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@typescript-eslint-eslint-plugin-npm-8.15.0-24f974ab4c-72e9726bf9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@typescript-eslint-parser-npm-8.15.0-2e1c8e616e-439b87d604.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@typescript-eslint-scope-manager-npm-8.15.0-24e8e7fb14-a7f89a2ee3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@typescript-eslint-type-utils-npm-8.15.0-b6cdb5f5ee-42f150749c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@typescript-eslint-types-npm-8.15.0-5027ee909a-e44b3bbb92.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@typescript-eslint-typescript-estree-npm-8.15.0-bcac28dfc3-4adfa103ec.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@typescript-eslint-utils-npm-8.15.0-ba23d4c92f-0101e0a09e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@typescript-eslint-visitor-keys-npm-8.15.0-11bf7be0bd-393a5ff4e7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/@ungap-structured-clone-npm-1.2.0-648f0b82e0-4f656b7b46.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/abbrev-npm-2.0.0-0eb38a17e5-0e994ad2aa.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/acorn-jsx-npm-5.3.2-d7594599ea-c3d3b2a89c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/acorn-npm-8.14.0-dc46f61424-8755074ba5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/agent-base-npm-7.1.1-c9e1a4b59e-51c158769c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/aggregate-error-npm-3.1.0-415a406f4e-1101a33f21.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ajv-npm-6.12.6-4b5105e2b2-874972efe5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ansi-regex-npm-5.0.1-c963a48615-2aa4bb54ca.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ansi-regex-npm-6.1.0-abe011aae4-495834a53b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ansi-styles-npm-4.3.0-245c7d42c7-513b44c3b2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ansi-styles-npm-6.2.1-d43647018c-ef940f2f0c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/any-promise-npm-1.3.0-f34eeaa7e7-0ee8a9bdbe.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/anymatch-npm-3.1.3-bc81d103b1-3e044fd6d1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/arg-npm-5.0.2-2f5805a547-6c69ada1a9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/argparse-npm-2.0.1-faff7999e6-83644b5649.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/aria-hidden-npm-1.2.4-9bb601e7c8-2ac90b70d2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/aria-query-npm-5.3.2-78632ac5c5-d971175c85.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/array-buffer-byte-length-npm-1.0.1-e7afc30010-53524e08f4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/array-includes-npm-3.1.8-62a178e549-eb39ba5530.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/array.prototype.findlast-npm-1.2.5-316cb71d39-83ce4ad95b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/array.prototype.findlastindex-npm-1.2.5-f112a7bfcd-2c81cff2a7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/array.prototype.flat-npm-1.3.2-350729f7f4-5d6b4bf102.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/array.prototype.flatmap-npm-1.3.2-5c6a4af226-ce09fe21dc.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/array.prototype.tosorted-npm-1.1.4-c1fc919434-e4142d6f55.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/arraybuffer.prototype.slice-npm-1.0.3-97a993a091-352259cba5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ast-types-flow-npm-0.0.8-d5c457c18e-0a64706609.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/available-typed-arrays-npm-1.0.7-e5e5d79687-1aa3ffbfe6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/axe-core-npm-4.10.2-46ed42027d-2b9b1c93ea.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/axobject-query-npm-4.1.0-9703554323-7d1e87bf0a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/balanced-match-npm-1.0.2-a53c126459-9706c088a2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/binary-extensions-npm-2.3.0-bd3f20d865-bcad01494e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/brace-expansion-npm-1.1.11-fb95eb05ad-faf34a7bb0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/brace-expansion-npm-2.0.1-17aa2616f9-a61e7cd2e8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/braces-npm-3.0.3-582c14023c-b95aa0b3bd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/busboy-npm-1.6.0-ebb5cbb04b-32801e2c01.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/cacache-npm-18.0.4-3dc4edc849-b7422c113b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/call-bind-npm-1.0.7-762763ef96-295c0c62b9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/callsites-npm-3.1.0-268f989910-072d17b6ab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/camelcase-css-npm-2.0.1-90d1b6df08-1cec2b3b3d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/caniuse-lite-npm-1.0.30001683-07fd70553b-66c5d4882f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/chalk-npm-4.1.2-ba8b67ab80-fe75c9d5c7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/chokidar-npm-3.6.0-3c413a828f-d2f29f4997.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/chownr-npm-2.0.0-638f1c9c61-c57cf9dd07.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/class-variance-authority-npm-0.7.0-1a63840197-e7fd1fab43.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/classnames-npm-2.5.1-c7273f3423-da424a8a6f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/clean-stack-npm-2.2.0-a8ce435a5c-2ac8cd2b2f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/client-only-npm-0.0.1-07d3e9505c-0c16bf660d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/clsx-npm-2.0.0-afafbbe44a-a2cfb2351b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/clsx-npm-2.1.1-96125b98be-acd3e1ab9d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/color-convert-npm-2.0.1-79730e935b-79e6bdb9fd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/color-name-npm-1.1.4-025792b0ea-b044585952.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/commander-npm-4.1.1-22a0fe921b-d7b9913ff9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/concat-map-npm-0.0.1-85a921b7ee-902a9f5d89.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/cross-spawn-npm-7.0.6-264bddf921-8d306efaca.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/cssesc-npm-3.0.0-15ec56f86f-f8c4ababff.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/csstype-npm-3.1.3-e9a1c85013-8db785cc92.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/damerau-levenshtein-npm-1.0.8-bda7311c69-d240b77575.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/data-view-buffer-npm-1.0.1-d911beebce-ce24348f3c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/data-view-byte-length-npm-1.0.1-538a9e432e-dbb3200edc.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/data-view-byte-offset-npm-1.0.0-7112a24a4b-7f0bf8720b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/date-fns-npm-2.30.0-895c790e0f-f7be015232.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/debug-npm-4.3.7-385645adf9-822d74e209.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/deep-is-npm-0.1.4-88938b5a67-edb65dd0d7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/define-data-property-npm-1.1.4-4cbd8efc51-8068ee6cab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/define-properties-npm-1.2.1-8a4d42413b-b4ccd00597.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/detect-node-es-npm-1.1.0-2ad57e0b50-e46307d726.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/didyoumean-npm-1.2.2-fd568ec571-d5d98719d5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/dlv-npm-1.1.3-187c903a21-d7381bca22.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/doctrine-npm-2.1.0-ac15d049b7-a45e277f7f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/doctrine-npm-3.0.0-c6f1615f04-fd7673ca77.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/dom-lib-npm-3.3.2-be4ae4ae45-f8cda9c6b9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eastasianwidth-npm-0.2.0-c37eb16bd1-7d00d7cd8e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/emoji-regex-npm-8.0.0-213764015c-d4c5c39d5a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/emoji-regex-npm-9.2.2-e6fac8d058-8487182da7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/encoding-npm-0.1.13-82a1837d30-bb98632f8f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/enhanced-resolve-npm-5.17.1-296305b69f-4bc38cf1ce.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/env-paths-npm-2.2.1-7c7577428c-65b5df55a8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/err-code-npm-2.0.3-082e0ff9a7-8b7b1be20d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/es-abstract-npm-1.23.5-24fac3af09-17c81f8a42.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/es-define-property-npm-1.0.0-e23aa9b242-f66ece0a88.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/es-errors-npm-1.3.0-fda0c9b8a8-ec1414527a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/es-iterator-helpers-npm-1.2.0-79f76f36b9-c5f5ff10d5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/es-object-atoms-npm-1.0.0-c5cca6d760-26f0ff78ab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/es-set-tostringtag-npm-2.0.3-8a191fed13-7227fa48a4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/es-shim-unscopables-npm-1.0.2-a3056a4c0d-432bd527c6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/es-to-primitive-npm-1.2.1-b7a7eac6c5-4ead6671a2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/escape-string-regexp-npm-4.0.0-4b531d8d59-98b48897d9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-config-next-npm-14.2.16-950d333992-d9ddb0e9e9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-import-resolver-node-npm-0.3.9-2a426afc4b-439b912712.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-import-resolver-typescript-npm-3.6.3-dc2ee1f728-1ed0cab4f3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-module-utils-npm-2.12.0-120238a0bc-be3ac52e09.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-npm-8.57.1-dd20287a5a-e2489bb7f8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-plugin-import-npm-2.31.0-3c7ca668cd-b1d2ac268b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-plugin-jsx-a11y-npm-6.10.2-23afcd8d2e-0cc861398f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-plugin-react-hooks-npm-5.0.0-canary-7118f5dd7-20230705-2292094517-20e334e60b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-plugin-react-npm-7.37.2-9fdf577e3b-7f5203afee.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-scope-npm-7.2.2-53cb0df8e8-ec97dbf5fb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-visitor-keys-npm-3.4.3-a356ac7e46-36e9ef87fc.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/eslint-visitor-keys-npm-4.2.0-a591434af3-779c604672.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/espree-npm-9.6.1-a50722a5a9-eb8c149c7a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/esquery-npm-1.6.0-16fee31531-08ec4fe446.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/esrecurse-npm-4.3.0-10b86a887a-ebc17b1a33.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/estraverse-npm-5.3.0-03284f8f63-072780882d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/esutils-npm-2.0.3-f865beafd5-22b5b08f74.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/exponential-backoff-npm-3.1.1-04df458b30-3d21519a4f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/fast-deep-equal-npm-3.1.3-790edcfcf5-e21a9d8d84.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/fast-glob-npm-3.3.2-0a8cb4f2ca-900e4979f4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/fast-json-stable-stringify-npm-2.1.0-02e8905fda-b191531e36.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/fast-levenshtein-npm-2.0.6-fcd74b8df5-92cfec0a8d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/fastq-npm-1.17.1-56d4554993-a8c5b26788.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/file-entry-cache-npm-6.0.1-31965cf0af-f49701feaa.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/fill-range-npm-7.1.1-bf491486db-b4abfbca38.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/find-up-npm-5.0.0-e03e9b796d-07955e3573.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/flat-cache-npm-3.2.0-9a887f084e-e7e0f59801.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/flatted-npm-3.3.2-6bf77e6e67-ac3c159742.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/for-each-npm-0.3.3-0010ca8cdd-6c48ff2bc6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/foreground-child-npm-3.3.0-b8be745271-1989698488.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/fs-minipass-npm-2.1.0-501ef87306-1b8d128dae.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/fs-minipass-npm-3.0.3-d148d6ac19-8722a41109.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/fs.realpath-npm-1.0.0-c8f05d8126-99ddea01a7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/fsevents-npm-2.3.3-ce9fb0ffae-11e6ea6fea.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/function-bind-npm-1.1.2-7a55be9b03-2b0ff4ce70.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/function.prototype.name-npm-1.1.6-fd3a6a5cdd-7a3f9bd98a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/functions-have-names-npm-1.2.3-e5cf1e2208-c3f1f5ba20.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/get-intrinsic-npm-1.2.4-1dad3427b2-414e3cdf2c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/get-nonce-npm-1.0.1-6272950b34-e2614e43b4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/get-symbol-description-npm-1.0.2-f8c332e0b5-e1cb53bc21.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/get-tsconfig-npm-4.8.1-adab2fc965-12df01672e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/get-value-npm-3.0.1-b525a3975a-d2df36858c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/glob-npm-10.3.10-da1ef8b112-4f2fe2511e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/glob-npm-10.4.5-8c63175f05-0bc725de5e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/glob-npm-7.2.3-2d866d17a5-29452e97b3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/glob-parent-npm-5.1.2-021ab32634-f4f2bfe242.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/glob-parent-npm-6.0.2-2cbef12738-c13ee97978.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/globals-npm-13.24.0-cc7713139c-56066ef058.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/globalthis-npm-1.0.4-de22ac6193-39ad667ad9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/gopd-npm-1.0.1-10c1d0b534-a5ccfb8806.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/graceful-fs-npm-4.2.11-24bb648a68-ac85f94da9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/graphemer-npm-1.4.0-0627732d35-bab8f0be9b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/has-bigints-npm-1.0.2-52732e614d-390e31e7be.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/has-flag-npm-4.0.0-32af9f0536-261a135703.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/has-property-descriptors-npm-1.0.2-d7077d09f1-fcbb246ea2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/has-proto-npm-1.0.3-b598da2961-fe7c3d50b3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/has-symbols-npm-1.0.3-1986bff2c4-a054c40c63.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/has-tostringtag-npm-1.0.2-74a4800369-999d60bb75.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/hasown-npm-2.0.2-80fe6c9901-e8516f776a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/http-cache-semantics-npm-4.1.1-1120131375-83ac0bc60b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/http-proxy-agent-npm-7.0.2-643ed7cc33-670858c8f8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/https-proxy-agent-npm-7.0.5-94c14d4619-2e1a28960f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/iconv-lite-npm-0.6.3-24b8aae27e-3f60d47a5c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ignore-npm-5.3.2-346d3ba017-2acfd32a57.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/import-fresh-npm-3.3.0-3e34265ca9-2cacfad06e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/imurmurhash-npm-0.1.4-610c5068a0-7cae75c8cd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/indent-string-npm-4.0.0-7b717435b2-824cfb9929.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/inflight-npm-1.0.6-ccedb4b908-f4f76aa072.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/inherits-npm-2.0.4-c66b3957a0-4a48a73384.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/internal-slot-npm-1.0.7-6e3758af00-cadc5eea5d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/invariant-npm-2.2.4-717fbdb119-cc3182d793.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ip-address-npm-9.0.5-9fa024d42a-aa15f12cfd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-array-buffer-npm-3.0.4-c1d4ec5b64-e4e3e6ef0f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-async-function-npm-2.0.0-ebf8596ab1-e3471d95e6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-bigint-npm-1.0.4-31c2eecbc9-c56edfe09b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-binary-path-npm-2.1.0-e61d46f557-84192eb88c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-boolean-object-npm-1.1.2-ecbd575e6a-c03b23dbaa.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-bun-module-npm-1.2.1-1b6eb6a54c-1c2cbcf1a7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-callable-npm-1.2.7-808a303e61-61fd57d03b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-core-module-npm-2.15.1-34c73a6cbd-df134c1681.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-data-view-npm-1.0.1-d6136250e8-4ba4562ac2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-date-object-npm-1.0.5-88f3d08b5e-baa9077cdf.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-extglob-npm-2.1.1-0870ea68b5-df033653d0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-finalizationregistry-npm-1.0.2-15bf1bd7ce-4f243a8e06.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-fullwidth-code-point-npm-3.0.0-1ecf4ebee5-44a30c2945.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-generator-function-npm-1.0.10-1d0f3809ef-d54644e7db.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-glob-npm-4.0.3-cb87bf1bdb-d381c1319f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-lambda-npm-1.0.1-7ab55bc8a8-93a32f0194.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-map-npm-2.0.3-9e061e76e3-e6ce5f6380.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-negative-zero-npm-2.0.3-d06b09e322-c1e6b23d20.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-number-npm-7.0.0-060086935c-456ac6f8e0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-number-object-npm-1.0.7-539d0e274d-d1e8d01bb0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-path-inside-npm-3.0.3-2ea0ef44fd-abd50f0618.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-plain-object-npm-2.0.4-da3265d804-2a401140cf.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-primitive-npm-3.0.1-fee1052bb5-c4da6a6e6d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-regex-npm-1.1.4-cca193ef11-362399b335.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-set-npm-2.0.3-1b72c9a855-36e3f8c44b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-shared-array-buffer-npm-1.0.3-3b3b3142a6-a4fff602c3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-string-npm-1.0.7-9f7066daed-323b3d0462.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-symbol-npm-1.0.4-eb9baac703-92805812ef.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-typed-array-npm-1.1.13-0dce6ee7c2-150f9ada18.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-weakmap-npm-2.0.2-ced3cab2dc-f36aef758b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-weakref-npm-1.0.2-ff80e8c314-95bd9a57cd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/is-weakset-npm-2.0.3-f7d282c9c1-8b6a20ee9f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/isarray-npm-2.0.5-4ba522212d-bd5bbe4104.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/isexe-npm-2.0.0-b58870bd2e-26bf6c5480.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/isexe-npm-3.1.1-9c0061eead-7fe1931ee4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/isobject-npm-3.0.1-8145901fd2-db85c4c970.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/iterator.prototype-npm-1.1.3-2bcc06f3f8-7d2a1f8bcb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/jackspeak-npm-2.3.6-42e1233172-57d43ad11e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/jackspeak-npm-3.4.3-546bfad080-be31027fc7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/jiti-npm-1.21.6-0bb76563a3-9ea4a70a7b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/js-tokens-npm-4.0.0-0ac852e9e2-8a95213a5a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/js-yaml-npm-4.1.0-3606f32312-c7830dfd45.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/jsbn-npm-1.1.0-1da0181838-944f924f2b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/json-buffer-npm-3.0.1-f8f6d20603-9026b03edc.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/json-schema-traverse-npm-0.4.1-4759091693-7486074d3b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/json-stable-stringify-without-jsonify-npm-1.0.1-b65772b28b-cff44156dd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/json5-npm-1.0.2-9607f93e30-866458a8c5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/jsx-ast-utils-npm-3.3.5-114c80f97a-f4b05fa4d7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/keyv-npm-4.5.4-4c8e2cf7f7-74a24395b1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/language-subtag-registry-npm-0.3.23-06b360f90f-0b64c1a6c5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/language-tags-npm-1.0.9-3ea51f204b-57c530796d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/levn-npm-0.4.1-d183b2d7bb-12c5021c85.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/lilconfig-npm-2.1.0-a179261924-8549bb352b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/lilconfig-npm-3.1.2-e5b7292949-4e8b83ddd1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/lines-and-columns-npm-1.2.4-d6c7cc5799-0c37f9f7fa.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/locate-path-npm-6.0.0-06a1e4c528-72eb661788.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/lodash.merge-npm-4.6.2-77cb4416bf-ad580b4bdb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/loose-envify-npm-1.4.0-6307b72ccf-6517e24e0c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/lru-cache-npm-10.4.3-30c10b861a-6476138d21.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/lucide-react-npm-0.460.0-d5626bc482-6106dc16dd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/make-fetch-happen-npm-13.0.1-4180f2aaa8-5c9fad6955.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/memoize-one-npm-5.2.1-ee0f8be979-a3cba7b824.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/merge2-npm-1.4.1-a2507bd06c-7268db63ed.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/micromatch-npm-4.0.8-c9570e4aca-79920eb634.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minimatch-npm-3.1.2-9405269906-c154e56640.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minimatch-npm-9.0.5-9aa93d97fa-2c035575ed.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minimist-npm-1.2.8-d7af7b1dce-75a6d645fb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minipass-collect-npm-2.0.1-73d3907e40-b251bceea6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minipass-fetch-npm-3.0.5-ed78529694-8047d27323.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minipass-flush-npm-1.0.5-efe79d9826-56269a0b22.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minipass-npm-3.3.6-b8d93a945b-a30d083c80.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minipass-npm-5.0.0-c64fb63c92-425dab2887.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minipass-npm-7.1.2-3a5327d36d-2bfd325b95.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minipass-pipeline-npm-1.2.4-5924cb077f-b14240dac0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minipass-sized-npm-1.0.3-306d86f432-79076749fc.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/minizlib-npm-2.1.2-ea89cd0cfb-f1fdeac0b0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/mkdirp-npm-1.0.4-37f6ef56b9-a96865108c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ms-npm-2.1.3-81ff3cfac1-aa92de6080.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/mz-npm-2.7.0-ec3cef4ec2-8427de0ece.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/nanoid-npm-3.3.7-98824ba130-d36c427e53.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/natural-compare-npm-1.4.0-97b75b362d-23ad088b08.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/negotiator-npm-0.6.4-4a96086720-7ded10aa02.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/next-npm-14.2.16-96548c5567-907cf5e348.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/next-themes-npm-0.4.3-45cb093cef-23b3a594cf.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/node-gyp-npm-10.2.0-cad1109948-0233759d8c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/nopt-npm-7.2.1-635b7da949-6fa729cc77.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/normalize-path-npm-3.0.0-658ba7d77f-88eeb4da89.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/object-assign-npm-4.1.1-1004ad6dec-fcc6e4ea8c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/object-hash-npm-3.0.0-d941e0cabe-80b4904bb3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/object-inspect-npm-1.13.3-b4e129b6d9-8c96210211.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/object-keys-npm-1.1.1-1bf2f1be93-b363c5e764.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/object.assign-npm-4.1.5-aa3b2260ba-f9aeac0541.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/object.entries-npm-1.1.8-386f7451b8-5314877cb6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/object.fromentries-npm-2.0.8-8f6e2db04a-29b2207a2d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/object.groupby-npm-1.0.3-d5feb41454-0d30693ca3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/object.values-npm-1.2.0-5112376fc7-51fef456c2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/once-npm-1.4.0-ccf03ef07a-cd0a885013.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/optionator-npm-0.9.4-1f114b00e8-ecbd010e3d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/p-limit-npm-3.1.0-05d2ede37f-7c3690c4db.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/p-locate-npm-5.0.0-92cc7c7a3e-1623088f36.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/p-map-npm-4.0.0-4677ae07c7-cb0ab21ec0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/package-json-from-dist-npm-1.0.1-4631a88465-58ee9538f2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/parent-module-npm-1.0.1-1fae11b095-6ba8b25514.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/path-exists-npm-4.0.0-e9e4f63eb0-505807199d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/path-is-absolute-npm-1.0.1-31bc695ffd-060840f92c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/path-key-npm-3.1.1-0e66ea8321-55cd7a9dd4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/path-parse-npm-1.0.7-09564527b7-49abf3d811.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/path-scurry-npm-1.11.1-aaf8c339af-890d5abcd5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/picocolors-npm-1.1.1-4fede47cf1-e1cf46bf84.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/picomatch-npm-2.3.1-c782cfd986-050c865ce8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/pify-npm-2.3.0-8b63310934-9503aaeaf4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/pirates-npm-4.0.6-a8ec571a43-46a65fefaf.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/possible-typed-array-names-npm-1.0.0-3a8176348a-b32d403ece.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/postcss-import-npm-15.1.0-8b9e86f900-7bd04bd8f0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/postcss-js-npm-4.0.1-2c4ee70bf3-5c1e83efea.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/postcss-load-config-npm-4.0.2-319bcff9ca-7c27dd3801.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/postcss-nested-npm-6.2.0-389c2a5f75-2c86ecf2d0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/postcss-npm-8.4.31-385051a82b-1d8611341b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/postcss-npm-8.4.49-1c13833dd1-eb5d6cbdca.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/postcss-selector-parser-npm-6.1.2-46a8e03b00-ce9440fc42.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/postcss-value-parser-npm-4.2.0-3cef602a6a-819ffab0c9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/prelude-ls-npm-1.2.1-3e4d272a55-cd192ec0d0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/proc-log-npm-4.2.0-4d65296a9d-98f6cd012d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/promise-retry-npm-2.0.1-871f0b01b7-f96a3f6d90.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/prop-types-npm-15.8.1-17c71ee7ee-c056d3f1c0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/punycode-npm-2.3.1-97543c420d-bb0a0ceedc.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/queue-microtask-npm-1.2.3-fcc98e4e2d-b676f8c040.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/react-dom-npm-18.3.1-a805663f38-298954ecd8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/react-is-npm-16.13.1-a9b9382b4f-f7a19ac349.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/react-is-npm-17.0.2-091bbb8db6-9d6d111d89.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/react-npm-18.3.1-af38f3c1ae-a27bcfa8ff.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/react-remove-scroll-bar-npm-2.3.6-92aacd8517-e793fe110e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/react-remove-scroll-npm-2.6.0-8b2203a174-e7ad2383ce.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/react-style-singleton-npm-2.2.1-e45b97b153-7ee8ef3aab.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/react-use-set-npm-1.0.0-6ddd6b87a5-ffdd795845.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/react-window-npm-1.8.10-8350e20b50-e8830f32e3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/read-cache-npm-1.0.0-00fa89ed05-cffc728b9e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/readdirp-npm-3.6.0-f950cc74ab-1ced032e6e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/reflect.getprototypeof-npm-1.0.6-b33819c756-88e9e65a7e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/regenerator-runtime-npm-0.14.1-a6c97c609a-9f57c93277.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/regexp.prototype.flags-npm-1.5.3-09ac29fab0-83ff0705b8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/resolve-from-npm-4.0.0-f758ec21bf-f4ba0b8494.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/resolve-npm-1.22.8-098f379dfe-f8a26958aa.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/resolve-npm-2.0.0-next.5-0e83bf26ee-a73ac69a1c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/resolve-patch-1169b4314d-064d09c180.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/resolve-patch-f6b5304cab-5479b7d431.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/resolve-pkg-maps-npm-1.0.0-135b70c854-1012afc566.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/retry-npm-0.12.0-72ac7fb4cc-623bd7d2e5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/reusify-npm-1.0.4-95ac4aec11-c3076ebcc2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/rimraf-npm-3.0.2-2cb7dac69a-87f4164e39.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/rsuite-npm-5.74.2-6e489c10a0-691889d05f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/rsuite-table-npm-5.19.1-cdf94002fe-91dc6bb96c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/run-parallel-npm-1.2.0-3f47ff2034-cb4f97ad25.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/safe-array-concat-npm-1.1.2-f9c09c1a31-a3b2596947.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/safe-regex-test-npm-1.0.3-97fe5cc608-6c7d392ff1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/safer-buffer-npm-2.1.2-8d5c0b705e-cab8f25ae6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/scheduler-npm-0.23.2-6d1dd9c2b7-3e82d1f419.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/schema-typed-npm-2.2.2-63ea6816d7-0a1f21e8f7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/semver-npm-6.3.1-bcba31fdbe-ae47d06de2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/semver-npm-7.6.3-57e82c14d5-4110ec5d01.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/set-function-length-npm-1.2.2-243073748b-a8248bdacd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/set-function-name-npm-2.0.2-3d9a2d8899-d6229a7152.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/set-value-npm-4.1.0-c7a3c25411-2b4f0f2225.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/shebang-command-npm-2.0.0-eb2b01921d-6b52fe8727.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/shebang-regex-npm-3.0.0-899a0cd65e-1a2bcae50d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/side-channel-npm-1.0.6-511657386f-bfc1afc182.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/signal-exit-npm-4.1.0-61fb957687-64c757b498.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/smart-buffer-npm-4.2.0-5ac3f668bb-b5167a7142.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/socks-npm-2.8.3-3532b59899-7a6b7f6eed.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/socks-proxy-agent-npm-8.0.4-991722041a-b2ec5051d8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/source-map-js-npm-1.2.1-b9a47d7e1a-4eb0cd997c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/sprintf-js-npm-1.1.3-b99efd75b2-a3fdac7b49.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ssri-npm-10.0.6-6b8eaec5ce-4603d53a05.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/streamsearch-npm-1.1.0-fc3ad6536d-1cce16cea8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/string-width-npm-4.2.3-2c27177bae-e52c10dc3f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/string-width-npm-5.1.2-bf60531341-7369deaa29.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/string.prototype.includes-npm-2.0.1-12fb63787c-ed4b7058b0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/string.prototype.matchall-npm-4.0.11-a18d0665a1-6ac6566ed0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/string.prototype.repeat-npm-1.0.0-3f87f5fd9e-95dfc514ed.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/string.prototype.trim-npm-1.2.9-7b24b35971-ea2df6ec1e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/string.prototype.trimend-npm-1.0.8-9c0ed19266-cc3bd2de08.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/string.prototype.trimstart-npm-1.0.8-8c6b16ba6e-df1007a7f5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/strip-ansi-npm-6.0.1-caddc7cb40-f3cd25890a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/strip-ansi-npm-7.1.0-7453b80b79-859c73fcf2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/strip-bom-npm-3.0.0-71e8f81ff9-8d50ff27b7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/strip-json-comments-npm-3.1.1-dcb2324823-492f73e272.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/styled-jsx-npm-5.1.1-2557a209ba-523a33b386.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/sucrase-npm-3.35.0-60ad876a0c-9fc5792a9a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/supports-color-npm-7.2.0-606bfcf7da-3dda818de0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/supports-preserve-symlinks-flag-npm-1.0.0-f17c4d0028-53b1e247e6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/tailwind-merge-npm-2.5.4-cdd9f9e9ac-c22adafebd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/tailwindcss-animate-npm-1.0.7-0ee9776556-c1760983eb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/tailwindcss-npm-3.4.15-ea0b9b13fd-189a2a4747.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/tapable-npm-2.2.1-8cf5ff3039-3b7a1b4d86.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/tar-npm-6.2.1-237800bb20-f1322768c9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/text-table-npm-0.2.0-d92a778b59-b6937a38c8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/thenify-all-npm-1.6.0-96309bbc8b-dba7cc8a23.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/thenify-npm-3.3.1-030bedb22c-84e1b804bf.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/to-regex-range-npm-5.0.1-f1e8263b00-f76fa01b3d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ts-api-utils-npm-1.4.0-b091964d6e-477601317d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/ts-interface-checker-npm-0.1.13-0c7b064494-20c29189c2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/tsconfig-paths-npm-3.15.0-ff68930e0e-59f35407a3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/tslib-npm-2.8.1-66590b21b8-e4aba30e63.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/type-check-npm-0.4.0-60565800ce-ec688ebfc9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/type-fest-npm-0.20.2-b36432617f-4fb3272df2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/typed-array-buffer-npm-1.0.2-31e458f38d-02ffc185d2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/typed-array-byte-length-npm-1.0.1-9ab0891fb8-f65e5ecd1c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/typed-array-byte-offset-npm-1.0.3-1a3dc5b65f-36728daa80.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/typed-array-length-npm-1.0.6-867a36a1ac-f0315e5b8f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/typescript-npm-5.7.2-b1f84a8b28-b55300c4ce.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/typescript-patch-472214f365-803430c6da.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/unbox-primitive-npm-1.0.2-cb56a05066-b7a1cf5862.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/undici-types-npm-6.19.8-9f12285b7a-de51f1b447.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/unique-filename-npm-3.0.0-77d68e0a45-8e2f59b356.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/unique-slug-npm-4.0.0-e6b08f28aa-0884b58365.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/uri-js-npm-4.4.1-66d11cbcaf-7167432de6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/use-callback-ref-npm-1.3.2-ba60d2965f-df690f2032.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/use-sidecar-npm-1.1.2-dfc322e94a-925d1922f9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/util-deprecate-npm-1.0.2-e3fe1a219c-474acf1146.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/which-boxed-primitive-npm-1.0.2-e214f9ae5a-53ce774c73.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/which-builtin-type-npm-1.1.4-23f1df9013-1f41302525.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/which-collection-npm-1.0.2-0d6277e921-c51821a331.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/which-npm-2.0.2-320ddf72f7-1a5c563d3c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/which-npm-4.0.0-dd31cd4928-f17e84c042.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/which-typed-array-npm-1.1.15-91410874a2-65227dcbfa.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/word-wrap-npm-1.2.5-42d00c4b09-f93ba3586f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/wrap-ansi-npm-7.0.0-ad6e1a0554-a790b846fd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/wrap-ansi-npm-8.1.0-26a4e6ae28-371733296d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/wrappy-npm-1.0.2-916de4d4b3-159da4805f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/yallist-npm-4.0.0-b493d9e907-343617202a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/yaml-npm-2.6.1-eb747069e9-5cf2627f12.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/cache/yocto-queue-npm-0.1.0-c6c9a7db29-f77b3d8d00.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/@next-swc-linux-x64-gnu-npm-14.2.16-310233fd76/node_modules/@next/swc-linux-x64-gnu/.ready" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/@next-swc-linux-x64-gnu-npm-14.2.16-310233fd76/node_modules/@next/swc-linux-x64-gnu/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/@next-swc-linux-x64-gnu-npm-14.2.16-310233fd76/node_modules/@next/swc-linux-x64-gnu/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/.ready" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/.release-please-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/SECURITY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/addon.gypi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/bin/node-gyp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/.release-please-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/data/ninja/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/data/win/large-pdb-shim.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/docs/GypVsCMake.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/docs/Hacking.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/docs/InputFormatReference.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/docs/LanguageSpecification.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/docs/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/docs/Testing.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/docs/UserDocumentation.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/gyp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/gyp.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/gyp_main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/MSVSNew.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/MSVSProject.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/MSVSSettings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/MSVSSettings_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/MSVSToolFile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/MSVSUserFile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/MSVSUtil.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/MSVSVersion.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/common.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/common_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/easy_xml.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/easy_xml_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/flock_tool.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/analyzer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/android.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/cmake.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/compile_commands_json.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/dump_dependency_json.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/eclipse.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/gypd.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/gypsh.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/make.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/msvs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/msvs_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/ninja.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/ninja_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/xcode.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/generator/xcode_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/input.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/input_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/mac_tool.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/msvs_emulation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/ninja_syntax.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/simple_copy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/win_tool.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/xcode_emulation_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/xcode_ninja.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/xcodeproj_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/gyp/xml_fix.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/LICENSE.APACHE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/LICENSE.BSD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/_elffile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/_manylinux.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/_musllinux.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/_parser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/_structures.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/_tokenizer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/markers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/metadata.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/py.typed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/requirements.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/specifiers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/tags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pylib/packaging/version.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/pyproject.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/release-please-config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/gyp/test_gyp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/Find-VisualStudio.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/clean.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/configure.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/create-config-gypi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/download.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/find-node-directory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/find-python.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/find-visualstudio.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/install.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/log.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/node-gyp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/process-release.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/rebuild.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/remove.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/lib/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/macOS_Catalina_acid_test.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/release-please-config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/src/win_delay_load_hook.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/fonts/GeistMonoVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/fonts/GeistVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/components.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/components/layout/footer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/components/layout/header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/components/logo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/components/theme-provider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/components/theme-toggle.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/components/ui/button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/components/ui/dropdown-menu.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/components/ui/input.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/lib/utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/next.config.mjs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/postcss.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/black-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/white-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/white-video.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/tailwind.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/avatar/admin.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/avatar/admin_man.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/bg1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/background/bg1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/bg2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/background/bg2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/bg_light.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/background/bg_light.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/gradient_waves.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/background/gradient_waves.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/landing.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/background/landing.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/api/adminApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/adminApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/api/transactionApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/transactionApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/api/userApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/userApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/auth/LoginComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/auth/LoginComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/auth/RegisterComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/auth/RegisterComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/header/HeaderComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/header/HeaderComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/header/UserDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/header/UserDropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/interfaces/AuthInterface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/interfaces/AuthInterface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/home/GreetingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/home/GreetingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/home/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/home/LandingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/home/UserBankAccountsPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/user/UserProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/user/UserProfilePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/store/UserStore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/store/UserStore.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -776,64 +202,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Build backend.executor": "Run",
-    "Gradle.Build config-service.executor": "Run",
-    "Gradle.Building Gradle Dependencies.executor": "Run",
-    "Gradle.backend [:services:config-service:classes].executor": "Run",
-    "Gradle.backend [build].executor": "Run",
-    "Gradle.backend [clean build && docker-compose up --build --force-recreate].executor": "Run",
-    "Gradle.backend [clean build].executor": "Run",
-    "Gradle.backend [clean].executor": "Run",
-    "Gradle.backend [projects].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ConfigServiceApplication (1).executor": "Run",
-    "Spring Boot.ConfigServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/vladimir/ITMO/5 semester/Информационные системы/coursework/backend/lib/security/src/main/kotlin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/home/vladimir/ITMO/5 semester/Информационные системы/coursework/backend/services/user-management-service/src/main/kotlin/Main.kt",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.40110394",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.language.Kotlin.scripting",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build backend.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build config-service.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Building Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [:services:config-service:classes].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [clean build &amp;&amp; docker-compose up --build --force-recreate].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [clean build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend [projects].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ConfigServiceApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ConfigServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vladimir/ITMO/5 semester/Информационные системы/coursework/backend/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/vladimir/ITMO/5 semester/Информационные системы/coursework/backend/services/user-management-service/src/main/kotlin/Main.kt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.40110394&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin.scripting&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/security/src/main/kotlin" />
       <recent name="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service" />
+      <recent name="$PROJECT_DIR$/lib/security/src/main/kotlin" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/services/administration-management-service/src/main/kotlin/com/coursework/administration_management_service/domain/service/admin" />
       <recent name="$PROJECT_DIR$/services/notification-service/src/main/kotlin/com/coursework/notification_service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/services/api-gateway-service/src/main/kotlin/com/coursework/api_gateway_service/config" />
       <recent name="$PROJECT_DIR$/lib/security/src/main/kotlin" />
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/lib/contract/account-management/src/main/kotlin/internal" />
       <recent name="$PROJECT_DIR$/lib/contract/administration-management/src/main/kotlin/external" />
-      <recent name="$PROJECT_DIR$/services/file-service/src/main/kotlin" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.coursework.user_management_service.domain.user.filter" />
       <recent name="com.coursework.user_management_service.security.config" />
       <recent name="com.coursework.user_management_service.security" />
       <recent name="com.coursework.administration_management_service.domain.service" />
@@ -999,14 +426,14 @@
       </method>
     </configuration>
     <configuration name="AccountManagementServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="services.account-management-service.backend.services.account-management-service.main" />
+      <module name="backend.services.account-management-service.backend.services.account-management-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.coursework.account_management_service.AccountManagementServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="AdministrationManagementServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="services.user-management-service.backend.services.user-management-service.main" />
+      <module name="backend.services.user-management-service.backend.services.user-management-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.coursework.user_management_service.AdministrationManagementServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1041,7 +468,7 @@
       </method>
     </configuration>
     <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="services.config-service.backend.services.config-service.main" />
+      <module name="backend.services.config-service.backend.services.config-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.coursework.config_service.ConfigServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1055,7 +482,7 @@
       </method>
     </configuration>
     <configuration name="FileServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="services.file-service.backend.services.file-service.main" />
+      <module name="backend.services.file-service.backend.services.file-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.coursework.file_service.FileServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1069,7 +496,7 @@
       </method>
     </configuration>
     <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="services.notification-service.backend.services.notification-service.main" />
+      <module name="backend.services.notification-service.main~1" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.coursework.notification_service.NotificationServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1140,6 +567,12 @@
       <workItem from="1736626272351" duration="158000" />
       <workItem from="1736626436621" duration="488000" />
       <workItem from="1736626938187" duration="1512000" />
+      <workItem from="1736785317420" duration="661000" />
+      <workItem from="1736785988885" duration="1376000" />
+      <workItem from="1736789082202" duration="2432000" />
+      <workItem from="1736798907324" duration="7375000" />
+      <workItem from="1736839020812" duration="12768000" />
+      <workItem from="1736875872195" duration="35615000" />
     </task>
     <servers />
   </component>

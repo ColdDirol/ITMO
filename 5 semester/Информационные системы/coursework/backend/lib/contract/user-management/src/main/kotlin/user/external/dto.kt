@@ -1,10 +1,10 @@
 package user.external
 
-import com.newdex.services.contract.common.external.UserMainInfoDto
+import external.UserMainInfoProjection
 import java.time.LocalDateTime
 
 data class UserInfoChangeLogDto(
     val id: Long,
     val date: LocalDateTime,
-    val user: UserMainInfoDto,
+    val user: UserMainInfoProjection,
 )

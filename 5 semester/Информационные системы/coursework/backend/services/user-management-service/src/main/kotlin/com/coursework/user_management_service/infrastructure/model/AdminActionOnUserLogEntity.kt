@@ -12,8 +12,8 @@ class AdminActionOnUserLogEntity(
     var id: Long,
     var date: LocalDateTime,
     @ManyToOne
-    var administrator: com.coursework.user_management_service.infrastructure.model.UsersEntity,
+    var administrator: UsersEntity,
     var action: ActionType,
     @ManyToOne
-    var user: com.coursework.user_management_service.infrastructure.model.UsersEntity
+    var user: UsersEntity
 )

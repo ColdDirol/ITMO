@@ -1,4 +1,4 @@
-package com.newdex.services.contract.common.external
+package external
 
 import internal.RoleType
 import internal.UserStatusType
@@ -14,6 +14,12 @@ data class UserInfoDto(
     val dateOfBirth: LocalDateTime,
     val status: UserStatusType,
 )
+
+interface UserMainInfoProjection {
+    val id: Long
+    val email: String
+    val name: String
+}
 
 data class UserMainInfoDto(
     val id: Long,

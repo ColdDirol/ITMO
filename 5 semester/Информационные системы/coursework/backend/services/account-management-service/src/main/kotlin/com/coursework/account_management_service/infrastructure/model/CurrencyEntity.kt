@@ -1,6 +1,7 @@
 package com.coursework.account_management_service.infrastructure.model
 
 import jakarta.persistence.*
+import java.math.BigDecimal
 
 @Entity
 @Table(name = "currency")

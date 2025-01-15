@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 
 const useUserStore = () => {
     const [token, setToken] = useState<string | null>(null);
-    const [fullname, setfullname] = useState<string | null>(null);
+    const [name, setName] = useState<string | null>(null);
     const [email, setEmail] = useState<string | null>(null);
     const [phone, setPhone] = useState<string | null>(null);
     const [role, setRole] = useState<string | null>(null);
@@ -16,7 +16,7 @@ const useUserStore = () => {
 
     useEffect(() => {
         const storedToken = localStorage.getItem("token");
-        const storedFullname = localStorage.getItem("fullname");
+        const storedName = localStorage.getItem("name");
         const storedEmail = localStorage.getItem("email");
         const storedPhone = localStorage.getItem("phone");
         const storedRole = localStorage.getItem("role");
@@ -27,7 +27,7 @@ const useUserStore = () => {
         const storedIsDarkTheme = localStorage.getItem("isDarkTheme") === "true";
 
         if (storedToken) setToken(storedToken);
-        if (storedFullname) setfullname(storedFullname);
+        if (storedName) setName(storedName);
         if (storedEmail) setEmail(storedEmail);
         if (storedPhone) setPhone(storedPhone);
         if (storedRole) setRole(storedRole);
@@ -43,7 +43,7 @@ const useUserStore = () => {
         setToken(newToken);
 
         const decodedToken: {
-            fullname: string;
+            name: string;
             email: string;
             phone: string;
             role: string;
@@ -52,13 +52,13 @@ const useUserStore = () => {
             iat: number;
             exp: number;
         } = jwtDecode(newToken);
-        const newFullname = decodedToken.fullname;
+        const newName = decodedToken.name;
         const newEmail = decodedToken.email;
         const newPhone = decodedToken.phone;
         const newRole = decodedToken.role;
         const newSex = decodedToken.sex;
         const newPageElementsLimit = decodedToken.pageElementsLimit;
-        setfullname(newFullname);
+        setName(newName);
         setEmail(newEmail);
         setPhone(newPhone);
         setRole(newRole);
@@ -68,7 +68,7 @@ const useUserStore = () => {
         setHasAvatar(hasAvatar);
 
         localStorage.setItem("token", newToken);
-        localStorage.setItem("fullname", newFullname);
+        localStorage.setItem("name", newName);
         localStorage.setItem("email", newEmail);
         localStorage.setItem("phone", newPhone);
         localStorage.setItem("role", newRole);
@@ -82,7 +82,7 @@ const useUserStore = () => {
 
     const logout = () => {
         setToken(null);
-        setfullname(null);
+        setName(null);
         setEmail(null);
         setPhone(null);
         setRole(null);
@@ -94,7 +94,7 @@ const useUserStore = () => {
         console.log("logouting");
 
         localStorage.removeItem("token");
-        localStorage.removeItem("username");
+        localStorage.removeItem("name");
         localStorage.removeItem("email");
         localStorage.removeItem("phone");
         localStorage.removeItem("role");
@@ -123,7 +123,7 @@ const useUserStore = () => {
 
     return {
         token,
-        fullname,
+        name,
         email,
         phone,
         role,

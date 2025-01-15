@@ -1,4 +1,4 @@
-package com.coursework.user_management_service.domain.user.action
+package com.coursework.user_management_service.domain.auth.action
 
 import com.coursework.user_management_service.infrastructure.persistence.UserRepository
 import internal.UserStatusType

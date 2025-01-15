@@ -1,10 +1,11 @@
 package admin.external
 
-enum class ActionType {
+enum class  ActionType {
     BLOCKED,
     UNBLOCKED,
     FROZEN,
     UNFROZEN,
 
     DELETED,
+    ACTIVATED,
 }

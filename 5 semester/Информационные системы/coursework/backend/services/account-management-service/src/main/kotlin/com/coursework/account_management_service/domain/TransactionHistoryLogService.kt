@@ -1,8 +1,9 @@
 package com.coursework.account_management_service.domain
 
+import com.coursework.account_management_service.domain.transaction_history_log.filter.GetTransactionHistoryLogsByUserEmailFilter
 import org.springframework.stereotype.Service
 
 @Service
 class TransactionHistoryLogService(
-
+    val getTransactionHistoryLogsByUserEmail: GetTransactionHistoryLogsByUserEmailFilter
 )

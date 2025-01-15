@@ -1,0 +1,8 @@
+.profile-avatar {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+}

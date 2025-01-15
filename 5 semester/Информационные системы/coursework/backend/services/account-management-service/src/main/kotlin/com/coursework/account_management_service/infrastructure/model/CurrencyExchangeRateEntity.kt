@@ -9,8 +9,9 @@ class CurrencyExchangeRateEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long,
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "currency_id", nullable = false)
     var currency: CurrencyEntity,
+    var coefficient: Double,
     var status: ExchangeRateStatus,
 )

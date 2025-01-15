@@ -2,6 +2,7 @@ package com.coursework.account_management_service.api.v1
 
 import com.coursework.account_management_service.domain.BankAccountService
 import external.BankAccountDto
+import external.BankAccountRequestDto
 import external.TransferDto
 import org.springframework.web.bind.annotation.*
 
@@ -26,13 +27,20 @@ class BankAccountController(
         @PathVariable("userId") userId: Long
     ): List<BankAccountDto> = service.getAllByUserId(userId)
 
+    @PostMapping("/user")
+    fun getAllByUserEmail(
+        @RequestBody dto: BankAccountRequestDto
+    ): List<BankAccountDto> {
+        return service.getAllByUserEmail(dto);
+    }
+
     @DeleteMapping("/{id}")
     fun delete(
         @PathVariable("id") id: Long
     ) = service.delete(id)
 
 
-    // custom
+    // transaction
     @PostMapping("/transfer")
     fun transferMoney(
         @RequestBody dto: TransferDto

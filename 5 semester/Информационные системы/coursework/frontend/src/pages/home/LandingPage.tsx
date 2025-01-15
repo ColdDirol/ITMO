@@ -1,16 +1,12 @@
-import { Button, Form } from "rsuite";
-import FormGroup from "rsuite/FormGroup";
-import FormControlLabel from "rsuite/FormControlLabel";
-import FormControl from "rsuite/FormControl";
-import './LandingPage.css'; // Импортируем CSS файл для стилей
+import { Button } from "rsuite";
+import './LandingPage.css';
 
 const LandingPage = () => {
     return (
         <div style={{ position: "relative", zIndex: 0 }}>
-            {/* Фоновая картинка */}
             <div className="landing-fullscreen-bg" />
 
-            <div className="content" style={{ position: "relative", padding: "30px", textAlign: "center" }}>
+            <div className="content" style={{ position: "relative", textAlign: "center" }}>
                 <h1>Ваши финансы на любой орбите!</h1>
                 <p>Гарантируем надежность, доступ и скорость во всех уголках вселенной.</p>
                 <div style={{ padding: "30px", textAlign: "center" }}>
@@ -75,31 +71,31 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            <div className="content" style={{position: "relative", padding: "25px"}}>
-                <h2 style={{ paddingLeft: "15px" }}>Свяжитесь с нами</h2>
-                <Form fluid style={{padding: "30px", textAlign: "center"}}>
-                    <FormGroup>
-                        <FormControlLabel>Ваше имя</FormControlLabel>
-                        <FormControl name="name" type="text" placeholder="Введите ваше имя"/>
-                    </FormGroup>
-                    <FormGroup>
-                        <FormControlLabel>Ваш email</FormControlLabel>
-                        <FormControl name="email" type="email" placeholder="Введите ваш email"/>
-                    </FormGroup>
-                    <FormGroup>
-                    <FormControlLabel>Ваше сообщение</FormControlLabel>
-                        <FormControl
-                            name="message"
-                            componentClass="textarea"
-                            rows={5}
-                            placeholder="Введите ваше сообщение"
-                        />
-                    </FormGroup>
-                    <Button appearance="primary" type="submit">
-                        Отправить
-                    </Button>
-                </Form>
-            </div>
+        {/*    <div className="content" style={{position: "relative", padding: "25px"}}>*/}
+        {/*        <h2 style={{ paddingLeft: "15px" }}>Свяжитесь с нами</h2>*/}
+        {/*        <Form fluid style={{padding: "30px", textAlign: "center"}}>*/}
+        {/*            <FormGroup>*/}
+        {/*                <FormControlLabel>Ваше имя</FormControlLabel>*/}
+        {/*                <FormControl name="name" type="text" placeholder="Введите ваше имя"/>*/}
+        {/*            </FormGroup>*/}
+        {/*            <FormGroup>*/}
+        {/*                <FormControlLabel>Ваш email</FormControlLabel>*/}
+        {/*                <FormControl name="email" type="email" placeholder="Введите ваш email"/>*/}
+        {/*            </FormGroup>*/}
+        {/*            <FormGroup>*/}
+        {/*            <FormControlLabel>Ваше сообщение</FormControlLabel>*/}
+        {/*                <FormControl*/}
+        {/*                    name="message"*/}
+        {/*                    componentClass="textarea"*/}
+        {/*                    rows={5}*/}
+        {/*                    placeholder="Введите ваше сообщение"*/}
+        {/*                />*/}
+        {/*            </FormGroup>*/}
+        {/*            <Button appearance="primary" type="submit">*/}
+        {/*                Отправить*/}
+        {/*            </Button>*/}
+        {/*        </Form>*/}
+        {/*    </div>*/}
         </div>
     );
 }

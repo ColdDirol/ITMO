@@ -4,24 +4,31 @@ import { Link } from "react-router-dom";
 import useUserStore from "../../store/UserStore.tsx";
 import AuthComponent from "../auth/AuthComponent.tsx";
 import ExitIcon from '@rsuite/icons/Exit';
-import {useState} from "react";
 import HelpIcon from '@rsuite/icons/HelpOutline'
-import {RoleEnum, SexEnum} from "../../interfaces/AuthInterface.ts";
+import {RoleEnum, SexEnum} from "../../interfaces/UserInterface.ts";
 
 const UserProfile = () => {
-    // const { isAuthorized, fullname, role, sex } = useUserStore();
-    const { fullname, role, sex } = useUserStore();
-    const [isAuthorized] = useState(true);
+    const { isAuthorized, name, role, sex, logout } = useUserStore();
+    // const { fullname, role, sex } = useUserStore();
+    // const [isAuthorized] = useState(true);
 
 
-    const avatarSrc =
+    let avatarSrc =
         role === RoleEnum.SUPER_ADMIN || role === RoleEnum.ADMIN
-            ? "/avatar/admin.svg"
+            ? "/avatar/admin_man.svg"
             : role === RoleEnum.USER && sex === SexEnum.MAN
                 ? "/avatar/man.svg"
                 : role === RoleEnum.USER && sex === SexEnum.WOMAN
                     ? "/avatar/woman.svg"
                     : "/avatar/man.svg";
+
+    if (role === "ADMIN" && sex === "WOMAN") {
+        avatarSrc = "/avatar/admin_woman.svg";
+    }
+
+    if (role === "SUPER_ADMIN" && sex === "WOMAN") {
+        avatarSrc = "/avatar/admin_woman.svg";
+    }
 
     const renderToggle = props => (
         <Avatar
@@ -44,17 +51,17 @@ const UserProfile = () => {
                     >
                         <Dropdown.Item panel style={{ padding: 10, width: 160 }}>
                             <p>Signed in as</p>
-                            <strong>{fullname ?? "fullname"}</strong>
+                            <strong>{name ?? "name"}</strong>
                         </Dropdown.Item>
                         <Dropdown.Separator />
                         <Dropdown.Item as={Link} to="/profile">Profile</Dropdown.Item>
-                        <Dropdown.Item>Accounts</Dropdown.Item>
+                        <Dropdown.Item as={Link} to="/bank/accounts">Accounts</Dropdown.Item>
                         <Dropdown.Item>History</Dropdown.Item>
                         <Dropdown.Item>Deposits</Dropdown.Item>
                         <Dropdown.Separator />
                         <Dropdown.Item icon={<HelpIcon />}>Help</Dropdown.Item>
                         <Dropdown.Item icon={<GearIcon />}>Settings</Dropdown.Item>
-                        <Dropdown.Item icon={<ExitIcon />}>Sign out</Dropdown.Item>
+                        <Dropdown.Item icon={<ExitIcon />} onClick={logout}>Sign out</Dropdown.Item>
                     </Dropdown>
 
                     : <AuthComponent />

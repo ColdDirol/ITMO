@@ -1,5 +1,5 @@
 import useUserStore from "../../store/UserStore.tsx";
-import UserBankAccountsPage from "./UserBankAccountsPage.tsx";
+import UserBankAccountsPage from "../user/UserBankAccountsPage.tsx";
 import LandingPage from "./LandingPage.tsx";
 
 const GreetingPage = () => {
@@ -8,8 +8,6 @@ const GreetingPage = () => {
     return(
         <>
             {isAuthorized ? <UserBankAccountsPage /> : <LandingPage /> }
-            {/*<UserBankAccountsPage />*/}
-            {/*<LandingPage />*/}
         </>
     )
 }

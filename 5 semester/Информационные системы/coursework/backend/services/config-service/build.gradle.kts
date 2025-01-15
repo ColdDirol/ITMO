@@ -19,6 +19,7 @@ allOpen {
 		"jakarta.persistence.MappedSuperclass",
 		"jakarta.persistence.Entity",
 		"org.springframework.context.annotation.Configuration",
+		"org.springframework.transaction.annotation.Transactional"
 	)
 }
 

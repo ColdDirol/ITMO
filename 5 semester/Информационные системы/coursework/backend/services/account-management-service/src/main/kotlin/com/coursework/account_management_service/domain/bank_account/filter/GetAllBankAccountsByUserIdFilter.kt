@@ -9,7 +9,8 @@ import org.springframework.stereotype.Service
 
 @Service
 class GetAllBankAccountsByUserIdFilter(
-    private val repository: BankAccountRepository, private val userRepository: UserMainInfoRepository
+    private val repository: BankAccountRepository,
+    private val userRepository: UserMainInfoRepository
 ) {
     operator fun invoke(userId: Long): List<BankAccountDto> = repository.findAllByUserId(userId)
         .orElseThrow { EntityNotFoundException("No bank accounts for user id $userId") }.map {
