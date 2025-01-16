@@ -12,7 +12,9 @@ class BankAccountEntity (
     var id: Long,
     @Column(name = "user_id", nullable = false)
     var userId: Long,
+    @Column(nullable = false)
     var name: String,
+    @Column(nullable = false)
     var balance: BigDecimal,
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "currency_id", nullable = false)

@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbcea44a-933b-4447-bdf9-81bff3e88c04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/transaction_history_log/action/ExportTransactionHistoryToCsvAction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/TransactionHistoryLogController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/api/v1/TransactionHistoryLogController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/TransactionHistoryLogService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/domain/TransactionHistoryLogService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/TransactionHistoryLogRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/persistence/TransactionHistoryLogRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user-management-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/api/transactionHistoryApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/transactionHistoryApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/transaction/TransactionHistoryPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/transaction/TransactionHistoryPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/BankAccountEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/BankAccountEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyExchangeRateEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/CurrencyExchangeRateEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/TransactionHistoryLogEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/account-management-service/src/main/kotlin/com/coursework/account_management_service/infrastructure/model/TransactionHistoryLogEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/AdminActionOnUserLogEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/AdminActionOnUserLogEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/UsersEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/services/user-management-service/src/main/kotlin/com/coursework/user_management_service/infrastructure/model/UsersEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/auth/RegisterComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/auth/RegisterComponent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -462,7 +461,7 @@
       <workItem from="1736789082202" duration="2432000" />
       <workItem from="1736798907324" duration="7375000" />
       <workItem from="1736839020812" duration="12768000" />
-      <workItem from="1736875872195" duration="38060000" />
+      <workItem from="1736875872195" duration="40204000" />
     </task>
     <servers />
   </component>

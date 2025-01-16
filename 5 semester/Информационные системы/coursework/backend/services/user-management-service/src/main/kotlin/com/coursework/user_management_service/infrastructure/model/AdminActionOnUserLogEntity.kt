@@ -10,10 +10,14 @@ class AdminActionOnUserLogEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long,
+    @Column(nullable = false)
     var date: LocalDateTime,
+    @Column(nullable = false)
     @ManyToOne
     var administrator: UsersEntity,
+    @Column(nullable = false)
     var action: ActionType,
+    @Column(nullable = false)
     @ManyToOne
     var user: UsersEntity
 )

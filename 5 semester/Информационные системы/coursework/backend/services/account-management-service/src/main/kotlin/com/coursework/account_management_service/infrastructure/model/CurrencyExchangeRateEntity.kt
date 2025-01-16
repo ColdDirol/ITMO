@@ -12,6 +12,8 @@ class CurrencyExchangeRateEntity (
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "currency_id", nullable = false)
     var currency: CurrencyEntity,
+    @Column(nullable = false)
     var coefficient: Double,
+    @Column(nullable = false)
     var status: ExchangeRateStatus,
 )

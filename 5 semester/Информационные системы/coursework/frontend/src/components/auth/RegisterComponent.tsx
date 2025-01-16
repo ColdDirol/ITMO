@@ -89,6 +89,7 @@ const RegisterComponent = () => {
                         </Form.Group>
                     </Form>
                 </Modal.Body>
+                
                 <Modal.Footer>
                     <Button onClick={handleSubmit} appearance="primary">
                         Confirm

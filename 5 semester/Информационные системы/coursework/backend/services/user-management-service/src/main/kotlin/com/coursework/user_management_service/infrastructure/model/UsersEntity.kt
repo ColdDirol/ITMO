@@ -12,12 +12,20 @@ class UsersEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long,
+    @Column(nullable = false)
     var email: String,
+    @Column(nullable = false)
     var password: String,
+    @Column(nullable = false)
     var role: RoleType,
+    @Column(nullable = false)
     var phone: String,
+    @Column(nullable = false)
     var name: String,
+    @Column(nullable = false)
     var sex: SexType,
+    @Column(nullable = false)
     var dateOfBirth: LocalDateTime,
+    @Column(nullable = false)
     var status: UserStatusType,
 )

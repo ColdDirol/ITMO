@@ -12,6 +12,7 @@ class TransactionHistoryLogEntity (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long,
 
+    @Column(nullable = false)
     var date: LocalDateTime,
 
     @Column(name = "account_from", nullable = false)
@@ -20,11 +21,15 @@ class TransactionHistoryLogEntity (
     @Column(name = "account_to", nullable = false)
     var accountTo: Long,
 
+    @Column(nullable = false)
     var senderCurrency: String,
 
+    @Column(nullable = false)
     var receiverCurrency: String,
 
+    @Column(nullable = false)
     var amountInSenderCurrency: BigDecimal,
 
+    @Column(nullable = false)
     var amountInReceiverCurrency: BigDecimal,
 )
