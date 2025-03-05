@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="human.HumanTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-03-05T00:38:57" hostname="lenovo" time="0.025">
+  <properties/>
+  <testcase name="testHumanMovement()" classname="human.HumanTest" time="0.006"/>
+  <testcase name="testFurnitureInitialization()" classname="human.HumanTest" time="0.002"/>
+  <testcase name="testHumanInitialization()" classname="human.HumanTest" time="0.002"/>
+  <testcase name="testPlaceInitialization()" classname="human.HumanTest" time="0.001"/>
+  <testcase name="testBodyPartInitialization()" classname="human.HumanTest" time="0.001"/>
+  <testcase name="testInvalidHumanCreation()" classname="human.HumanTest" time="0.003"/>
+  <testcase name="testHumanActions()" classname="human.HumanTest" time="0.002"/>
+  <system-out><![CDATA[
+Жил был 12 летний человек - Артур.
+У него были: 
+Голова, Тело, Левая рука, Правая рука, Левая нога, Правая нога, 
+
+Жил был 3080 летний человек - Человек.
+У него были: 
+Левая голова, Правая голова, Тело, Левая рука, Правая рука, Левая нога, Правая нога, 
+
+Существовало место - Комната
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

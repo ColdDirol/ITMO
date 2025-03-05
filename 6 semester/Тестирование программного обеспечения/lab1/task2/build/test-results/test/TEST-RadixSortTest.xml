@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RadixSortTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-03-04T22:21:28" hostname="lenovo" time="0.025">
+  <properties/>
+  <testcase name="testRadixSortWithNegativeNumbers()" classname="RadixSortTest" time="0.018"/>
+  <testcase name="testRadixSortWithAlreadySortedArray()" classname="RadixSortTest" time="0.001"/>
+  <testcase name="testRadixSort()" classname="RadixSortTest" time="0.001"/>
+  <testcase name="testRadixSortWithEmptyArray()" classname="RadixSortTest" time="0.0"/>
+  <testcase name="testRadixSortWithSingleElement()" classname="RadixSortTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EventsFlow.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">task3</a> &gt; <a href="index.source.html" class="el_package">vladimir</a> &gt; <span class="el_source">EventsFlow.java</span></div><h1>EventsFlow.java</h1><pre class="source lang-java linenums">package vladimir;
+
+import vladimir.human.Human;
+import vladimir.human.body.BodyPart;
+import vladimir.furniture.Armchair;
+import vladimir.place.Room;
+
+import java.time.LocalDateTime;
+
+public class EventsFlow {
+
+<span class="fc" id="L12">    public EventsFlow() {</span>
+<span class="fc" id="L13">        System.out.println(</span>
+<span class="fc" id="L14">                &quot;Эта история произошла в &quot; + LocalDateTime.now().getYear() + &quot; году&quot;</span>
+        );
+<span class="fc" id="L16">    }</span>
+
+    public void story() {
+<span class="fc" id="L19">        Human artur = new Human(</span>
+                &quot;Артур&quot;,
+<span class="fc" id="L21">                12,</span>
+                new BodyPart(&quot;Голова&quot;),
+                new BodyPart(&quot;Тело&quot;),
+                new BodyPart(&quot;Левая рука&quot;),
+                new BodyPart(&quot;Правая рука&quot;),
+                new BodyPart(&quot;Левая нога&quot;),
+                new BodyPart(&quot;Правая нога&quot;)
+        );
+
+<span class="fc" id="L30">        Human human = new Human(</span>
+                &quot;Человек&quot;,
+<span class="fc" id="L32">                3080,</span>
+                new BodyPart(&quot;Левая голова&quot;),
+                new BodyPart(&quot;Правая голова&quot;),
+                new BodyPart(&quot;Тело&quot;),
+                new BodyPart(&quot;Левая рука&quot;),
+                new BodyPart(&quot;Правая рука&quot;),
+                new BodyPart(&quot;Левая нога&quot;),
+                new BodyPart(&quot;Правая нога&quot;)
+        );
+
+<span class="fc" id="L42">        Room room = new Room();</span>
+
+<span class="fc" id="L44">        artur.beNervous();</span>
+<span class="fc" id="L45">        artur.comeIn(room);</span>
+<span class="fc" id="L46">        artur.seeSmb(human);</span>
+<span class="fc" id="L47">        human.sit(new Armchair());</span>
+<span class="fc" id="L48">        human.move();</span>
+
+<span class="fc" id="L50">        artur.notBelieve();</span>
+<span class="fc" id="L51">        artur.beSurprised();</span>
+<span class="fc" id="L52">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

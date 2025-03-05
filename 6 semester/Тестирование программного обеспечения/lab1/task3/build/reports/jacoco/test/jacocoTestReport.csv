@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+task3,vladimir.furniture,Furniture,0,6,0,0,0,3,0,1,0,1
+task3,vladimir.furniture,Armchair,0,4,0,0,0,2,0,1,0,1
+task3,vladimir.furniture,Chair,0,4,0,0,0,2,0,1,0,1
+task3,vladimir,EventsFlow,141,0,0,0,17,0,2,0,2,0
+task3,vladimir,Main,8,0,0,0,3,0,2,0,2,0
+task3,vladimir.place,Room,0,4,0,0,0,2,0,1,0,1
+task3,vladimir.place,Place,0,15,0,0,0,6,0,1,0,1
+task3,vladimir.human,Human,0,112,1,5,0,31,1,12,0,10
+task3,vladimir.human.body,BodyPart,0,6,0,0,0,3,0,1,0,1
