@@ -1,9 +1,11 @@
 package vladimir.human.body;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-public class BodyPart {
+@Getter
+@Setter
+public abstract class BodyPart {
 
     private String name;
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RadixSort.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">task2</a> &gt; <a href="index.source.html" class="el_package">vladimir</a> &gt; <span class="el_source">RadixSort.java</span></div><h1>RadixSort.java</h1><pre class="source lang-java linenums">package vladimir;
 
 import java.util.Arrays;
+import java.util.Objects;
 
-<span class="nc" id="L5">public class RadixSort {</span>
+<span class="nc" id="L6">public class RadixSort {</span>
 
-    // Вспомогательная функция для получения максимального значения в массиве
-    private static int getMax(int[] arr) {
+    private static int getMax(Integer[] arr) {
 <span class="fc" id="L9">        int max = arr[0];</span>
 <span class="fc bfc" id="L10" title="All 2 branches covered.">        for (int i = 1; i &lt; arr.length; i++) {</span>
 <span class="fc bfc" id="L11" title="All 2 branches covered.">            if (arr[i] &gt; max) {</span>
@@ -15,81 +15,80 @@ import java.util.Arrays;
 <span class="fc" id="L15">        return max;</span>
     }
 
-    // Функция для выполнения сортировки подсчетом по разряду
-    private static void countingSort(int[] arr, int exp) {
-<span class="fc" id="L20">        int n = arr.length;</span>
-<span class="fc" id="L21">        int[] output = new int[n];</span>
-<span class="fc" id="L22">        int[] count = new int[10];</span>
-<span class="fc" id="L23">        Arrays.fill(count, 0);</span>
+    private static void countingSort(Integer[] arr, int exp) {
+<span class="fc" id="L19">        int n = arr.length;</span>
+<span class="fc" id="L20">        Integer[] output = new Integer[n];</span>
+<span class="fc" id="L21">        int[] count = new int[10];</span>
+<span class="fc" id="L22">        Arrays.fill(count, 0);</span>
 
-        // Подсчет количества элементов в каждом разряде
-<span class="fc bfc" id="L26" title="All 2 branches covered.">        for (int i = 0; i &lt; n; i++) {</span>
-<span class="fc" id="L27">            count[(arr[i] / exp) % 10]++;</span>
-        }
-
-        // Изменение count[i] так, чтобы count[i] содержал фактическую позицию цифры в output[]
-<span class="fc bfc" id="L31" title="All 2 branches covered.">        for (int i = 1; i &lt; 10; i++) {</span>
-<span class="fc" id="L32">            count[i] += count[i - 1];</span>
-        }
-
-        // Построение выходного массива
-<span class="fc bfc" id="L36" title="All 2 branches covered.">        for (int i = n - 1; i &gt;= 0; i--) {</span>
-<span class="fc" id="L37">            output[count[(arr[i] / exp) % 10] - 1] = arr[i];</span>
-<span class="fc" id="L38">            count[(arr[i] / exp) % 10]--;</span>
-        }
-
-        // Копирование выходного массива в arr[], чтобы arr[] содержал отсортированные числа по текущему разряду
-<span class="fc" id="L42">        System.arraycopy(output, 0, arr, 0, n);</span>
-<span class="fc" id="L43">    }</span>
-
-    // Основная функция для выполнения Radix Sort
-    public static void radixSort(int[] arr) {
-        // Разделение массива на отрицательные и неотрицательные числа
-<span class="fc bfc" id="L48" title="All 2 branches covered.">        int[] negativeNumbers = Arrays.stream(arr).filter(x -&gt; x &lt; 0).toArray();</span>
-<span class="fc bfc" id="L49" title="All 2 branches covered.">        int[] nonNegativeNumbers = Arrays.stream(arr).filter(x -&gt; x &gt;= 0).toArray();</span>
-
-        // Преобразование отрицательных чисел в положительные для сортировки
-<span class="fc bfc" id="L52" title="All 2 branches covered.">        for (int i = 0; i &lt; negativeNumbers.length; i++) {</span>
-<span class="fc" id="L53">            negativeNumbers[i] = Math.abs(negativeNumbers[i]);</span>
-        }
-
-        // Сортировка неотрицательных чисел
-<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (nonNegativeNumbers.length &gt; 0) {</span>
-<span class="fc" id="L58">            int max = getMax(nonNegativeNumbers);</span>
-<span class="fc bfc" id="L59" title="All 2 branches covered.">            for (int exp = 1; max / exp &gt; 0; exp *= 10) {</span>
-<span class="fc" id="L60">                countingSort(nonNegativeNumbers, exp);</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        for (int i = 0; i &lt; n; i++) {</span>
+<span class="pc bpc" id="L25" title="1 of 2 branches missed.">            if (arr[i] != null) { // Проверка на null</span>
+<span class="fc" id="L26">                count[(arr[i] / exp) % 10]++;</span>
             }
         }
 
-        // Сортировка отрицательных чисел
-<span class="fc bfc" id="L65" title="All 2 branches covered.">        if (negativeNumbers.length &gt; 0) {</span>
-<span class="fc" id="L66">            int max = getMax(negativeNumbers);</span>
-<span class="fc bfc" id="L67" title="All 2 branches covered.">            for (int exp = 1; max / exp &gt; 0; exp *= 10) {</span>
-<span class="fc" id="L68">                countingSort(negativeNumbers, exp);</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        for (int i = 1; i &lt; 10; i++) {</span>
+<span class="fc" id="L31">            count[i] += count[i - 1];</span>
+        }
+
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        for (int i = n - 1; i &gt;= 0; i--) {</span>
+<span class="pc bpc" id="L35" title="1 of 2 branches missed.">            if (arr[i] != null) {</span>
+<span class="fc" id="L36">                output[count[(arr[i] / exp) % 10] - 1] = arr[i];</span>
+<span class="fc" id="L37">                count[(arr[i] / exp) % 10]--;</span>
             }
         }
 
-        // Восстановление отрицательных чисел и реверсирование порядка
-<span class="fc bfc" id="L73" title="All 2 branches covered.">        for (int i = 0; i &lt; negativeNumbers.length; i++) {</span>
-<span class="fc" id="L74">            negativeNumbers[i] = -negativeNumbers[i];</span>
-        }
-<span class="fc" id="L76">        reverseArray(negativeNumbers);</span>
+<span class="fc" id="L41">        System.arraycopy(output, 0, arr, 0, n);</span>
+<span class="fc" id="L42">    }</span>
 
-        // Объединение отсортированных массивов
+    public static void radixSort(Integer[] arr) {
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        if (Arrays.stream(arr).anyMatch(Objects::isNull)) {</span>
+<span class="fc" id="L46">            throw new NullPointerException(&quot;Массив содержит null-значение!&quot;);</span>
+        }
+
+<span class="fc" id="L49">        Integer[] negativeNumbers = Arrays.stream(arr)</span>
+<span class="pc bpc" id="L50" title="1 of 4 branches missed.">                .filter(x -&gt; x != null &amp;&amp; x &lt; 0)</span>
+<span class="fc" id="L51">                .toArray(Integer[]::new);</span>
+<span class="fc" id="L52">        Integer[] nonNegativeNumbers = Arrays.stream(arr)</span>
+<span class="pc bpc" id="L53" title="1 of 4 branches missed.">                .filter(x -&gt; x != null &amp;&amp; x &gt;= 0)</span>
+<span class="fc" id="L54">                .toArray(Integer[]::new);</span>
+
+<span class="fc bfc" id="L56" title="All 2 branches covered.">        for (int i = 0; i &lt; negativeNumbers.length; i++) {</span>
+<span class="fc" id="L57">            negativeNumbers[i] = Math.abs(negativeNumbers[i]);</span>
+        }
+
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        if (nonNegativeNumbers.length &gt; 0) {</span>
+<span class="fc" id="L61">            int max = getMax(nonNegativeNumbers);</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">            for (int exp = 1; max / exp &gt; 0; exp *= 10) {</span>
+<span class="fc" id="L63">                countingSort(nonNegativeNumbers, exp);</span>
+            }
+        }
+
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        if (negativeNumbers.length &gt; 0) {</span>
+<span class="fc" id="L68">            int max = getMax(negativeNumbers);</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">            for (int exp = 1; max / exp &gt; 0; exp *= 10) {</span>
+<span class="fc" id="L70">                countingSort(negativeNumbers, exp);</span>
+            }
+        }
+
+<span class="fc bfc" id="L74" title="All 2 branches covered.">        for (int i = 0; i &lt; negativeNumbers.length; i++) {</span>
+<span class="fc" id="L75">            negativeNumbers[i] = -negativeNumbers[i];</span>
+        }
+<span class="fc" id="L77">        reverseArray(negativeNumbers);</span>
+
 <span class="fc" id="L79">        System.arraycopy(negativeNumbers, 0, arr, 0, negativeNumbers.length);</span>
 <span class="fc" id="L80">        System.arraycopy(nonNegativeNumbers, 0, arr, negativeNumbers.length, nonNegativeNumbers.length);</span>
 <span class="fc" id="L81">    }</span>
 
-    // Вспомогательная функция для реверсирования массива
-    private static void reverseArray(int[] arr) {
-<span class="fc" id="L85">        int i = 0, j = arr.length - 1;</span>
-<span class="fc bfc" id="L86" title="All 2 branches covered.">        while (i &lt; j) {</span>
-<span class="fc" id="L87">            int temp = arr[i];</span>
-<span class="fc" id="L88">            arr[i] = arr[j];</span>
-<span class="fc" id="L89">            arr[j] = temp;</span>
-<span class="fc" id="L90">            i++;</span>
-<span class="fc" id="L91">            j--;</span>
-<span class="fc" id="L92">        }</span>
-<span class="fc" id="L93">    }</span>
+    private static void reverseArray(Integer[] arr) {
+<span class="fc" id="L84">        int i = 0, j = arr.length - 1;</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">        while (i &lt; j) {</span>
+<span class="fc" id="L86">            int temp = arr[i];</span>
+<span class="fc" id="L87">            arr[i] = arr[j];</span>
+<span class="fc" id="L88">            arr[j] = temp;</span>
+<span class="fc" id="L89">            i++;</span>
+<span class="fc" id="L90">            j--;</span>
+<span class="fc" id="L91">        }</span>
+<span class="fc" id="L92">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -1,6 +1,7 @@
 package vladimir.human;
 
 import vladimir.furniture.Furniture;
+import vladimir.human.body.BodyPart;
 import vladimir.place.Place;
 
 public interface IHuman {
@@ -10,6 +11,6 @@ public interface IHuman {
     void beSurprised();
     void beNervous();
     void seeSmb(Human creature);
-    void move();
+    void move(BodyPart organ);
     void notBelieve();
 }

@@ -1,6 +1,7 @@
 package vladimir;
 
 import vladimir.human.Human;
+import vladimir.human.Moster;
 import vladimir.human.body.BodyPart;
 import vladimir.furniture.Armchair;
 import vladimir.place.Room;
@@ -18,25 +19,12 @@ public class EventsFlow {
     public void story() {
         Human artur = new Human(
                 "Артур",
-                12,
-                new BodyPart("Голова"),
-                new BodyPart("Тело"),
-                new BodyPart("Левая рука"),
-                new BodyPart("Правая рука"),
-                new BodyPart("Левая нога"),
-                new BodyPart("Правая нога")
+                12
         );
 
-        Human human = new Human(
+        Moster human = new Moster(
                 "Человек",
-                3080,
-                new BodyPart("Левая голова"),
-                new BodyPart("Правая голова"),
-                new BodyPart("Тело"),
-                new BodyPart("Левая рука"),
-                new BodyPart("Правая рука"),
-                new BodyPart("Левая нога"),
-                new BodyPart("Правая нога")
+                3080
         );
 
         Room room = new Room();
@@ -45,7 +33,7 @@ public class EventsFlow {
         artur.comeIn(room);
         artur.seeSmb(human);
         human.sit(new Armchair());
-        human.move();
+        human.move(human.getSecondHead());
 
         artur.notBelieve();
         artur.beSurprised();

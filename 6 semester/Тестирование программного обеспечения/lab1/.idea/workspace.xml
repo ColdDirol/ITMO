@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9505fdb9-4f15-4845-b64e-e164487f57fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/Moster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Body.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Hand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Head.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Leg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/vladimir/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/test/MathUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/test/MathUtilsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/reports/tests/test/classes/MathUtilsTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/reports/tests/test/classes/MathUtilsTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/test-results/test/TEST-MathUtilsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/test-results/test/TEST-MathUtilsTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/tmp/compileJava/compileTransaction/stash-dir/MathUtils.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/tmp/compileTestJava/compileTransaction/stash-dir/MathUtilsTest.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/tmp/compileTestJava/compileTransaction/stash-dir/MathUtilsTest.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/test/java/MathUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/test/java/MathUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/classes/java/main/vladimir/RadixSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/classes/java/main/vladimir/RadixSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/classes/java/test/RadixSortTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/classes/java/test/RadixSortTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/jacoco/test.exec" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/jacoco/test.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/RadixSort.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/RadixSort.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/RadixSort.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/RadixSort.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/jacocoTestReport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/jacocoTestReport.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/reports/tests/test/classes/RadixSortTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/tests/test/classes/RadixSortTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/test-results/test/TEST-RadixSortTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/test-results/test/TEST-RadixSortTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/tmp/compileJava/compileTransaction/stash-dir/RadixSort.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/tmp/compileJava/compileTransaction/stash-dir/RadixSort.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/tmp/compileTestJava/compileTransaction/stash-dir/RadixSortTest.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/tmp/compileTestJava/compileTransaction/stash-dir/RadixSortTest.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/src/main/java/vladimir/RadixSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/task2/src/main/java/vladimir/RadixSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/src/test/java/RadixSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/task2/src/test/java/RadixSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/furniture/Chair.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/furniture/Chair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/test/human/HumanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/test/human/HumanTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/jacoco/test.exec" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/jacoco/test.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/EventsFlowTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/EventsFlowTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/MainTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/MainTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/human.HumanTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/human.HumanTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/packages/human.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/packages/human.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/TEST-EventsFlowTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/TEST-EventsFlowTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/TEST-MainTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/TEST-MainTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/TEST-human.HumanTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/TEST-human.HumanTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileJava/compileTransaction/stash-dir/EventsFlow.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileJava/compileTransaction/stash-dir/Human.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileJava/compileTransaction/stash-dir/IHuman.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileTestJava/compileTransaction/stash-dir/HumanTest.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/tmp/compileTestJava/compileTransaction/stash-dir/HumanTest.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/EventsFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/EventsFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/furniture/Chair.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/furniture/Chair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/IHuman.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/IHuman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/BodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/BodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/test/java/human/HumanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/test/java/human/HumanTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/task1">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/task2">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/task3">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/task1">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2tt7yudUf8S2D07a4Rxrn7Qqmpw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.MathUtilsTest.executor": "Run",
+    "Gradle.MathUtilsTest.testArccosBoundaryZero.executor": "Run",
+    "Gradle.MathUtilsTest.testArccosRandomValues.executor": "Run",
+    "Gradle.RadixSortTest.executor": "Run",
+    "Gradle.RadixSortTest.testRadixSort.executor": "Run",
+    "Gradle.RadixSortTest.testRadixSortWithRandomArray.executor": "Run",
+    "Gradle.task3.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/vladimir/ITMO/6 semester/Тестирование программного обеспечения/lab1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.40110394",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Gradle.RadixSortTest">
+    <configuration name="MathUtilsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/task1" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;MathUtilsTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MathUtilsTest.testArccosRandomValues" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/task1" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;MathUtilsTest.testArccosRandomValues&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RadixSortTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/task2" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;RadixSortTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RadixSortTest.testRadixSort" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/task2" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;RadixSortTest.testRadixSort&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RadixSortTest.testRadixSortWithRandomArray" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/task2" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;RadixSortTest.testRadixSortWithRandomArray&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="task3" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/task3" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.task3" />
+      <item itemvalue="Gradle.MathUtilsTest.testArccosRandomValues" />
+      <item itemvalue="Gradle.RadixSortTest.testRadixSort" />
+      <item itemvalue="Gradle.RadixSortTest.testRadixSortWithRandomArray" />
+      <item itemvalue="Gradle.MathUtilsTest" />
+      <item itemvalue="Gradle.RadixSortTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.RadixSortTest" />
+        <item itemvalue="Gradle.RadixSortTest.testRadixSortWithRandomArray" />
+        <item itemvalue="Gradle.RadixSortTest.testRadixSort" />
+        <item itemvalue="Gradle.MathUtilsTest.testArccosRandomValues" />
+        <item itemvalue="Gradle.MathUtilsTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9505fdb9-4f15-4845-b64e-e164487f57fb" name="Changes" comment="" />
+      <created>1741159775213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741159775213</updated>
+      <workItem from="1741159776347" duration="12879000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -3,6 +3,7 @@ package vladimir.human;
 import lombok.Data;
 import vladimir.human.body.BodyPart;
 import vladimir.furniture.Furniture;
+import vladimir.human.body.Head;
 import vladimir.place.Place;
 
 import java.util.List;
@@ -12,27 +13,31 @@ public class Human implements IHuman {
     private String name;
     private Integer age;
 
-    private List<BodyPart> organs;
+    private BodyPart head;
+    private BodyPart body;
+    private BodyPart leftHand;
+    private BodyPart rightHand;
+    private BodyPart leftLeg;
+    private BodyPart rightLeg;
 
-    public Human(String name, Integer age, BodyPart ...organs) {
+    public Human(String name, Integer age) {
         if (name.trim().isEmpty()) throw new IllegalArgumentException("Name cannot be empty");
         if (age == null || age < 0) throw new IllegalArgumentException("Age cannot be null");
 
         this.name = name;
         this.age = age;
 
-        this.organs = List.of(
-                organs
-        );
+        this.head = new Head("Голова");
+        this.head = new Head("Тело");
+        this.head = new Head("Левая рука");
+        this.head = new Head("Правая рука");
+        this.head = new Head("Левая нога");
+        this.head = new Head("Правая нога");
 
         System.out.println();
         System.out.println(
                 "Жил был " + this.age + " летний человек - " + this.name + "."
         );
-        System.out.println(
-                "У него были: "
-        );
-        this.organs.forEach(organ -> System.out.print(organ.getName() + ", "));
         System.out.println();
 
     }
@@ -73,10 +78,8 @@ public class Human implements IHuman {
     }
 
     @Override
-    public void move() {
-        organs.forEach(organ -> {
-            System.out.println(name + " шевелит " + organ.getName());
-        });
+    public void move(BodyPart organ) {
+        System.out.println(name + " шевелит " + organ.getName());
     }
 
     @Override

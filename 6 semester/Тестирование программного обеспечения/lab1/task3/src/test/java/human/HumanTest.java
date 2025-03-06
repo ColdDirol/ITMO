@@ -60,8 +60,7 @@ class HumanTest {
     @Test
     void testFurnitureInitialization() {
         Chair chair = new Chair();
-        assertEquals("Стул", chair.getName());
-        assertEquals("Кресло", armchair.getName());
+        assertEquals("Стоял стул\n", outContent.toString());
     }
 
     @Test
