@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-05T09:31:48" hostname="lenovo" time="0.003">
+<testsuite name="MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-13T15:07:30" hostname="lenovo" time="0.047">
   <properties/>
-  <testcase name="testMain()" classname="MainTest" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testMainMethod()" classname="MainTest" time="0.047"/>
+  <system-out><![CDATA[
+Эта история произошла в 2025 году
+
+Жил был 12 летний человек - Артур.
+Жил был 3080 летний человек - Человек.
+Существовало место - Комната
+
+Артур нервничал
+Артур зашел в Комната
+Артур был ошеломлен
+Голова Артура увидел Человека
+Жопа Человека сидел на Кресло
+Человек положил Ноги на Пульт управления
+Голова Человек широко улыбнулся
+Человекаа ковырялся в Зубы Челюсть Вторая голова руками
+Человек шевелит Вторая голова
+Артур не верил своему Глаза
+Челюсть отвисла
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

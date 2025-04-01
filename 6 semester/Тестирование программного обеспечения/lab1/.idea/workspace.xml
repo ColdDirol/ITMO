@@ -5,57 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9505fdb9-4f15-4845-b64e-e164487f57fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/Moster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Body.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Hand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Head.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Leg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/task1/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/vladimir/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/test/MathUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/test/MathUtilsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/reports/tests/test/classes/MathUtilsTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/reports/tests/test/classes/MathUtilsTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/reports/tests/test/packages/default-package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/test-results/test/TEST-MathUtilsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/test-results/test/TEST-MathUtilsTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/tmp/compileJava/compileTransaction/stash-dir/MathUtils.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/tmp/compileTestJava/compileTransaction/stash-dir/MathUtilsTest.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/tmp/compileTestJava/compileTransaction/stash-dir/MathUtilsTest.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/test/java/MathUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/test/java/MathUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/task2/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/classes/java/main/vladimir/RadixSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/classes/java/main/vladimir/RadixSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/classes/java/test/RadixSortTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/classes/java/test/RadixSortTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/jacoco/test.exec" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/jacoco/test.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/RadixSort.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/RadixSort.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/RadixSort.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/RadixSort.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/html/vladimir/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/reports/jacoco/test/jacocoTestReport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/jacoco/test/jacocoTestReport.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/reports/tests/test/classes/RadixSortTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/tests/test/classes/RadixSortTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/reports/tests/test/packages/default-package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/test-results/test/TEST-RadixSortTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/test-results/test/TEST-RadixSortTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/tmp/compileJava/compileTransaction/stash-dir/RadixSort.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/tmp/compileJava/compileTransaction/stash-dir/RadixSort.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/tmp/compileTestJava/compileTransaction/stash-dir/RadixSortTest.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/tmp/compileTestJava/compileTransaction/stash-dir/RadixSortTest.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task2/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/src/main/java/vladimir/RadixSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/task2/src/main/java/vladimir/RadixSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/src/test/java/RadixSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/task2/src/test/java/RadixSortTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/furniture/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/BodyPartAbstract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Hands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/IBodyPart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/OrganAbstract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/head/Eyes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/head/Head.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/head/Jaw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/head/Teeth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/leg/Ass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/leg/Legs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/emotion/EmotionLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/emotion/IEmotions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/utils/Validator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/furniture/ArmchairTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/furniture/ControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/furniture/FurnitureAbstractTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/MonsterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/body/BodyPartAbstractTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/body/BodyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/body/HandsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/body/OrganAbstractTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/body/head/EyesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/body/head/HeadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/body/head/JawTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/body/head/TeethTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/body/leg/AssTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/human/body/leg/LegsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/place/PlaceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/place/RoomTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3/src/test/java/utils/ValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
@@ -63,32 +46,49 @@
       <change beforePath="$PROJECT_DIR$/task3/.gradle/8.10/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/8.10/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/task3/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/furniture/Chair.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/furniture/Chair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/EventsFlow.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/EventsFlow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/furniture/Armchair.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/furniture/Armchair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/furniture/Chair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/furniture/Furniture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/human/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/human/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/human/IHuman.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/human/IHuman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/human/body/BodyPart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/place/Place.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/main/vladimir/place/Place.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/test/EventsFlowTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/test/EventsFlowTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/classes/java/test/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/test/MainTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/classes/java/test/human/HumanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/classes/java/test/human/HumanTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/jacoco/test.exec" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/jacoco/test.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/EventsFlowTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/EventsFlowTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/EventsFlowTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/MainTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/MainTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/human.HumanTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/human.HumanTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/classes/human.HumanTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/packages/default-package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/packages/human.html" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/reports/tests/test/packages/human.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/TEST-EventsFlowTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/TEST-EventsFlowTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/reports/tests/test/packages/human.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/TEST-EventsFlowTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/TEST-MainTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/TEST-MainTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/TEST-human.HumanTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/TEST-human.HumanTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/TEST-human.HumanTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileJava/compileTransaction/stash-dir/EventsFlow.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileJava/compileTransaction/stash-dir/Human.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileJava/compileTransaction/stash-dir/IHuman.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileJava/compileTransaction/stash-dir/Chair.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileTestJava/compileTransaction/stash-dir/HumanTest.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/tmp/compileTestJava/compileTransaction/stash-dir/HumanTest.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileTestJava/compileTransaction/stash-dir/HumanTest.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task3/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/EventsFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/EventsFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/furniture/Chair.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/furniture/Chair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/furniture/Armchair.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/furniture/Armchair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/furniture/Chair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/furniture/Furniture.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/furniture/FurnitureAbstract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/IHuman.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/IHuman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/BodyPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/BodyPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/Moster.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Body.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/BodyPart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Hand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Head.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/human/body/Leg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/main/java/vladimir/place/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/main/java/vladimir/place/Place.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/test/java/EventsFlowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/test/java/EventsFlowTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task3/src/test/java/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/test/java/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task3/src/test/java/human/HumanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/task3/src/test/java/human/HumanTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,9 +127,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2tt7yudUf8S2D07a4Rxrn7Qqmpw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -143,47 +143,37 @@
     "Gradle.RadixSortTest.executor": "Run",
     "Gradle.RadixSortTest.testRadixSort.executor": "Run",
     "Gradle.RadixSortTest.testRadixSortWithRandomArray.executor": "Run",
+    "Gradle.task3 [:vladimir.Main.main()].executor": "Run",
     "Gradle.task3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/vladimir/ITMO/6 semester/Тестирование программного обеспечения/lab1",
+    "last_opened_file_path": "/home/vladimir/vintelligent/staging-data-update-tool",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.40110394",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.RadixSortTest">
-    <configuration name="MathUtilsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/task1" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;MathUtilsTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vladimir.Main" />
+      <module name="task3.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vladimir.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="MathUtilsTest.testArccosRandomValues" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -304,20 +294,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.task3" />
       <item itemvalue="Gradle.MathUtilsTest.testArccosRandomValues" />
       <item itemvalue="Gradle.RadixSortTest.testRadixSort" />
       <item itemvalue="Gradle.RadixSortTest.testRadixSortWithRandomArray" />
-      <item itemvalue="Gradle.MathUtilsTest" />
       <item itemvalue="Gradle.RadixSortTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.RadixSortTest" />
         <item itemvalue="Gradle.RadixSortTest.testRadixSortWithRandomArray" />
         <item itemvalue="Gradle.RadixSortTest.testRadixSort" />
         <item itemvalue="Gradle.MathUtilsTest.testArccosRandomValues" />
-        <item itemvalue="Gradle.MathUtilsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -338,6 +328,12 @@
       <option name="presentableId" value="Default" />
       <updated>1741159775213</updated>
       <workItem from="1741159776347" duration="12879000" />
+      <workItem from="1741690379822" duration="176000" />
+      <workItem from="1741865240758" duration="9937000" />
+      <workItem from="1741971037113" duration="443000" />
+      <workItem from="1742338704810" duration="1093000" />
+      <workItem from="1742371898185" duration="307000" />
+      <workItem from="1742469104564" duration="338000" />
     </task>
     <servers />
   </component>

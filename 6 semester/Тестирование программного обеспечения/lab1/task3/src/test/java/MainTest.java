@@ -3,10 +3,10 @@ import vladimir.Main;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
-class MainTest {
+public class MainTest {
 
     @Test
-    void testMain() {
-        assertDoesNotThrow(() -> Main.main(new String[]{}));
+    public void testMainMethod() {
+        assertDoesNotThrow(() -> Main.main(new String[0]));
     }
 }

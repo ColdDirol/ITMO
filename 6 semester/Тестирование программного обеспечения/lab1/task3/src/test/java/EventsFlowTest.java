@@ -3,10 +3,13 @@ import vladimir.EventsFlow;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
-class EventsFlowTest {
+public class EventsFlowTest {
 
     @Test
-    void testStory() {
-        assertDoesNotThrow(() -> new EventsFlow().story());
+    public void testStoryMethod() {
+        assertDoesNotThrow(() -> {
+            EventsFlow eventsFlow = new EventsFlow();
+            eventsFlow.story();
+        });
     }
 }

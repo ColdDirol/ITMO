@@ -1,8 +1,9 @@
 package vladimir.human.body;
 
-public class Body extends BodyPart {
+public class Body extends BodyPartAbstract {
 
-    public Body(String name) {
-        super(name);
+    public Body(String name, String owner) {
+        super(name, owner);
     }
+
 }
