@@ -19,6 +19,7 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args) {
+        createTestValues(0.1);
         String base = "src/main/resources/csv/out/";
         String out = "src/main/resources/charts/";
 
@@ -176,6 +177,54 @@ public class Main {
 
                 System.out.println("CSV files have been generated in 'src/main/resources/csv/out'.");
 
+            } catch (IOException e) {
+                System.out.println("Error writing to CSV files: " + e.getMessage());
+            }
+        } catch (IOException e) {
+            System.out.println("Error opening files: " + e.getMessage());
+        }
+    }
+
+    public static void createTestValues(Double eps) {
+        try (Writer writerSin = new FileWriter("src/main/resources/csv/out/SinOut.csv");
+             Writer writerCos = new FileWriter("src/main/resources/csv/out/CosOut.csv");
+             Writer writerTan = new FileWriter("src/main/resources/csv/out/TanOut.csv");
+             Writer writerSec = new FileWriter("src/main/resources/csv/out/SecOut.csv");
+             Writer writerCot = new FileWriter("src/main/resources/csv/out/CotOut.csv");
+             Writer writerLog2 = new FileWriter("src/main/resources/csv/out/Log2Out.csv");
+             Writer writerLog5 = new FileWriter("src/main/resources/csv/out/Log5Out.csv");
+             Writer writerLog10 = new FileWriter("src/main/resources/csv/out/Log10Out.csv");
+             Writer writerLn = new FileWriter("src/main/resources/csv/out/LnOut.csv");
+             Writer writerExpression = new FileWriter("src/main/resources/csv/out/ExpressionOut.csv")) {
+
+            try (CSVPrinter printerSin = CSVFormat.DEFAULT.print(writerSin);
+                 CSVPrinter printerCos = CSVFormat.DEFAULT.print(writerCos);
+                 CSVPrinter printerTan = CSVFormat.DEFAULT.print(writerTan);
+                 CSVPrinter printerSec = CSVFormat.DEFAULT.print(writerSec);
+                 CSVPrinter printerCot = CSVFormat.DEFAULT.print(writerCot);
+                 CSVPrinter printerLog2 = CSVFormat.DEFAULT.print(writerLog2);
+                 CSVPrinter printerLog5 = CSVFormat.DEFAULT.print(writerLog5);
+                 CSVPrinter printerLog10 = CSVFormat.DEFAULT.print(writerLog10);
+                 CSVPrinter printerLn = CSVFormat.DEFAULT.print(writerLn);
+                 CSVPrinter printerExpression = CSVFormat.DEFAULT.print(writerExpression);) {
+
+                Double[] testValues = {-1.0, -0.5, 0.5, 1.0, -0.121212, 0.121212, -100.5437, 100.5437, -2.3918483494, 2.3918483494};
+
+                for (Double x : testValues) {
+                    printerSin.printRecord(x, Math.sin(x));
+                    printerCos.printRecord(x, Math.cos(x));
+                    printerTan.printRecord(x, Math.tan(x));
+                    printerSec.printRecord(x, 1 / Math.cos(x));
+                    printerCot.printRecord(x, 1 / Math.tan(x));
+
+                    printerLog2.printRecord(x, Math.log(x) / Math.log(2));
+                    printerLog5.printRecord(x, Math.log(x) / Math.log(5));
+                    printerLog10.printRecord(x, Math.log(x) / Math.log(10));
+                    printerLn.printRecord(x, Math.log(x));
+
+                    printerExpression.printRecord(x, new Expression().solve(x, eps));
+                }
+                System.out.println("CSV files have been generated in 'src/main/resources/csv/out'.");
             } catch (IOException e) {
                 System.out.println("Error writing to CSV files: " + e.getMessage());
             }

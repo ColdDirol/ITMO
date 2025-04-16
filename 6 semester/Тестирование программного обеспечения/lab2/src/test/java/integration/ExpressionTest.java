@@ -31,7 +31,6 @@ public class ExpressionTest {
     private static Ln lnMock;
     private static Log logMock;
 
-
     private static Reader sinIn;
     private static Reader cosIn;
     private static Reader secIn;
@@ -43,7 +42,7 @@ public class ExpressionTest {
     private static Reader log10In;
 
     @BeforeAll
-    static void setUpBeforeTest() throws Exception {
+    static void setUpBeforeTest() {
         sinMock = Mockito.mock(Sin.class);
         cosMock = Mockito.mock(Cos.class);
         secMock = Mockito.mock(Sec.class);
