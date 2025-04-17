@@ -1,7 +1,9 @@
 package unit;
 
+import com.vladimir.trig.Cos;
 import com.vladimir.trig.Tan;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -55,5 +57,18 @@ public class TanTest {
     @DisplayName("Тестирует tan для малых отрицательных значений")
     public void testTanSmallNegativeValues(double value) {
         assertEquals(Math.tan(value), new Tan().tan(value, eps), DELTA);
+    }
+
+    @Test
+    @DisplayName("Test infinity")
+    public void testInfinity() {
+        assertEquals(Double.NaN, new Tan().tan(Double.POSITIVE_INFINITY, eps), DELTA);
+        assertEquals(Double.NaN, new Tan().tan(Double.NEGATIVE_INFINITY, eps), DELTA);
+    }
+
+    @Test
+    @DisplayName("Test NaN")
+    public void testNaN() {
+        assertEquals(Double.NaN, new Cos().cos(Double.NaN, eps), DELTA);
     }
 }

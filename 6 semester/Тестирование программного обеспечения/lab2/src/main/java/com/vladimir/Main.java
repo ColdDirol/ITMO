@@ -208,7 +208,7 @@ public class Main {
                  CSVPrinter printerLn = CSVFormat.DEFAULT.print(writerLn);
                  CSVPrinter printerExpression = CSVFormat.DEFAULT.print(writerExpression);) {
 
-                Double[] testValues = {-1.0, -0.5, 0.5, 1.0, -0.121212, 0.121212, -100.5437, 100.5437, -2.3918483494, 2.3918483494};
+                Double[] testValues = {-1.0, -0.5, 0.5, 1.0, 0.0, -0.121212, 0.121212, -100.5437, 100.5437, -2.3918483494, 2.3918483494};
 
                 for (Double x : testValues) {
                     printerSin.printRecord(x, Math.sin(x));
