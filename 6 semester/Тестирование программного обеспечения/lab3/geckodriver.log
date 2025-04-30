@@ -1,0 +1,13 @@
+1745997020611	geckodriver	INFO	Listening on 127.0.0.1:1954
+1745997020617	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileZJKetZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1745997021339	Marionette	INFO	Marionette enabled
+1745997021505	Marionette	INFO	Listening on port 42911
+Read port: 42911
+1745997021609	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIAppStartup.secondsSinceLastOSRestart]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource:///modules/BrowserGlue.sys.mjs :: _collectStartupConditionsTelemetry :: line 1871"  data: no]
+JavaScript error: https://noodlemagazine.com/static/js/main.min.2c5d9bbc13e9.js, line 1: TypeError: n is null
+JavaScript error: https://noodlemagazine.com/static/js/main.min.2c5d9bbc13e9.js, line 1: TypeError: n is null
+JavaScript warning: https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js, line 464: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1745997027663	Marionette	INFO	Stopped listening on port 42911
