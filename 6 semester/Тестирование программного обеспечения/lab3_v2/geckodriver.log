@@ -1,0 +1,18 @@
+1747205323695	geckodriver	INFO	Listening on 127.0.0.1:7207
+1747205323743	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileJ1OP3q"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1747205324199	Marionette	INFO	Marionette enabled
+1747205324381	Marionette	INFO	Listening on port 39133
+Read port: 39133
+1747205324500	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIAppStartup.secondsSinceLastOSRestart]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource:///modules/BrowserGlue.sys.mjs :: _collectStartupConditionsTelemetry :: line 1871"  data: no]
+console.error: [Exception... "Component returned failure code: 0x8052000f (NS_ERROR_FILE_TOO_BIG) [nsIFaviconService.setFaviconForPage]"  nsresult: "0x8052000f (NS_ERROR_FILE_TOO_BIG)"  location: "JS frame :: resource:///actors/LinkHandlerParent.sys.mjs :: setIconFromLink :: line 142"  data: no]
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://fanfics.me."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://fanfics.me."
+console.error: [Exception... "Component returned failure code: 0x8052000f (NS_ERROR_FILE_TOO_BIG) [nsIFaviconService.setFaviconForPage]"  nsresult: "0x8052000f (NS_ERROR_FILE_TOO_BIG)"  location: "JS frame :: resource:///actors/LinkHandlerParent.sys.mjs :: setIconFromLink :: line 142"  data: no]
+console.error: [Exception... "Component returned failure code: 0x8052000f (NS_ERROR_FILE_TOO_BIG) [nsIFaviconService.setFaviconForPage]"  nsresult: "0x8052000f (NS_ERROR_FILE_TOO_BIG)"  location: "JS frame :: resource:///actors/LinkHandlerParent.sys.mjs :: setIconFromLink :: line 142"  data: no]
+JavaScript warning: https://yastatic.net/safeframe-bundles/0.83/1-1-0/render.html line 26 > injectedScript, line 28: Script terminated by timeout at:
+n@https://yastatic.net/safeframe-bundles/0.83/1-1-0/render.html line 26 > injectedScript:28:1222
+
+console.error: [Exception... "Component returned failure code: 0x8052000f (NS_ERROR_FILE_TOO_BIG) [nsIFaviconService.setFaviconForPage]"  nsresult: "0x8052000f (NS_ERROR_FILE_TOO_BIG)"  location: "JS frame :: resource:///actors/LinkHandlerParent.sys.mjs :: setIconFromLink :: line 142"  data: no]
