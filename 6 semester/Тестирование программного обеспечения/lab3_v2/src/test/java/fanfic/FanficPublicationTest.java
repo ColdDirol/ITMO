@@ -86,7 +86,6 @@ public class FanficPublicationTest {
             WebComponentTools.fillInputField(driver, FanficPublicationLocators.SUMMARY_FILLING_SELECTION_INPUT, faker.lorem().paragraph());
             WebComponentTools.clickButton(driver, FanficPublicationLocators.SUMMARY_FILLING_SELECTION_DONE);
 
-//            new WebDriverWait(driver, Duration.ofSeconds(15));
             // goto fanfic chapters
             WebComponentTools.clickButton(driver, FanficPublicationLocators.GOTO_ADD_CHAPTER_BUTTON);
             WebComponentTools.fillInputField(driver, FanficPublicationLocators.CHAPTER_NAME_INPUT, faker.lorem().paragraph());

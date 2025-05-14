@@ -50,8 +50,8 @@ public class FanficCommentingTest {
             driver.get(FanficPublicationTools.publicate(driver));
 
             String comment = faker.lorem().paragraph();
-            WebComponentTools.fillInputField(driver, FanficCommenticLocators.NEW_COMMENT_INPUT, comment);
-            WebComponentTools.clickButton(driver, FanficCommenticLocators.NEW_COMMENT_BUTTON);
+            WebComponentTools.fillInputField(driver, FanficCommentingLocators.NEW_COMMENT_INPUT, comment);
+            WebComponentTools.clickButton(driver, FanficCommentingLocators.NEW_COMMENT_BUTTON);
 
             assertTrue(
                     wait.until(ExpectedConditions.visibilityOfElementLocated(FanficCommentingTools.getCommentByAuthorAndTextLocator(login, comment)))
@@ -80,8 +80,8 @@ public class FanficCommentingTest {
                 comments.add(faker.lorem().sentence(10));
             }
             comments.forEach(comment -> {
-                WebComponentTools.fillInputField(driver, FanficCommenticLocators.NEW_COMMENT_INPUT, comment);
-                WebComponentTools.clickButton(driver, FanficCommenticLocators.NEW_COMMENT_BUTTON);
+                WebComponentTools.fillInputField(driver, FanficCommentingLocators.NEW_COMMENT_INPUT, comment);
+                WebComponentTools.clickButton(driver, FanficCommentingLocators.NEW_COMMENT_BUTTON);
                 assertTrue(
                         wait.until(ExpectedConditions.visibilityOfElementLocated(FanficCommentingTools.getCommentByAuthorAndTextLocator(login, comment)))
                                 .isDisplayed()

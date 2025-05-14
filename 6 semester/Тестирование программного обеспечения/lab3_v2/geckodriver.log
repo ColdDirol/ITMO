@@ -1,18 +1,43 @@
-1747205323695	geckodriver	INFO	Listening on 127.0.0.1:7207
-1747205323743	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileJ1OP3q"
+1747211731964	geckodriver	INFO	Listening on 127.0.0.1:23083
+1747211732009	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileykW8PA"
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-1747205324199	Marionette	INFO	Marionette enabled
-1747205324381	Marionette	INFO	Listening on port 39133
-Read port: 39133
-1747205324500	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1747211732492	Marionette	INFO	Marionette enabled
+1747211732645	Marionette	INFO	Listening on port 35645
+Read port: 35645
+1747211732761	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 console.error: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIAppStartup.secondsSinceLastOSRestart]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource:///modules/BrowserGlue.sys.mjs :: _collectStartupConditionsTelemetry :: line 1871"  data: no]
 console.error: [Exception... "Component returned failure code: 0x8052000f (NS_ERROR_FILE_TOO_BIG) [nsIFaviconService.setFaviconForPage]"  nsresult: "0x8052000f (NS_ERROR_FILE_TOO_BIG)"  location: "JS frame :: resource:///actors/LinkHandlerParent.sys.mjs :: setIconFromLink :: line 142"  data: no]
+[Child 16484, MediaDecoderStateMachine #1] WARNING: Decoder=7ab1a2e13d00 Decode error: NS_ERROR_DOM_MEDIA_DEMUXER_ERR (0x806e000c): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachineBase.cpp:168
+libva info: VA-API version 1.20.0
+libva info: Trying to open /usr/lib/x86_64-linux-gnu/dri/radeonsi_drv_video.so
+libva info: Found init function __vaDriverInit_1_20
+libva info: va_openDriver() returns 0
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://fanfics.me."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://fanfics.me."
 console.error: [Exception... "Component returned failure code: 0x8052000f (NS_ERROR_FILE_TOO_BIG) [nsIFaviconService.setFaviconForPage]"  nsresult: "0x8052000f (NS_ERROR_FILE_TOO_BIG)"  location: "JS frame :: resource:///actors/LinkHandlerParent.sys.mjs :: setIconFromLink :: line 142"  data: no]
 console.error: [Exception... "Component returned failure code: 0x8052000f (NS_ERROR_FILE_TOO_BIG) [nsIFaviconService.setFaviconForPage]"  nsresult: "0x8052000f (NS_ERROR_FILE_TOO_BIG)"  location: "JS frame :: resource:///actors/LinkHandlerParent.sys.mjs :: setIconFromLink :: line 142"  data: no]
+console.error: [Exception... "Component returned failure code: 0x8052000f (NS_ERROR_FILE_TOO_BIG) [nsIFaviconService.setFaviconForPage]"  nsresult: "0x8052000f (NS_ERROR_FILE_TOO_BIG)"  location: "JS frame :: resource:///actors/LinkHandlerParent.sys.mjs :: setIconFromLink :: line 142"  data: no]
+1747211741779	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:205:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:189:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:467:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:220:33
+1747211742864	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:205:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:189:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:467:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:220:33
+1747211743998	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:205:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:189:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:467:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:220:33
 JavaScript warning: https://yastatic.net/safeframe-bundles/0.83/1-1-0/render.html line 26 > injectedScript, line 28: Script terminated by timeout at:
 n@https://yastatic.net/safeframe-bundles/0.83/1-1-0/render.html line 26 > injectedScript:28:1222
 
 console.error: [Exception... "Component returned failure code: 0x8052000f (NS_ERROR_FILE_TOO_BIG) [nsIFaviconService.setFaviconForPage]"  nsresult: "0x8052000f (NS_ERROR_FILE_TOO_BIG)"  location: "JS frame :: resource:///actors/LinkHandlerParent.sys.mjs :: setIconFromLink :: line 142"  data: no]
+1747211751179	Marionette	INFO	Stopped listening on port 35645
+JavaScript warning: https://fanfics.me/jquery_php/jquery-1.7.1.min.js, line 3: Script terminated by timeout at:
+i@https://fanfics.me/jquery_php/jquery-1.7.1.min.js:3:244
+
