@@ -1,0 +1,109 @@
+networks:
+  postgres_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+services:
+  # PostgreSQL Master
+  postgres_master:
+    image: postgres:latest
+    container_name: postgres_master
+    hostname: postgres_master
+    environment:
+      POSTGRES_DB: testdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_INITDB_ARGS: "--auth-host=md5"
+    volumes:
+      - ./master/init-master.sql:/docker-entrypoint-initdb.d/01-init-master.sql
+      - ./master/setup-master.sh:/docker-entrypoint-initdb.d/02-setup-master.sh
+      - postgres_master_data:/var/lib/postgresql/data
+      - ./logs:/var/log/postgresql
+    ports:
+      - "5432:5432"
+    networks:
+      postgres_network:
+        ipv4_address: 172.20.0.10
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # PostgreSQL Slave
+  postgres_slave:
+    image: postgres:latest
+    container_name: postgres_slave
+    hostname: postgres_slave
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      PGPASSWORD: postgres123
+    volumes:
+      - postgres_slave_data:/var/lib/postgresql/data
+      - ./logs:/var/log/postgresql
+      - ./slave/setup-slave.sh:/setup-slave.sh
+    entrypoint: |
+      bash -c "
+        chmod +x /setup-slave.sh
+        /setup-slave.sh
+      "
+    ports:
+      - "5433:5432"
+    networks:
+      postgres_network:
+        ipv4_address: 172.20.0.11
+    depends_on:
+      postgres_master:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # PgBouncer для балансировки нагрузки
+  pgbouncer:
+    image: edoburu/pgbouncer:latest
+    container_name: pgbouncer
+    hostname: pgbouncer
+    environment:
+      DATABASE_URL: postgres://postgres:postgres123@postgres_master:5432/testdb
+      POOL_MODE: transaction
+      MAX_CLIENT_CONN: 100
+      DEFAULT_POOL_SIZE: 20
+      RESERVE_POOL_SIZE: 5
+      AUTH_TYPE: trust
+    ports:
+      - "6432:5432"
+    networks:
+      postgres_network:
+        ipv4_address: 172.20.0.20
+    depends_on:
+      postgres_master:
+        condition: service_healthy
+      postgres_slave:
+        condition: service_healthy
+
+  # Клиентская машина для тестирования
+  postgres_client:
+    image: postgres:latest
+    container_name: postgres_client
+    hostname: postgres_client
+    environment:
+      PGPASSWORD: postgres123
+    volumes:
+      - ./client:/client
+      - ./scripts:/scripts
+    networks:
+      postgres_network:
+        ipv4_address: 172.20.0.30
+    command: tail -f /dev/null
+    depends_on:
+      - pgbouncer
+
+volumes:
+  postgres_master_data:
+  postgres_slave_data:
