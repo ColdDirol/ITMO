@@ -1,9 +1,0 @@
-beans/PointsService.class
-db/DatabaseUtils.class
-db/repositories/PointRepository.class
-beans/Point.class
-beans/SessionBean.class
-validators/YValidator.class
-db/entities/PointsEntity.class
-beans/AreaCheckService.class
-clock/ClockViewBean.class

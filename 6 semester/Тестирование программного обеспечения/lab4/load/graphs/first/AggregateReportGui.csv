@@ -1,3 +1,0 @@
-Label,# Samples,Average,Median,90% Line,95% Line,99% Line,Min,Max,Error %,Throughput,Received KB/sec,Std. Dev.
-http #1,185,1081,1073,1147,1175,1360,988,1363,100.00%,2.0,.5,60.68
-TOTAL,185,1081,1073,1147,1175,1360,988,1363,100.00%,2.0,.5,60.68
