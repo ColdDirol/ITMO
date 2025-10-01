@@ -1,7 +1,7 @@
      VMA      LMA     Size Align Out     In      Symbol
        0        0 80200000     1 . = 0x80200000
 80200000 80200000      a72     2 .text
-80200000 80200000        e     2         /tmp/kernel-fa7c66.o:(.text.boot)
+80200000 80200000        e     2         /tmp/kernel-96a63d.o:(.text.boot)
 80200000 80200000        0     1                 
 80200000 80200000        0     1                 
 80200000 80200000        0     1                 $x.1
@@ -9,7 +9,7 @@
 80200000 80200000        e     1                 boot
 8020000e 8020000e        0     1                 
 8020000e 8020000e        0     1                 
-8020000e 8020000e      a64     2         /tmp/kernel-fa7c66.o:(.text)
+8020000e 8020000e      a64     2         /tmp/kernel-96a63d.o:(.text)
 8020000e 8020000e        0     1                 
 8020000e 8020000e        0     1                 
 8020000e 8020000e        0     1                 $x.0
@@ -567,13 +567,13 @@
 80200bfc 80200bfc    20000     1 . += 128 * 1024
 80220bfc 80220bfc        0     1 __stack_top = .
        0        0      161     1 .debug_abbrev
-       0        0      161     1         /tmp/kernel-fa7c66.o:(.debug_abbrev)
+       0        0      161     1         /tmp/kernel-96a63d.o:(.debug_abbrev)
        0        0        0     1                 $d.3
        0        0      756     1 .debug_info
-       0        0      756     1         /tmp/kernel-fa7c66.o:(.debug_info)
+       0        0      756     1         /tmp/kernel-96a63d.o:(.debug_info)
        0        0        0     1                 $d.4
        0        0       20     1 .debug_ranges
-       0        0       20     1         /tmp/kernel-fa7c66.o:(.debug_ranges)
+       0        0       20     1         /tmp/kernel-96a63d.o:(.debug_ranges)
        0        0        0     1                 
        0        0        0     1                 $d.5
        0        0      282     1 .debug_str
@@ -583,11 +583,11 @@
        0        0       2b     1 .riscv.attributes
        0        0       2b     1         <internal>:(.riscv.attributes)
        0        0      1e8     4 .debug_frame
-       0        0      1e8     4         /tmp/kernel-fa7c66.o:(.debug_frame)
+       0        0      1e8     4         /tmp/kernel-96a63d.o:(.debug_frame)
        0        0        0     1                 
        0        0        0     1                 $d.9
        0        0      d10     1 .debug_line
-       0        0      d10     1         /tmp/kernel-fa7c66.o:(.debug_line)
+       0        0      d10     1         /tmp/kernel-96a63d.o:(.debug_line)
        0        0        0     1                 .Lline_table_start0
        0        0        0     1                 $d.10
        0        0     2310     4 .symtab

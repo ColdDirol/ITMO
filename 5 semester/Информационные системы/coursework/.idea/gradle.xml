@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/backend" />
+        <option name="gradleJvm" value="corretto-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/backend" />
+            <option value="$PROJECT_DIR$/backend/lib" />
+            <option value="$PROJECT_DIR$/backend/lib/contract" />
+            <option value="$PROJECT_DIR$/backend/lib/contract/account-management" />
+            <option value="$PROJECT_DIR$/backend/lib/contract/common" />
+            <option value="$PROJECT_DIR$/backend/lib/contract/file-management" />
+            <option value="$PROJECT_DIR$/backend/lib/contract/user-management" />
+            <option value="$PROJECT_DIR$/backend/services" />
+            <option value="$PROJECT_DIR$/backend/services/account-management-service" />
+            <option value="$PROJECT_DIR$/backend/services/api-gateway-service" />
+            <option value="$PROJECT_DIR$/backend/services/config-service" />
+            <option value="$PROJECT_DIR$/backend/services/file-service" />
+            <option value="$PROJECT_DIR$/backend/services/notification-service" />
+            <option value="$PROJECT_DIR$/backend/services/user-management-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
