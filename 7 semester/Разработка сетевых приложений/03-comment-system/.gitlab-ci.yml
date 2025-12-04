@@ -1,0 +1,52 @@
+# DO NOT TOUCH IT FILE !!!
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_PIPELINE_SOURCE == 'web'
+
+stages:
+  - build
+  - basic_tests
+  - extended_tests
+
+
+build:
+  stage: build
+  script:
+    - bash build
+  artifacts:
+    when: always
+    reports:
+      junit: results/TEST-build.xml
+
+back_tests:
+  stage: basic_tests
+  needs: ["build"]
+  script:
+    - bash stage_back_tests
+  artifacts:
+    when: always
+    reports:
+      junit: back/build/test-results/test/TEST-com.example.back.BackTests.xml
+
+front_tests_1:
+  stage: basic_tests
+  needs: ["build"]
+  script:
+    - bash stage_front_tests_1
+  artifacts:
+    when: always
+    reports:
+      junit: front/junit.xml
+
+front_tests_2:
+  stage: extended_tests
+  needs: ["build"]
+  script:
+    - bash stage_front_tests_2
+  artifacts:
+    when: always
+    reports:
+      junit: front/junit.xml
+
